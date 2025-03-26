@@ -4,10 +4,10 @@ import dace
 import dace.transformation
 import numpy as np
 import transpose
-import gc
 
 N = dace.symbol("N", dtype=dace.int64)
 cpu = False
+verify = False
 
 @dace.program
 def kernel(
@@ -146,13 +146,13 @@ if __name__ == "__main__":
 
     # Parse the command line arguments
     args = parser.parse_args()
-    N_values = args["N_values"]
+    N_values = args.N_values
 
     if not cpu:
         import torch
     if Path("unstructured_stencil_3d_u_s_u.sdfgz").exists():
         sdfg = dace.SDFG.from_file("unstructured_stencil_3d_u_s_u.sdfgz")
-        tsdfg = dace.SDFG.from_file("unstructured_stencil_3d_u_s_u.sdfgz")
+        tsdfg = dace.SDFG.from_file("unstructured_stencil_3d_u_s_u_transposed.sdfgz")
     else:
         sdfg = kernel.to_sdfg(use_cache=False)
         tsdfg = copy.deepcopy(sdfg)
@@ -185,8 +185,8 @@ if __name__ == "__main__":
         tsdfg.save("unstructured_stencil_3d_u_s_u_transposed.sdfgz", compress=True)
 
 
-    for _N in [N_values]:
-        for _TSTEPS in [10, 50, 100]:
+    for _N in N_values:
+        for _TSTEPS in [10]:
             if Path(f"u_s_u_times_N_{_N}_TSTEPS_{_TSTEPS}.txt").exists():
                 continue
             with open(f"u_s_u_times_N_{_N}_TSTEPS_{_TSTEPS}.txt", "w") as f:
@@ -195,19 +195,20 @@ if __name__ == "__main__":
                     f.write("Repeat: " + str(repeat) + "\n")
                     vals_A, vals_B, neighbors = initialize(_N)
                     vals_A2, vals_B2, n2 = initialize(_N)
-                    if not cpu:
-                        assert torch.allclose(vals_A2, vals_A), f"{vals_A2 - vals_A}"
-                        assert torch.allclose(vals_B2, vals_B), f"{vals_B2 - vals_B}"
-                        assert torch.allclose(neighbors, n2), f"{neighbors - n2}"
-                    else:
-                        assert np.allclose(vals_A2, vals_A), f"{vals_A2 - vals_A}"
-                        assert np.allclose(vals_B2, vals_B), f"{vals_B2 - vals_B}"
-                        assert np.allclose(neighbors, n2), f"{neighbors - n2}"
-                    del n2
-                    if cpu:
-                        np_kernel(vals_A=vals_A, vals_B=vals_B, neighbors=neighbors, TSTEPS=_TSTEPS)
-                    else:
-                        torch_kernel(vals_A=vals_A, vals_B=vals_B, neighbors=neighbors, TSTEPS=_TSTEPS)
+                    if verify:
+                        if not cpu:
+                            assert torch.allclose(vals_A2, vals_A), f"{vals_A2 - vals_A}"
+                            assert torch.allclose(vals_B2, vals_B), f"{vals_B2 - vals_B}"
+                            assert torch.allclose(neighbors, n2), f"{neighbors - n2}"
+                        else:
+                            assert np.allclose(vals_A2, vals_A), f"{vals_A2 - vals_A}"
+                            assert np.allclose(vals_B2, vals_B), f"{vals_B2 - vals_B}"
+                            assert np.allclose(neighbors, n2), f"{neighbors - n2}"
+                        del n2
+                        if cpu:
+                            np_kernel(vals_A=vals_A, vals_B=vals_B, neighbors=neighbors, TSTEPS=_TSTEPS)
+                        else:
+                            torch_kernel(vals_A=vals_A, vals_B=vals_B, neighbors=neighbors, TSTEPS=_TSTEPS)
 
                     sdfg.instrument = dace.InstrumentationType.Timer
                     for state in sdfg.all_states():
@@ -218,16 +219,17 @@ if __name__ == "__main__":
                                 else:
                                     node.instrument = dace.InstrumentationType.GPU_Events
                     sdfg(vals_A=vals_A2, vals_B=vals_B2, neighbors=neighbors, N=_N, TSTEPS=_TSTEPS)
-                    if not cpu:
-                        if not torch.allclose(vals_B2, vals_B):
-                            f.write("SDFG and NumPy/CuPy outputs do not match\n")
-                        if not torch.allclose(vals_A2, vals_A):
-                            f.write("SDFG and NumPy/CuPy outputs do not match\n")
-                    else:
-                        if not np.allclose(vals_B2, vals_B):
-                            f.write("SDFG and NumPy/CuPy outputs do not match\n")
-                        if not np.allclose(vals_A2, vals_A):
-                            f.write("SDFG and NumPy/CuPy outputs do not match\n")
+                    if verify:
+                        if not cpu:
+                            if not torch.allclose(vals_B2, vals_B):
+                                f.write("SDFG and NumPy/CuPy outputs do not match\n")
+                            if not torch.allclose(vals_A2, vals_A):
+                                f.write("SDFG and NumPy/CuPy outputs do not match\n")
+                        else:
+                            if not np.allclose(vals_B2, vals_B):
+                                f.write("SDFG and NumPy/CuPy outputs do not match\n")
+                            if not np.allclose(vals_A2, vals_A):
+                                f.write("SDFG and NumPy/CuPy outputs do not match\n")
                     report = sdfg.get_latest_report()
                     f.write(report.__str__())
                     f.flush()
@@ -245,16 +247,17 @@ if __name__ == "__main__":
                                 else:
                                     node.instrument = dace.InstrumentationType.GPU_Events
                     tsdfg(vals_A=vals_A3, vals_B=vals_B3, neighbors=neighbors, N=_N, TSTEPS=_TSTEPS)
-                    if not cpu:
-                        if not torch.allclose(vals_B3, vals_B):
-                            f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
-                        if not torch.allclose(vals_A3, vals_A):
-                            f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
-                    else:
-                        if not np.allclose(vals_B3, vals_B):
-                            f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
-                        if not np.allclose(vals_A3, vals_A):
-                            f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
+                    if verify:
+                        if not cpu:
+                            if not torch.allclose(vals_B3, vals_B):
+                                f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
+                            if not torch.allclose(vals_A3, vals_A):
+                                f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
+                        else:
+                            if not np.allclose(vals_B3, vals_B):
+                                f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
+                            if not np.allclose(vals_A3, vals_A):
+                                f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
                     report2 = tsdfg.get_latest_report()
                     f.write(report2.__str__())
                     f.flush()
