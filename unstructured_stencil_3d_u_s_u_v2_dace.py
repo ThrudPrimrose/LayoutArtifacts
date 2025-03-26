@@ -135,45 +135,58 @@ def torch_kernel(TSTEPS, vals_A, vals_B, neighbors):
         )
 
 
+import argparse
+
+
+
 if __name__ == "__main__":
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description="Process values for N.")
+    parser.add_argument('N_values', nargs='+', type=int, help='List of N values')
+
+    # Parse the command line arguments
+    args = parser.parse_args()
+    N_values = args["N_values"]
+
     if not cpu:
         import torch
-    #if Path("unstructured_stencil_3d_u_s_u.sdfgz").exists():
-    #    sdfg = dace.SDFG.from_file("unstructured_stencil_3d_u_s_u.sdfgz")
-    #    tsdfg = dace.SDFG.from_file("unstructured_stencil_3d_u_s_u.sdfgz")
-    #else:
-    sdfg = kernel.to_sdfg(use_cache=False)
-    tsdfg = copy.deepcopy(sdfg)
-    sdfg.clear_instrumentation_reports()
-    tsdfg.clear_instrumentation_reports()
-    tsdfg.name = tsdfg.name + "_transposed"
+    if Path("unstructured_stencil_3d_u_s_u.sdfgz").exists():
+        sdfg = dace.SDFG.from_file("unstructured_stencil_3d_u_s_u.sdfgz")
+        tsdfg = dace.SDFG.from_file("unstructured_stencil_3d_u_s_u.sdfgz")
+    else:
+        sdfg = kernel.to_sdfg(use_cache=False)
+        tsdfg = copy.deepcopy(sdfg)
+        sdfg.clear_instrumentation_reports()
+        tsdfg.clear_instrumentation_reports()
+        tsdfg.name = sdfg.name + "_transposed"
 
-    sdfg.validate()
-    if not cpu:
-        for arr_name, arr in sdfg.arrays.items():
-            if not arr.transient and isinstance(arr, dace.data.Array):
-                arr.storage = dace.StorageType.GPU_Global
-        sdfg.apply_gpu_transformations()
+        sdfg.validate()
+        if not cpu:
+            for arr_name, arr in sdfg.arrays.items():
+                if not arr.transient and isinstance(arr, dace.data.Array):
+                    arr.storage = dace.StorageType.GPU_Global
+            sdfg.apply_gpu_transformations()
 
-    sdfg.validate()
+        sdfg.validate()
 
-    tsdfg.validate()
-    transpose.permute_index(tsdfg, tsdfg, {"vals_A": [0, 2, 1], "vals_B": [0, 2, 1]})
-    # Make openmp parallel for on the last dimension
-    transpose.permute_maps(tsdfg, {"kernel_21": [0, 2, 1], "kernel_31": [0, 2, 1]})
-    if not cpu:
-        for arr_name, arr in tsdfg.arrays.items():
-            if not arr.transient and isinstance(arr, dace.data.Array):
-                arr.storage = dace.StorageType.GPU_Global
-        tsdfg.apply_gpu_transformations()
+        tsdfg.validate()
+        transpose.permute_index(tsdfg, tsdfg, {"vals_A": [0, 2, 1], "vals_B": [0, 2, 1]})
+        # Make openmp parallel for on the last dimension
+        transpose.permute_maps(tsdfg, {"kernel_21": [0, 2, 1], "kernel_31": [0, 2, 1]})
+        if not cpu:
+            for arr_name, arr in tsdfg.arrays.items():
+                if not arr.transient and isinstance(arr, dace.data.Array):
+                    arr.storage = dace.StorageType.GPU_Global
+            tsdfg.apply_gpu_transformations()
 
-    tsdfg.validate()
+        tsdfg.validate()
 
-    sdfg.save("unstructured_stencil_3d_u_s_u.sdfgz", compress=True)
-    tsdfg.save("unstructured_stencil_3d_u_s_u_transposed.sdfgz", compress=True)
+        sdfg.save("unstructured_stencil_3d_u_s_u.sdfgz", compress=True)
+        tsdfg.save("unstructured_stencil_3d_u_s_u_transposed.sdfgz", compress=True)
 
-    for _N in [128+2, 256+2]:
-        for _TSTEPS in [5, 10]:
+
+    for _N in [N_values]:
+        for _TSTEPS in [10, 50, 100]:
             if Path(f"u_s_u_times_N_{_N}_TSTEPS_{_TSTEPS}.txt").exists():
                 continue
             with open(f"u_s_u_times_N_{_N}_TSTEPS_{_TSTEPS}.txt", "w") as f:
@@ -217,6 +230,7 @@ if __name__ == "__main__":
                             f.write("SDFG and NumPy/CuPy outputs do not match\n")
                     report = sdfg.get_latest_report()
                     f.write(report.__str__())
+                    f.flush()
                     del vals_A2, vals_B2
 
 
@@ -243,5 +257,6 @@ if __name__ == "__main__":
                             f.write("SDFG and NumPy/CuPy outputs do not match (transposed kernel)\n")
                     report2 = tsdfg.get_latest_report()
                     f.write(report2.__str__())
+                    f.flush()
                     del vals_A3, vals_B3
 
