@@ -1,6 +1,7 @@
 import dace
 from typing import Dict, List
 
+from dace.transformation.dataflow.map_dim_shuffle import MapDimShuffle
 
 def permute_index(root: dace.SDFG, sdfg: dace.SDFG, permute_map : Dict[str, List[int]]):
     if root == sdfg:
@@ -148,26 +149,14 @@ def permute_index(root: dace.SDFG, sdfg: dace.SDFG, permute_map : Dict[str, List
                     new_subset.append(e.data.subset[permute_indices[i]])
                 e.data.subset = dace.subsets.Range(new_subset)
 
-
-import numpy as np
-
-
-def initialize(N, datatype=np.float64, seed=42):
-    np.random.seed(seed)
-
-    vals_A = np.fromfunction(lambda i, j, k: i * k * (j + 2) / N, (N, N, N), dtype=datatype)
-    vals_B = np.fromfunction(lambda i, j, k: i * k * (j + 3) / N, (N, N, N), dtype=datatype)
-    neighbors = np.random.randint(1, N, size=(N, N, 8), dtype=np.int64)
-    return vals_A, vals_B, neighbors
-
-
-if __name__ == "__main__":
-    sdfg = dace.SDFG.from_file("unstructured_stencil_3d_u_s_u.sdfgz")
-    sdfg.validate()
-    sdfg.compile()
-    sdfg.name = sdfg.name + "_transposed"
-    permute_index(sdfg, sdfg, {"vals_A": [1, 0, 2], "vals_B": [1, 0, 2]})
-    sdfg.save("unstructured_stencil_3d_u_s_u.sdfgz", compress=True)
-    sdfg.validate()
-    sdfg.compile()
-
+def permute_maps(sdfg: dace.SDFG, permute_map : Dict[str, List[int]]):
+    for s, g in sdfg.all_nodes_recursive():
+        if isinstance(s, dace.SDFGState):
+            for n in s.nodes():
+                if isinstance(n, dace.nodes.MapEntry):
+                    old_params = n.map.params
+                    new_params = []
+                    if n.map.label in permute_map:
+                        for j in range(len(permute_map[n.map.label])):
+                            new_params.append(old_params[permute_map[n.map.label][j]])
+                        MapDimShuffle.apply_to(sdfg, map_entry=n, options={"parameters": new_params})
