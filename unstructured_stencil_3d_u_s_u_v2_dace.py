@@ -140,6 +140,7 @@ import argparse
 
 
 if __name__ == "__main__":
+    dace.Config.set('cache',value='unique')
     # Set up argument parser
     parser = argparse.ArgumentParser(description="Process values for N.")
     parser.add_argument('N_values', nargs='+', type=int, help='List of N values')
