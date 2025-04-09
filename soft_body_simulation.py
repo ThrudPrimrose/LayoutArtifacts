@@ -140,7 +140,7 @@ if __name__ == "__main__":
 
     # Measure performance
     aos_obj(points=points, N=_N, steps=_steps, dt=_dt)
-    # soa_obj(points=points, N=_N, steps=_steps, dt=_dt)
+    soa_obj(points=points, N=_N, steps=_steps, dt=_dt)
 
     aos_time = list(
         list(list(aos.get_latest_report().durations.values())[0].values())[0].values()
