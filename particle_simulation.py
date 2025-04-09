@@ -8,7 +8,7 @@ N = dace.symbol("N")  # Number of particles
 
 # Array of Structs version
 @dace.program
-def monte_carlo_aos(dat: dace.float64[N, 6], step: dace.float64):
+def particle_aos(dat: dace.float64[N, 6], step: dace.float64):
     r = dat[:, :3]
     p = dat[:, 3:]
     pn = np.sqrt(p[:, 0] * p[:, 0] + p[:, 1] * p[:, 1] + p[:, 2] * p[:, 2])
@@ -20,7 +20,7 @@ def monte_carlo_aos(dat: dace.float64[N, 6], step: dace.float64):
 
 # Struct of Arrays version
 @dace.program
-def monte_carlo_soa(dat: dace.float64[6, N], step: dace.float64):
+def particle_soa(dat: dace.float64[6, N], step: dace.float64):
     r = dat[:3]
     p = dat[3:]
     pn = np.sqrt(p[0] * p[0] + p[1] * p[1] + p[2] * p[2])
@@ -31,8 +31,8 @@ def monte_carlo_soa(dat: dace.float64[6, N], step: dace.float64):
 
 
 if __name__ == "__main__":
-    aos = monte_carlo_aos.to_sdfg()
-    soa = monte_carlo_soa.to_sdfg()
+    aos = particle_aos.to_sdfg()
+    soa = particle_soa.to_sdfg()
 
     # Sizes
     _N = 100  # Higher => better for AoS
