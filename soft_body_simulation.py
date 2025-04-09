@@ -47,16 +47,17 @@ def soft_body_aos(points: dace.float64[N, 17]):
             for d in range(3):
                 points[i][d + 9] = 0.0
             # process spring of left neighbor
+            idx = i - 1
+            if i == 0:
+                idx = N - 1
             dist = 0.0
             for d in range(3):
-                dist += (points[(i - 1) % N][d] - points[i][d]) ** 2
+                dist += (points[idx][d] - points[i][d]) ** 2
             dist = dist**0.5
             elongation = dist - 1.0  # assuming rest length of 1.0
             force_mag = -points[i][14] * points[i][12] * elongation
             for d in range(3):
-                points[i][d + 9] += (
-                    force_mag * (points[(i - 1) % N][d] - points[i][d]) / dist
-                )
+                points[i][d + 9] += force_mag * (points[idx][d] - points[i][d]) / dist
             # process spring of right neighbor
             dist = 0.0
             for d in range(3):
@@ -90,16 +91,17 @@ def soft_body_soa(points: dace.float64[17, N]):
             for d in range(3):
                 points[d + 9][i] = 0.0
             # process spring of left neighbor
+            idx = i - 1
+            if i == 0:
+                idx = N - 1
             dist = 0.0
             for d in range(3):
-                dist += (points[d][(i - 1) % N] - points[d][i]) ** 2
+                dist += (points[d][idx] - points[d][i]) ** 2
             dist = dist**0.5
             elongation = dist - 1.0
             force_mag = -points[14][i] * points[12][i] * elongation
             for d in range(3):
-                points[d + 9][i] += (
-                    force_mag * (points[d][(i - 1) % N] - points[d][i]) / dist
-                )
+                points[d + 9][i] += force_mag * (points[d][idx] - points[d][i]) / dist
             # process spring of right neighbor
             dist = 0.0
             for d in range(3):
@@ -123,7 +125,7 @@ if __name__ == "__main__":
     soa = soft_body_soa.to_sdfg()
 
     # Sizes
-    _N = 100000
+    _N = 1000000
     _steps = 100
     _dt = 0.01
 
