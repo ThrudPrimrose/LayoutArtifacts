@@ -29,7 +29,7 @@ props = dace.struct(
 
 # Array of Structs version
 @dace.program
-def nbody_aos(bodies: dace.float64[N, dims]):
+def nbody_aos(bodies: dace.float64[N, 4 * dims + 1]):
     for _ in range(steps):
         # Update the position and velocity of each body
         for i in range(N):
@@ -48,7 +48,7 @@ def nbody_aos(bodies: dace.float64[N, dims]):
                         dist += (bodies[j][d] - bodies[i][d]) ** 2
                     dist = dist**0.5
 
-                    force_mag = (bodies[i][4 * dims - 1] * bodies[j][4 * dims - 1]) / (
+                    force_mag = (bodies[i][4 * dims - 1] * bodies[j][4 * dims]) / (
                         dist**2
                     )
                     for d in range(dims):
@@ -59,14 +59,12 @@ def nbody_aos(bodies: dace.float64[N, dims]):
         # Update acceleration based on the net force
         for i in range(N):
             for d in range(dims):
-                bodies[i][d + 2 * dims] = (
-                    bodies[i][d + 3 * dims] / bodies[i][4 * dims - 1]
-                )
+                bodies[i][d + 2 * dims] = bodies[i][d + 3 * dims] / bodies[i][4 * dims]
 
 
 # Struct of Arrays version
 @dace.program
-def nbody_soa(bodies: dace.float64[dims, N]):
+def nbody_soa(bodies: dace.float64[4 * dims + 1, N]):
     for _ in range(steps):
         # Update the position and velocity of each body
         for i in range(N):
@@ -85,7 +83,7 @@ def nbody_soa(bodies: dace.float64[dims, N]):
                         dist += (bodies[d][j] - bodies[d][i]) ** 2
                     dist = dist**0.5
 
-                    force_mag = (bodies[4 * dims - 1][i] * bodies[4 * dims - 1][j]) / (
+                    force_mag = (bodies[4 * dims - 1][i] * bodies[4 * dims][j]) / (
                         dist**2
                     )
                     for d in range(dims):
@@ -96,9 +94,7 @@ def nbody_soa(bodies: dace.float64[dims, N]):
         # Update acceleration based on the net force
         for i in range(N):
             for d in range(dims):
-                bodies[d + 2 * dims][i] = (
-                    bodies[d + 3 * dims][i] / bodies[4 * dims - 1][i]
-                )
+                bodies[d + 2 * dims][i] = bodies[d + 3 * dims][i] / bodies[4 * dims][i]
 
 
 if __name__ == "__main__":
@@ -106,25 +102,25 @@ if __name__ == "__main__":
     soa = nbody_soa.to_sdfg()
 
     # Sizes
-    _N = 100  # Higher => better for SoA
-    _dims = 3  # Higher => better for AoS
+    _N = 1000
+    _dims = 3
     _steps = 100
     _dt = 0.01
 
     # Generate random data
-    bodies = np.random.random((_N, 4 * _dims)).astype(np.float64)
+    bodies = np.random.random((_N, 4 * _dims + 1)).astype(np.float64)
 
     # Add instrumentation
     aos.instrument = dace.InstrumentationType.Timer
     soa.instrument = dace.InstrumentationType.Timer
 
     # Compile the SDFGs
-    aos.compile()
-    soa.compile()
+    aos_obj = aos.compile()
+    soa_obj = soa.compile()
 
     # Measure performance
-    aos(bodies=bodies, N=_N, steps=_steps, dt=_dt, dims=_dims)
-    soa(bodies=bodies, N=_N, steps=_steps, dt=_dt, dims=_dims)
+    aos_obj(bodies=bodies, N=_N, steps=_steps, dt=_dt, dims=_dims)
+    soa_obj(bodies=bodies, N=_N, steps=_steps, dt=_dt, dims=_dims)
 
     aos_time = list(
         list(list(aos.get_latest_report().durations.values())[0].values())[0].values()

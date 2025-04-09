@@ -39,7 +39,7 @@ if __name__ == "__main__":
     soa = particle_soa.to_sdfg()
 
     # Sizes
-    _N = 100  # Higher => better for AoS
+    _N = 1000000
     _steps = 100
     _step_size = 0.1
 
@@ -51,12 +51,12 @@ if __name__ == "__main__":
     soa.instrument = dace.InstrumentationType.Timer
 
     # Compile the SDFGs
-    aos.compile()
-    soa.compile()
+    aos_obj = aos.compile()
+    soa_obj = soa.compile()
 
     # Measure performance
-    aos(dat=particles, N=_N, steps=_steps, step_size=_step_size)
-    soa(dat=particles, N=_N, steps=_steps, step_size=_step_size)
+    aos_obj(dat=particles, N=_N, steps=_steps, step_size=_step_size)
+    soa_obj(dat=particles, N=_N, steps=_steps, step_size=_step_size)
 
     aos_time = list(
         list(list(aos.get_latest_report().durations.values())[0].values())[0].values()
