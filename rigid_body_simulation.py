@@ -78,7 +78,7 @@ if __name__ == "__main__":
     soa = rigid_body_soa.to_sdfg()
 
     # Sizes
-    _N = 100  # Higher => better for AoS
+    _N = 1000
     _steps = 100
     _dt = 0.01
 
@@ -90,12 +90,12 @@ if __name__ == "__main__":
     soa.instrument = dace.InstrumentationType.Timer
 
     # Compile the SDFGs
-    aos.compile()
-    soa.compile()
+    aos_obj = aos.compile()
+    soa_obj = soa.compile()
 
     # Measure performance
-    aos(bodies=bodies, N=_N, steps=_steps, dt=_dt)
-    soa(bodies=bodies, N=_N, steps=_steps, dt=_dt)
+    aos_obj(bodies=bodies, N=_N, steps=_steps, dt=_dt)
+    soa_obj(bodies=bodies, N=_N, steps=_steps, dt=_dt)
 
     aos_time = list(
         list(list(aos.get_latest_report().durations.values())[0].values())[0].values()
