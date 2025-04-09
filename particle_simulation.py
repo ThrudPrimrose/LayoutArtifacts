@@ -1,0 +1,69 @@
+# Source: https://hdembinski.github.io/posts/struct_of_arrays_vs_arrays_of_structs.html
+import dace
+import numpy as np
+
+# Simulation parameters
+N = dace.symbol("N")  # Number of particles
+steps = dace.symbol("steps")  # Number of simulation steps
+step_size = dace.symbol("step_size", dace.float64)  # Step size
+
+
+# Array of Structs version
+@dace.program
+def particle_aos(dat: dace.float64[N, 6]):
+    for _ in range(steps):
+        r = dat[:, :3]
+        p = dat[:, 3:]
+        pn = np.sqrt(p[:, 0] * p[:, 0] + p[:, 1] * p[:, 1] + p[:, 2] * p[:, 2])
+        ps = step_size / pn
+        for i in range(3):
+            r[:, i] += p[:, i] * ps
+    return dat
+
+
+# Struct of Arrays version
+@dace.program
+def particle_soa(dat: dace.float64[6, N]):
+    for _ in range(steps):
+        r = dat[:3]
+        p = dat[3:]
+        pn = np.sqrt(p[0] * p[0] + p[1] * p[1] + p[2] * p[2])
+        ps = step_size / pn
+        for i in range(3):
+            r[i] += p[i] * ps
+    return dat
+
+
+if __name__ == "__main__":
+    aos = particle_aos.to_sdfg()
+    soa = particle_soa.to_sdfg()
+
+    # Sizes
+    _N = 100  # Higher => better for AoS
+    _steps = 100
+    _step_size = 0.1
+
+    # Generate random data
+    particles = np.random.random((_N, 6)).astype(np.float64)
+
+    # Add instrumentation
+    aos.instrument = dace.InstrumentationType.Timer
+    soa.instrument = dace.InstrumentationType.Timer
+
+    # Compile the SDFGs
+    aos.compile()
+    soa.compile()
+
+    # Measure performance
+    aos(dat=particles, N=_N, steps=_steps, step_size=_step_size)
+    soa(dat=particles, N=_N, steps=_steps, step_size=_step_size)
+
+    aos_time = list(
+        list(list(aos.get_latest_report().durations.values())[0].values())[0].values()
+    )[0][0]
+    soa_time = list(
+        list(list(soa.get_latest_report().durations.values())[0].values())[0].values()
+    )[0][0]
+
+    print(f"AoS Time: {aos_time} us")
+    print(f"SoA Time: {soa_time} us")

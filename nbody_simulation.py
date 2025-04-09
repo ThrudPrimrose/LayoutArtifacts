@@ -134,4 +134,4 @@ if __name__ == "__main__":
     )[0][0]
 
     print(f"AoS Time: {aos_time} us")
-    print(f"SOA Time: {soa_time} us")
+    print(f"SoA Time: {soa_time} us")
