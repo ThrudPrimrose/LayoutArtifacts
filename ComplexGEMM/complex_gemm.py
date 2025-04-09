@@ -52,10 +52,14 @@ def complex_gemm_soa():
 
     Ar, Br = state.add_access("Ar"), state.add_access("Br")
     Cr = state.add_access("Cr")
-    gemm1 = Gemm(name="Ar_at_Br", beta=0.0, alpha=1.0)
-    gemm2 = Gemm(name="Aim_at_Br", beta=1.0, alpha=-1.0)
-    gemm3 = Gemm(name="Ar_at_Bim", beta=0.0, alpha=1.0)
-    gemm4 = Gemm(name="Aim_at_Br", beta=1.0, alpha=1.0)
+    gemm1 = Gemm(name="Ar_at_Br")
+    gemm2 = Gemm(name="Aim_at_Bim", beta=1.0, alpha=-1.0)
+    gemm3 = Gemm(name="Ar_at_Bim")
+    gemm4 = Gemm(name="Aim_at_Br", beta=1.0)
+    gemm1._gpu_stream = 0
+    gemm2._gpu_stream = 1
+    gemm3._gpu_stream = 2
+    gemm4._gpu_stream = 3
 
     state.add_node(gemm1)
     state.add_edge(
@@ -65,7 +69,7 @@ def complex_gemm_soa():
         Br, None, gemm1, "_b", dace.memlet.Memlet.from_array(Br, sdfg.arrays["Br"])
     )
     state.add_edge(
-        gemm1, "_c", Cr, None, dace.memlet.Memlet.from_array(Cr, sdfg.arrays["Br"])
+        gemm1, "_c", Cr, None, dace.memlet.Memlet.from_array(Cr, sdfg.arrays["Cr"])
     )
 
     Aim, Bim, Cr2 = (
@@ -80,7 +84,7 @@ def complex_gemm_soa():
         Bim, None, gemm2, "_b", dace.memlet.Memlet.from_array(Bim, sdfg.arrays["Bim"])
     )
     state.add_edge(
-        Cr, None, gemm2, "_cin", dace.memlet.Memlet.from_array(Cr, sdfg.arrays["Br"])
+        Cr, None, gemm2, "_cin", dace.memlet.Memlet.from_array(Cr, sdfg.arrays["Cr"])
     )
     state.add_edge(
         gemm2, "_c", Cr2, None, dace.memlet.Memlet.from_array(Cr, sdfg.arrays["Cr"])
@@ -118,6 +122,9 @@ def complex_gemm_soa():
     state.add_edge(
         gemm4, "_c", Cim2, None, dace.memlet.Memlet.from_array(Cim2, sdfg.arrays["Cim"])
     )
+    state.add_edge(
+        Cr, None, gemm3, None, dace.memlet.Memlet(None)
+    )
     return sdfg
 
 
@@ -126,9 +133,9 @@ aopt.auto_optimize(sdfg2, dace.DeviceType.GPU)
 
 sdfg2.save("complex_gemm_soa.sdfgz", compress=True)
 
-_M = 2048
-_N = 2048
-_K = 2048
+_M = 8000
+_N = 8000
+_K = 8000
 
 
 # Generate random data
@@ -168,10 +175,10 @@ for sdfg in [sdfg1, sdfg2]:
                 n.instrument = dace.InstrumentationType.GPU_Events
     sdfg.instrument = dace.InstrumentationType.Timer
 
-sdfg1.compile()
-sdfg2.compile()
+c1 = sdfg1.compile()
+c2 = sdfg2.compile()
 
-sdfg1(A=complex_A_gpu, B=complex_B_gpu, C=complex_C_gpu, M=_M, N=_N, K=_K)
+c1(A=complex_A_gpu, B=complex_B_gpu, C=complex_C_gpu, M=_M, N=_N, K=_K)
 complex_C_gpu_cpu = complex_C_gpu.cpu().numpy()
 complex_error = np.max(np.abs(complex_C - complex_C_gpu_cpu))
 if np.allclose(complex_C, complex_C_gpu_cpu):
@@ -181,7 +188,7 @@ else:
     print("The CPU and GPU arrays are different.")
 
 
-sdfg2(
+c2(
     Ar=Ar_gpu,
     Aim=Aim_gpu,
     Br=Br_gpu,
@@ -194,15 +201,15 @@ sdfg2(
 )
 complex_C_gpu_cpu_real = Cr_gpu.cpu().numpy()
 complex_C_gpu_cpu_im = Cim_gpu.cpu().numpy()
-real_error = np.max(np.abs(complex_C.real.astype(np.float64) - complex_C_gpu_cpu_real))
-imag_error = np.max(np.abs(complex_C.imag.astype(np.float64) - complex_C_gpu_cpu_im))
+real_error = np.max(np.abs(complex_C.real.astype(float_type) - complex_C_gpu_cpu_real))
+imag_error = np.max(np.abs(complex_C.imag.astype(float_type) - complex_C_gpu_cpu_im))
 
-if np.allclose(complex_C.real.astype(np.float64), complex_C_gpu_cpu_real):
+if np.allclose(complex_C.real.astype(float_type), complex_C_gpu_cpu_real):
     print(real_error)
     print("The CPU and GPU arrays are almost identical.")
 else:
     print("The CPU and GPU arrays are different.")
-if np.allclose(complex_C.imag.astype(np.float64), complex_C_gpu_cpu_im):
+if np.allclose(complex_C.imag.astype(float_type), complex_C_gpu_cpu_im):
     print(imag_error)
     print("The CPU and GPU arrays are almost identical.")
 else:
