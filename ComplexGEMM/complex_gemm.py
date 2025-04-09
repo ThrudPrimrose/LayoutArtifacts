@@ -105,22 +105,22 @@ def complex_gemm_soa():
         gemm3, "_c", Cim, None, dace.memlet.Memlet.from_array(Cim, sdfg.arrays["Cim"])
     )
 
-    Ar3, Bim3, Cim2 = (
-        state.add_access("Ar"),
-        state.add_access("Bim"),
+    Aim2, Br2, Cim2 = (
+        state.add_access("Aim"),
+        state.add_access("Br"),
         state.add_access("Cim"),
     )
     state.add_edge(
-        Ar3, None, gemm4, "_a", dace.memlet.Memlet.from_array(Ar2, sdfg.arrays["Ar"])
+        Br2, None, gemm4, "_a", dace.memlet.Memlet.from_array(Br2, sdfg.arrays["Ar"])
     )
     state.add_edge(
-        Bim3, None, gemm4, "_b", dace.memlet.Memlet.from_array(Bim2, sdfg.arrays["Bim"])
+        Aim2, None, gemm4, "_b", dace.memlet.Memlet.from_array(Aim2, sdfg.arrays["Bim"])
     )
     state.add_edge(
         Cim, None, gemm4, "_cin", dace.memlet.Memlet.from_array(Cim, sdfg.arrays["Cim"])
     )
     state.add_edge(
-        gemm4, "_c", Cim2, None, dace.memlet.Memlet.from_array(Cim2, sdfg.arrays["Cim"])
+        gemm4, "_c", Cim2, None, dace.memlet.Memlet.from_array(Cim, sdfg.arrays["Cim"])
     )
     state.add_edge(
         Cr, None, gemm3, None, dace.memlet.Memlet(None)
