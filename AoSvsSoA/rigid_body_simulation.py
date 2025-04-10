@@ -81,8 +81,9 @@ def check_correctness(verbose=False) -> bool:
     soa = rigid_body_soa.to_sdfg()
     aos.simplify()
     soa.simplify()
-    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
-    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+    # breaks:
+    # auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    # auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
 
     _N = 100
     _steps = 100
@@ -103,8 +104,9 @@ def run_benchmark(csv_filepath: str) -> None:
     soa = rigid_body_soa.to_sdfg()
     aos.simplify()
     soa.simplify()
-    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
-    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+    # breaks:
+    # auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    # auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
 
     aos.instrument = dace.InstrumentationType.Timer
     soa.instrument = dace.InstrumentationType.Timer
@@ -115,7 +117,7 @@ def run_benchmark(csv_filepath: str) -> None:
     _steps = 1
     _dt = 0.01
     reps = 10
-    Ns = [10 ** (i + 2) for i in range(4)]
+    Ns = [10 ** (i + 2) for i in range(3)]
 
     # write csv file header
     with open(csv_filepath, "w") as f:
