@@ -103,6 +103,10 @@ def nbody_soa(bodies: dace.float64[4 * dims + 1, N]):
 def check_correctness(verbose=False) -> bool:
     aos = nbody_aos.to_sdfg()
     soa = nbody_soa.to_sdfg()
+    aos.simplify()
+    soa.simplify()
+    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
 
     _N = 100
     _dims = 3

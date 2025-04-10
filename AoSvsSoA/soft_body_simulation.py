@@ -126,6 +126,10 @@ def soft_body_soa(points: dace.float64[17, N]):
 def check_correctness(verbose=False) -> bool:
     aos = soft_body_aos.to_sdfg()
     soa = soft_body_soa.to_sdfg()
+    aos.simplify()
+    soa.simplify()
+    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
 
     _N = 100
     _steps = 100

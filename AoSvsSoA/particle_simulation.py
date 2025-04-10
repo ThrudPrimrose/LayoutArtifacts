@@ -40,6 +40,10 @@ def particle_soa(dat: dace.float64[6, N]):
 def check_correctness(verbose=False) -> bool:
     aos = particle_aos.to_sdfg()
     soa = particle_soa.to_sdfg()
+    aos.simplify()
+    soa.simplify()
+    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
 
     _N = 100
     _steps = 100

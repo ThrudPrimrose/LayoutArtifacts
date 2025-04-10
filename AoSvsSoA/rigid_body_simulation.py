@@ -79,6 +79,10 @@ def rigid_body_soa(bodies: dace.float64[22, N]):
 def check_correctness(verbose=False) -> bool:
     aos = rigid_body_aos.to_sdfg()
     soa = rigid_body_soa.to_sdfg()
+    aos.simplify()
+    soa.simplify()
+    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
 
     _N = 100
     _steps = 100
