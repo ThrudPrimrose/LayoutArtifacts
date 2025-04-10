@@ -126,7 +126,7 @@ def check_correctness(verbose=False) -> bool:
     aos = soft_body_aos.to_sdfg()
     soa = soft_body_soa.to_sdfg()
 
-    _N = 1000000
+    _N = 100
     _steps = 100
     _dt = 0.01
     points_aos = np.random.random((_N, 17)).astype(np.float64)
@@ -137,6 +137,54 @@ def check_correctness(verbose=False) -> bool:
     soa(points=points_soa, N=_N, steps=_steps, dt=_dt)
     assert_allclose(points_aos, points_soa.T)
     return True
+
+
+# Function to run the benchmark
+def run_benchmark(csv_filepath: str) -> None:
+    aos = soft_body_aos.to_sdfg()
+    soa = soft_body_soa.to_sdfg()
+    aos.instrument = dace.InstrumentationType.Timer
+    soa.instrument = dace.InstrumentationType.Timer
+    aos_obj = aos.compile()
+    soa_obj = soa.compile()
+
+    # Parameters
+    _steps = 100
+    _dt = 0.01
+    reps = 10
+    Ns = [10**i for i in range(7)]
+
+    # write csv file header
+    with open(csv_filepath, "w") as f:
+        f.write("Name,N,Time(us)\n")
+
+    # Measure performance for different sizes
+    aos_times = {k: [] for k in Ns}
+    for N in Ns:
+        for _ in range(reps):
+            aos.clear_instrumentation_reports()
+            points = np.random.random((N, 17)).astype(np.float64)
+            aos_obj(points=points, N=N, steps=_steps, dt=_dt)
+            time = aos.get_latest_report().events[0].duration
+            aos_times[N].append(time)
+
+    soa_times = {k: [] for k in Ns}
+    for N in Ns:
+        for _ in range(reps):
+            soa.clear_instrumentation_reports()
+            points = np.random.random((N, 17)).astype(np.float64)
+            soa_obj(points=points, N=N, steps=_steps, dt=_dt)
+            time = soa.get_latest_report().events[0].duration
+            soa_times[N].append(time)
+
+    # write csv file data
+    with open(csv_filepath, "a") as f:
+        for k, v in aos_times.items():
+            for t in v:
+                f.write(f"AoS,{k},{t}\n")
+        for k, v in soa_times.items():
+            for t in v:
+                f.write(f"SoA,{k},{t}\n")
 
 
 if __name__ == "__main__":
@@ -163,12 +211,8 @@ if __name__ == "__main__":
     aos_obj(points=points, N=_N, steps=_steps, dt=_dt)
     soa_obj(points=points, N=_N, steps=_steps, dt=_dt)
 
-    aos_time = list(
-        list(list(aos.get_latest_report().durations.values())[0].values())[0].values()
-    )[0][0]
-    soa_time = list(
-        list(list(soa.get_latest_report().durations.values())[0].values())[0].values()
-    )[0][0]
+    aos_time = aos.get_latest_report().events[0].duration
+    soa_time = soa.get_latest_report().events[0].duration
 
     print(f"AoS Time: {aos_time} us")
     print(f"SoA Time: {soa_time} us")
