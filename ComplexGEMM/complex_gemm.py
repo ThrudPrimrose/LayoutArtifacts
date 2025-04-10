@@ -107,10 +107,10 @@ else:
         for i, j in dace.map[0:M, 0:N] @ dace.ScheduleType.GPU_Device:
             for k in dace.map[0:K] @ dace.ScheduleType.Sequential:
                 tmp1 = Cr[i, j] + (Ar[i, k] * Br[k, j])
-                tmp2 = Cim[i, j] - (Aim[i, k] * Bim[k, j])
-                tmp3 = tmp1 + (Aim[i, k] * Br[k, j])
-                tmp4 = tmp2 + (Ar[i, k] * Bim[k, j])
-                Cr[i, j] = tmp3
+                tmp2 = tmp1 - (Aim[i, k] * Bim[k, j])
+                tmp3 = Cim[i, j] + (Aim[i, k] * Br[k, j])
+                tmp4 = tmp3 + (Ar[i, k] * Bim[k, j])
+                Cr[i, j] = tmp2
                 Cim[i, j] = tmp4
 
     def complex_gemm_soa():
@@ -322,7 +322,6 @@ if args.layout == "AoS":
     complex_C_gpu_cpu = complex_C_gpu.cpu().numpy()
     complex_error = np.max(np.abs(complex_C - complex_C_gpu_cpu))
     if np.allclose(complex_C, complex_C_gpu_cpu):
-        print(complex_error)
         print("The CPU and GPU arrays are almost identical.")
     else:
         print("The CPU and GPU arrays are different.")
@@ -346,12 +345,10 @@ else:
     imag_error = np.max(np.abs(complex_C.imag.astype(float_type) - complex_C_gpu_cpu_im))
 
     if np.allclose(complex_C.real.astype(float_type), complex_C_gpu_cpu_real):
-        print(real_error)
         print("The CPU and GPU arrays are almost identical.")
     else:
         print("The CPU and GPU arrays are different.")
     if np.allclose(complex_C.imag.astype(float_type), complex_C_gpu_cpu_im):
-        print(imag_error)
         print("The CPU and GPU arrays are almost identical.")
     else:
         print("The CPU and GPU arrays are different.")
