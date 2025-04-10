@@ -1,6 +1,7 @@
 # Source: https://hdembinski.github.io/posts/struct_of_arrays_vs_arrays_of_structs.html
 import dace
 import numpy as np
+from numpy.testing import assert_allclose
 
 # Simulation parameters
 N = dace.symbol("N")  # Number of particles
@@ -32,6 +33,24 @@ def particle_soa(dat: dace.float64[6, N]):
         for i in range(3):
             r[i] += p[i] * ps
     return dat
+
+
+# Function to check correctness of both implemenations
+def check_correctness(verbose=False) -> bool:
+    aos = particle_aos.to_sdfg()
+    soa = particle_soa.to_sdfg()
+
+    _N = 1000000
+    _steps = 100
+    _step_size = 0.1
+    particles_aos = np.random.random((_N, 6)).astype(np.float64)
+    particles_soa = particles_aos.T.copy()
+    assert_allclose(particles_aos, particles_soa.T)
+
+    aos(dat=particles_aos, N=_N, steps=_steps, step_size=_step_size)
+    soa(dat=particles_soa, N=_N, steps=_steps, step_size=_step_size)
+    assert_allclose(particles_aos, particles_soa.T)
+    return True
 
 
 if __name__ == "__main__":

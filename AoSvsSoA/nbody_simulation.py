@@ -1,5 +1,6 @@
 import dace
 import numpy as np
+from numpy.testing import assert_allclose
 from dace.sdfg.state import SDFGState, LoopRegion
 
 # Simulation parameters
@@ -95,6 +96,25 @@ def nbody_soa(bodies: dace.float64[4 * dims + 1, N]):
         for i in range(N):
             for d in range(dims):
                 bodies[d + 2 * dims][i] = bodies[d + 3 * dims][i] / bodies[4 * dims][i]
+
+
+# Function to check correctness of both implemenations
+def check_correctness(verbose=False) -> bool:
+    aos = nbody_aos.to_sdfg()
+    soa = nbody_soa.to_sdfg()
+
+    _N = 1000
+    _dims = 3
+    _steps = 100
+    _dt = 0.01
+    bodies_aos = np.random.random((_N, 4 * _dims + 1)).astype(np.float64)
+    bodies_soa = bodies_aos.T.copy()
+    assert_allclose(bodies_aos, bodies_soa.T)
+
+    aos(bodies=bodies_aos, N=_N, steps=_steps, dt=_dt, dims=_dims)
+    soa(bodies=bodies_soa, N=_N, steps=_steps, dt=_dt, dims=_dims)
+    assert_allclose(bodies_aos, bodies_soa.T)
+    return True
 
 
 if __name__ == "__main__":

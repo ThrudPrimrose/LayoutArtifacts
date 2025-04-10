@@ -1,5 +1,6 @@
 import dace
 import numpy as np
+from numpy.testing import assert_allclose
 from dace.sdfg.state import SDFGState, LoopRegion
 
 # Simulation parameters
@@ -71,6 +72,24 @@ def rigid_body_soa(bodies: dace.float64[22, N]):
             # Update orientation
             for d in range(3):
                 bodies[d + 3][i] += dt * w[d]
+
+
+# Function to check correctness of both implemenations
+def check_correctness(verbose=False) -> bool:
+    aos = rigid_body_aos.to_sdfg()
+    soa = rigid_body_soa.to_sdfg()
+
+    _N = 1000
+    _steps = 100
+    _dt = 0.01
+    bodies_aos = np.random.random((_N, 22)).astype(np.float64)
+    bodies_soa = bodies_aos.T.copy()
+    assert_allclose(bodies_aos, bodies_soa.T)
+
+    aos(bodies=bodies_aos, N=_N, steps=_steps, dt=_dt)
+    soa(bodies=bodies_soa, N=_N, steps=_steps, dt=_dt)
+    assert_allclose(bodies_aos, bodies_soa.T)
+    return True
 
 
 if __name__ == "__main__":

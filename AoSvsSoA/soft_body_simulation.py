@@ -1,5 +1,6 @@
 import dace
 import numpy as np
+from numpy.testing import assert_allclose
 from dace.sdfg.state import SDFGState, LoopRegion
 
 # Simulation parameters
@@ -118,6 +119,24 @@ def soft_body_soa(points: dace.float64[17, N]):
         for i in range(N):
             for d in range(3):
                 points[d + 6][i] = points[d + 9][i] / points[16][i]
+
+
+# Function to check correctness of both implemenations
+def check_correctness(verbose=False) -> bool:
+    aos = soft_body_aos.to_sdfg()
+    soa = soft_body_soa.to_sdfg()
+
+    _N = 1000000
+    _steps = 100
+    _dt = 0.01
+    points_aos = np.random.random((_N, 17)).astype(np.float64)
+    points_soa = points_aos.T.copy()
+    assert_allclose(points_aos, points_soa.T)
+
+    aos(points=points_aos, N=_N, steps=_steps, dt=_dt)
+    soa(points=points_soa, N=_N, steps=_steps, dt=_dt)
+    assert_allclose(points_aos, points_soa.T)
+    return True
 
 
 if __name__ == "__main__":
