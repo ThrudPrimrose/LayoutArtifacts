@@ -24,12 +24,14 @@ import argparse
 
 parser = argparse.ArgumentParser(description="Run complex GEMM (AoS or SoA)")
 parser.add_argument("--layout", choices=["AoS", "SoA"], required=True, help="Data layout: AoS or SoA")
+parser.add_argument("--m", type=int, default=2048, help="Size of the square matrices (default: 512)")
+parser.add_argument("--n", type=int, default=2048, help="Size of the square matrices (default: 512)")
+parser.add_argument("--k", type=int, default=2048, help="Size of the square matrices (default: 512)")
 args = parser.parse_args()
 
-
-_M = 1024
-_N = 1024
-_K = 1024
+_M = int(args.m)
+_N = int(args.n)
+_K = int(args.k)
 
 
 def rm_assign(sdfg:dace.SDFG):
@@ -92,7 +94,9 @@ if args.layout == "AoS":
         for n in s.nodes():
             if isinstance(n, dace.nodes.MapEntry):
                 _move_acc_to_tmp(s, n, ["Cr", "Cim"])
-    sdfg1.save("complex_gemm_aos.sdfgz", compress=True)
+
+    sdfg1.name += f"_{args.layout}_{args.m}_{args.m}_{args.k}"
+    #sdfg1.save("complex_gemm_aos.sdfgz", compress=True)
 
 else:
     @dace.program
@@ -271,8 +275,8 @@ else:
             if isinstance(n, dace.nodes.MapEntry):
                 _move_acc_to_tmp(s, n, ["Cr", "Cim"])
     sdfg2.validate()
-
-    sdfg2.save("complex_gemm_soa.sdfgz", compress=True)
+    sdfg2.name += f"_{args.layout}_{args.m}_{args.m}_{args.k}"
+    #sdfg2.save("complex_gemm_soa.sdfgz", compress=True)
 
 
 
@@ -376,13 +380,13 @@ elif gpu == "amd":
     warp_size = 64
     static_sram = 64*1024
 
-memory_tiling = [(16,)]
+memory_tiling = [(16,), (32,), (64,), (128,)]
 
 thread_coarsening_2D = [(x, y) for x, y in list(itertools.product(
-    [2], [2]))]
+    [1, 2, 4, 8, 16], [1, 2, 4, 8, 16]))]
 block_sizes_2D = [(x, y) for x, y in list(itertools.product(
-    [32], [8],))
-    if x * y <= 1024 and (x * y) % (warp_size) == 0 and x * y >= warp_size]
+    [16, 32, 64, 128, 256, 512], [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],))
+    if x * y <= 1024 and (x * y) % (warp_size) == 0 and x * y >= warp_size and (y == 1 or (x * y > 128 and y != 1))]
 
 thread_coarsening = thread_coarsening_2D
 block_sizes = block_sizes_2D
@@ -413,19 +417,22 @@ else:
 dace.Config.set('compiler', 'cpu', 'args', value='-march=native -mtune=native -flto -Ofast -std=c++17 -fPIC')
 dace.Config.set('compiler', 'cuda', 'args', value='-march=native --use_fast_math -O3 -std=c++17 --compiler-options=\"-Ofast\"')
 
+def is_power_of_two(n):
+    return n > 0 and (n & (n - 1)) == 0
+
 tiled_sdfg, _ = auto_tile_gpu(
     sdfg=sdfg,
     exhaustive_search=True,
     memory_tiling_parameters=memory_tiling,
     thread_coarsening_parameters=thread_coarsening,
     thread_block_parameters=block_sizes,
-    apply_explicit_memory_transfers=[(True, True, False),(False, False, False)],
-    apply_remainder_loop=[False],
+    apply_explicit_memory_transfers=[(True, True, False),(False, False, False)] if is_power_of_two(_M) and is_power_of_two(_N) and is_power_of_two(_K) else [(True, False, False),(False, False, False)],
+    apply_remainder_loop=[False] if is_power_of_two(_M) and is_power_of_two(_N) and is_power_of_two(_K) else [True],
     inputs=inputs,
     device_schedule = dace.dtypes.ScheduleType.GPU_Device,
     re_apply=False,
     verbose=True,
-    timeout=500,
+    timeout=4000,
     random_iter=True,
     static_sram_limit=static_sram,
     bound_dims=[_M, _N],
