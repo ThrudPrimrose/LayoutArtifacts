@@ -64,8 +64,9 @@ def run_benchmark(csv_filepath: str) -> None:
     soa = particle_soa.to_sdfg()
     aos.simplify()
     soa.simplify()
-    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
-    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+    # Segfaults:
+    # auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    # auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
 
     aos.instrument = dace.InstrumentationType.Timer
     soa.instrument = dace.InstrumentationType.Timer
@@ -76,7 +77,7 @@ def run_benchmark(csv_filepath: str) -> None:
     _steps = 1
     _step_size = 0.01
     reps = 10
-    Ns = [10 ** (i + 2) for i in range(8)]
+    Ns = [10 ** (i + 2) for i in range(6)] + [5 * 10 ** (i + 2) for i in range(6)]
 
     # write csv file header
     with open(csv_filepath, "w") as f:

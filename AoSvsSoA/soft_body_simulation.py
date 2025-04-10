@@ -162,7 +162,7 @@ def run_benchmark(csv_filepath: str) -> None:
     _steps = 1
     _dt = 0.01
     reps = 10
-    Ns = [10 ** (i + 2) for i in range(8)]
+    Ns = [10 ** (i + 2) for i in range(6)] + [5 * 10 ** (i + 2) for i in range(6)]
 
     # write csv file header
     with open(csv_filepath, "w") as f:
