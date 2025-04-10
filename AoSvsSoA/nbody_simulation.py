@@ -1,6 +1,8 @@
 import dace
 import numpy as np
+from numpy.testing import assert_allclose
 from dace.sdfg.state import SDFGState, LoopRegion
+from dace.transformation.auto.auto_optimize import auto_optimize
 
 # Simulation parameters
 N = dace.symbol("N")  # Number of bodies
@@ -97,6 +99,91 @@ def nbody_soa(bodies: dace.float64[4 * dims + 1, N]):
                 bodies[d + 2 * dims][i] = bodies[d + 3 * dims][i] / bodies[4 * dims][i]
 
 
+# Function to check correctness of both implemenations
+def check_correctness(verbose=False) -> bool:
+    aos = nbody_aos.to_sdfg()
+    soa = nbody_soa.to_sdfg()
+    aos.simplify()
+    soa.simplify()
+    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+
+    _N = 100
+    _dims = 3
+    _steps = 100
+    _dt = 0.01
+    bodies_aos = np.random.random((_N, 4 * _dims + 1)).astype(np.float64)
+    bodies_soa = bodies_aos.T.copy()
+    assert_allclose(bodies_aos, bodies_soa.T)
+
+    aos(bodies=bodies_aos, N=_N, steps=_steps, dt=_dt, dims=_dims)
+    soa(bodies=bodies_soa, N=_N, steps=_steps, dt=_dt, dims=_dims)
+    assert_allclose(bodies_aos, bodies_soa.T)
+    return True
+
+
+# Function to run the benchmark
+def run_benchmark(csv_filepath: str) -> None:
+    aos = nbody_aos.to_sdfg()
+    soa = nbody_soa.to_sdfg()
+    aos.simplify()
+    soa.simplify()
+    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+
+    aos.instrument = dace.InstrumentationType.Timer
+    soa.instrument = dace.InstrumentationType.Timer
+    aos_obj = aos.compile()
+    soa_obj = soa.compile()
+
+    # Parameters
+    _dims = 3
+    _steps = 1
+    _dt = 0.01
+    reps = 10
+    Ns = [10 ** (i + 2) for i in range(2)] + [5 * 10 ** (i + 2) for i in range(2)]
+
+    # write csv file header
+    with open(csv_filepath, "w") as f:
+        f.write("Name,N,Time(us)\n")
+
+    # Measure performance for different sizes
+    aos_times = {k: [] for k in Ns}
+    for N in Ns:
+        # Warmup
+        bodies = np.random.random((N, 4 * _dims + 1)).astype(np.float64)
+        aos_obj(bodies=bodies, N=N, steps=_steps, dt=_dt, dims=_dims)
+
+        for _ in range(reps):
+            aos.clear_instrumentation_reports()
+            bodies = np.random.random((N, 4 * _dims + 1)).astype(np.float64)
+            aos_obj(bodies=bodies, N=N, steps=_steps, dt=_dt, dims=_dims)
+            time = aos.get_latest_report().events[0].duration
+            aos_times[N].append(time)
+
+    soa_times = {k: [] for k in Ns}
+    for N in Ns:
+        # Warmup
+        bodies = np.random.random((N, 4 * _dims + 1)).astype(np.float64)
+        soa_obj(bodies=bodies, N=N, steps=_steps, dt=_dt, dims=_dims)
+
+        for _ in range(reps):
+            soa.clear_instrumentation_reports()
+            bodies = np.random.random((N, 4 * _dims + 1)).astype(np.float64)
+            soa_obj(bodies=bodies, N=N, steps=_steps, dt=_dt, dims=_dims)
+            time = soa.get_latest_report().events[0].duration
+            soa_times[N].append(time)
+
+    # write csv file data
+    with open(csv_filepath, "a") as f:
+        for k, v in aos_times.items():
+            for t in v:
+                f.write(f"AoS,{k},{t}\n")
+        for k, v in soa_times.items():
+            for t in v:
+                f.write(f"SoA,{k},{t}\n")
+
+
 if __name__ == "__main__":
     aos = nbody_aos.to_sdfg()
     soa = nbody_soa.to_sdfg()
@@ -122,12 +209,8 @@ if __name__ == "__main__":
     aos_obj(bodies=bodies, N=_N, steps=_steps, dt=_dt, dims=_dims)
     soa_obj(bodies=bodies, N=_N, steps=_steps, dt=_dt, dims=_dims)
 
-    aos_time = list(
-        list(list(aos.get_latest_report().durations.values())[0].values())[0].values()
-    )[0][0]
-    soa_time = list(
-        list(list(soa.get_latest_report().durations.values())[0].values())[0].values()
-    )[0][0]
+    aos_time = aos.get_latest_report().events[0].duration
+    soa_time = soa.get_latest_report().events[0].duration
 
     print(f"AoS Time: {aos_time} us")
     print(f"SoA Time: {soa_time} us")

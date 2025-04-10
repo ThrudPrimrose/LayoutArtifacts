@@ -1,3 +1,4 @@
 *.sdfg
 *.sdfgz
 .dacecache/
+__pycache__/
