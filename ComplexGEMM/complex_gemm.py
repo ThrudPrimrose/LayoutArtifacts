@@ -93,7 +93,7 @@ if args.layout == "AoS":
     for s in sdfg1.all_states():
         for n in s.nodes():
             if isinstance(n, dace.nodes.MapEntry):
-                _move_acc_to_tmp(s, n, ["Cr", "Cim"])
+                _move_acc_to_tmp(s, n)
 
     sdfg1.name += f"_{args.layout}_{args.m}_{args.m}_{args.k}"
     #sdfg1.save("complex_gemm_aos.sdfgz", compress=True)
@@ -432,7 +432,7 @@ tiled_sdfg, _ = auto_tile_gpu(
     device_schedule = dace.dtypes.ScheduleType.GPU_Device,
     re_apply=False,
     verbose=True,
-    timeout=4000,
+    timeout=500,
     random_iter=True,
     static_sram_limit=static_sram,
     bound_dims=[_M, _N],
