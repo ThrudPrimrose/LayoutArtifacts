@@ -11,7 +11,7 @@ slurm_script = "submit_complex_gemm.sh"
 # Loop over all combinations of layout and sizes
 for layout, (m, n, k) in product(layouts, sizes):
     # Build the command to run in the SLURM script
-    cmd = f"python complex_gemm.py --layout {layout} --m {m} --n {n} --k {k}"
+    cmd = f"/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py complex_gemm.py --layout {layout} --m {m} --n {n} --k {k}"
 
     # Create a temporary SLURM script with this configuration
     script_content = f"""#!/bin/sh
@@ -25,6 +25,9 @@ for layout, (m, n, k) in product(layouts, sizes):
 #SBATCH --error={layout.lower()}_gemm_m{m}_n{n}_k{k}.%j.e
 
 source /capstor/scratch/cscs/ybudanaz/.def/bin/activate
+cd /capstor/scratch/cscs/ybudanaz/dace
+pip install -e .
+cd /capstor/scratch/cscs/ybudanaz/LayoutArtifacts/ComplexGEMM
 spack load hip@6.2.1
 spack load cmake@3.30.5
 spack load hipsparse@6.2.1
@@ -35,7 +38,7 @@ spack load rocsparse@6.2.1
 spack load rocblas@6.2.1
 spack load rocthrust@6.2.1
 spack load rccl@6.2.1
-spack load mpich@4.2.3
+spack load mpich@4.2.3/dfsmhyo
 spack load rocprim@6.2.1
 spack load rocminfo@6.2.1
 
