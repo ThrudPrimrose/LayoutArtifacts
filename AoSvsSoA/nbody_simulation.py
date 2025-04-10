@@ -128,7 +128,7 @@ def run_benchmark(csv_filepath: str) -> None:
 
     # Parameters
     _dims = 3
-    _steps = 100
+    _steps = 1
     _dt = 0.01
     reps = 10
     Ns = [10**i for i in range(4)]
@@ -140,6 +140,10 @@ def run_benchmark(csv_filepath: str) -> None:
     # Measure performance for different sizes
     aos_times = {k: [] for k in Ns}
     for N in Ns:
+        # Warmup
+        bodies = np.random.random((N, 4 * _dims + 1)).astype(np.float64)
+        aos_obj(bodies=bodies, N=N, steps=_steps, dt=_dt, dims=_dims)
+
         for _ in range(reps):
             aos.clear_instrumentation_reports()
             bodies = np.random.random((N, 4 * _dims + 1)).astype(np.float64)
@@ -149,6 +153,10 @@ def run_benchmark(csv_filepath: str) -> None:
 
     soa_times = {k: [] for k in Ns}
     for N in Ns:
+        # Warmup
+        bodies = np.random.random((N, 4 * _dims + 1)).astype(np.float64)
+        soa_obj(bodies=bodies, N=N, steps=_steps, dt=_dt, dims=_dims)
+
         for _ in range(reps):
             soa.clear_instrumentation_reports()
             bodies = np.random.random((N, 4 * _dims + 1)).astype(np.float64)
