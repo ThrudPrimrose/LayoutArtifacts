@@ -2,6 +2,7 @@
 import dace
 import numpy as np
 from numpy.testing import assert_allclose
+from dace.transformation.auto.auto_optimize import auto_optimize
 
 # Simulation parameters
 N = dace.symbol("N")  # Number of particles
@@ -57,6 +58,11 @@ def check_correctness(verbose=False) -> bool:
 def run_benchmark(csv_filepath: str) -> None:
     aos = particle_aos.to_sdfg()
     soa = particle_soa.to_sdfg()
+    aos.simplify()
+    soa.simplify()
+    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+
     aos.instrument = dace.InstrumentationType.Timer
     soa.instrument = dace.InstrumentationType.Timer
     aos_obj = aos.compile()
@@ -66,7 +72,7 @@ def run_benchmark(csv_filepath: str) -> None:
     _steps = 1
     _step_size = 0.01
     reps = 10
-    Ns = [10**i for i in range(7)]
+    Ns = [10 ** (i + 2) for i in range(8)]
 
     # write csv file header
     with open(csv_filepath, "w") as f:

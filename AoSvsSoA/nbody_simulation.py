@@ -2,6 +2,7 @@ import dace
 import numpy as np
 from numpy.testing import assert_allclose
 from dace.sdfg.state import SDFGState, LoopRegion
+from dace.transformation.auto.auto_optimize import auto_optimize
 
 # Simulation parameters
 N = dace.symbol("N")  # Number of bodies
@@ -121,6 +122,11 @@ def check_correctness(verbose=False) -> bool:
 def run_benchmark(csv_filepath: str) -> None:
     aos = nbody_aos.to_sdfg()
     soa = nbody_soa.to_sdfg()
+    aos.simplify()
+    soa.simplify()
+    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+
     aos.instrument = dace.InstrumentationType.Timer
     soa.instrument = dace.InstrumentationType.Timer
     aos_obj = aos.compile()
@@ -131,7 +137,7 @@ def run_benchmark(csv_filepath: str) -> None:
     _steps = 1
     _dt = 0.01
     reps = 10
-    Ns = [10**i for i in range(4)]
+    Ns = [10 ** (i + 2) for i in range(4)]
 
     # write csv file header
     with open(csv_filepath, "w") as f:
