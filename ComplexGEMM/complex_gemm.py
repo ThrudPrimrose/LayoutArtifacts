@@ -27,9 +27,9 @@ parser.add_argument("--layout", choices=["AoS", "SoA"], required=True, help="Dat
 args = parser.parse_args()
 
 
-_M = 2000
-_N = 2000
-_K = 2000
+_M = 1024
+_N = 1024
+_K = 1024
 
 
 def rm_assign(sdfg:dace.SDFG):
@@ -77,7 +77,21 @@ if args.layout == "AoS":
             n.sdfg.simplify()
     sdfg1.apply_transformations_repeated(StateFusion)
     sdfg1.apply_transformations_repeated(InlineSDFG)
-
+    def _move_acc_to_tmp(graph: dace.SDFGState, map_entry: dace.nodes.MapEntry):
+        for n in graph.all_nodes_between(map_entry, graph.exit_node(map_entry)):
+            if isinstance(n, dace.nodes.AccessNode):
+                if graph.out_degree(n) == 1:
+                    oes = [oe for oe in graph.out_edges(n) if isinstance(oe.dst, dace.nodes.MapExit)]
+                    if len(oes) == 1:
+                        oe = oes[0]
+                        t = graph.add_tasklet(name="assign", inputs={"_in"}, outputs={"_out"}, code="_out = _in")
+                        graph.remove_edge(oe)
+                        graph.add_edge(n, None, t, "_in", dace.memlet.Memlet.from_array(n.data, graph.sdfg.arrays[n.data]))
+                        graph.add_edge(t, "_out", oe.dst, oe.dst_conn, copy.deepcopy(oe.data))
+    for s in sdfg1.all_states():
+        for n in s.nodes():
+            if isinstance(n, dace.nodes.MapEntry):
+                _move_acc_to_tmp(s, n, ["Cr", "Cim"])
     sdfg1.save("complex_gemm_aos.sdfgz", compress=True)
 
 else:
@@ -92,10 +106,12 @@ else:
     ):
         for i, j in dace.map[0:M, 0:N] @ dace.ScheduleType.GPU_Device:
             for k in dace.map[0:K] @ dace.ScheduleType.Sequential:
-                Cr[i, j] = Cr[i, j] + (Ar[i, k] * Br[k, j])
-                Cim[i, j] = Cim[i, j] - (Aim[i, k] * Bim[k, j])
-                Cr[i, j] = Cr[i, j] + (Aim[i, k] * Br[k, j])
-                Cim[i, j] = Cim[i, j] + (Ar[i, k] * Bim[k, j])
+                tmp1 = Cr[i, j] + (Ar[i, k] * Br[k, j])
+                tmp2 = Cim[i, j] - (Aim[i, k] * Bim[k, j])
+                tmp3 = tmp1 + (Aim[i, k] * Br[k, j])
+                tmp4 = tmp2 + (Ar[i, k] * Bim[k, j])
+                Cr[i, j] = tmp3
+                Cim[i, j] = tmp4
 
     def complex_gemm_soa():
         sdfg = dace.SDFG("complex_gemm_soa")
@@ -228,6 +244,16 @@ else:
                 e.data = dace.memlet.Memlet.from_array(nm[e.data.data], graph.sdfg.arrays[nm[e.data.data]])
             if e.data is not None and e.data.data in nm and isinstance(e.src, dace.nodes.AccessNode) and e.src.data == nm[e.data.data]:
                 e.data = dace.memlet.Memlet.from_array(nm[e.data.data], graph.sdfg.arrays[nm[e.data.data]])
+        for n in graph.all_nodes_between(map_entry, graph.exit_node(map_entry)):
+            if isinstance(n, dace.nodes.AccessNode):
+                if graph.out_degree(n) == 1:
+                    oes = [oe for oe in graph.out_edges(n) if isinstance(oe.dst, dace.nodes.MapExit)]
+                    if len(oes) == 1:
+                        oe = oes[0]
+                        t = graph.add_tasklet(name="assign", inputs={"_in"}, outputs={"_out"}, code="_out = _in")
+                        graph.remove_edge(oe)
+                        graph.add_edge(n, None, t, "_in", dace.memlet.Memlet.from_array(n.data, graph.sdfg.arrays[n.data]))
+                        graph.add_edge(t, "_out", oe.dst, oe.dst_conn, copy.deepcopy(oe.data))
 
     sdfg2 = complex_gemm_soa_merged.to_sdfg()
     sdfg2.simplify()
@@ -353,12 +379,12 @@ elif gpu == "amd":
     warp_size = 64
     static_sram = 64*1024
 
-memory_tiling = [(16,),(32,),(64,),(128,),]
+memory_tiling = [(16,)]
 
 thread_coarsening_2D = [(x, y) for x, y in list(itertools.product(
-    [1, 2, 4, 8, 16], [1, 2, 4, 8, 16]))]
+    [2], [2]))]
 block_sizes_2D = [(x, y) for x, y in list(itertools.product(
-    [1, 2, 4, 8, 16, 32, 64, 128, 256], [1, 2, 4, 8, 16, 32, 64, 128, 256],))
+    [32], [8],))
     if x * y <= 1024 and (x * y) % (warp_size) == 0 and x * y >= warp_size]
 
 thread_coarsening = thread_coarsening_2D
@@ -370,6 +396,9 @@ if args.layout == "AoS":
         "A":complex_A_gpu,
         "B":complex_B_gpu,
         "C":complex_C_gpu,
+        "M":_M,
+        "N":_N,
+        "K":_K,
     }
 else:
     sdfg = sdfg2
@@ -393,8 +422,8 @@ tiled_sdfg, _ = auto_tile_gpu(
     memory_tiling_parameters=memory_tiling,
     thread_coarsening_parameters=thread_coarsening,
     thread_block_parameters=block_sizes,
-    apply_explicit_memory_transfers=[(True, False, False),(True, False, True),(False, False, False)],
-    apply_remainder_loop=[False, True],
+    apply_explicit_memory_transfers=[(True, True, False),(False, False, False)],
+    apply_remainder_loop=[False],
     inputs=inputs,
     device_schedule = dace.dtypes.ScheduleType.GPU_Device,
     re_apply=False,
@@ -402,5 +431,8 @@ tiled_sdfg, _ = auto_tile_gpu(
     timeout=500,
     random_iter=True,
     static_sram_limit=static_sram,
-    bound_dims=[_M, _N]
+    bound_dims=[_M, _N],
+    copy_whole=True,
+    exclude_from_explicit_memory=["Cr", "Cim"],
+    output_name="Cr",
 )
