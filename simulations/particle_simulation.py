@@ -1,8 +1,10 @@
 # Source: https://hdembinski.github.io/posts/struct_of_arrays_vs_arrays_of_structs.html
 import dace
 import numpy as np
+import copy
 from numpy.testing import assert_allclose
 from dace.transformation.auto.auto_optimize import auto_optimize
+from simulations.copy_elimination import CopyElimination
 
 # Simulation parameters
 N = dace.symbol("N")  # Number of particles
@@ -42,8 +44,14 @@ def check_correctness(verbose=False) -> bool:
     soa = particle_soa.to_sdfg()
     aos.simplify()
     soa.simplify()
-    auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
-    auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+    # Segfaults:
+    # auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
+    # auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+
+    aos_ce = copy.deepcopy(aos)
+    soa_ce = copy.deepcopy(soa)
+    aos_ce.apply_transformations_repeated(CopyElimination)
+    soa_ce.apply_transformations_repeated(CopyElimination)
 
     _N = 100
     _steps = 100
@@ -52,9 +60,17 @@ def check_correctness(verbose=False) -> bool:
     particles_soa = particles_aos.T.copy()
     assert_allclose(particles_aos, particles_soa.T)
 
+    particles_aos_ce = copy.deepcopy(particles_aos)
+    particles_soa_ce = copy.deepcopy(particles_soa)
+
     aos(dat=particles_aos, N=_N, steps=_steps, step_size=_step_size)
     soa(dat=particles_soa, N=_N, steps=_steps, step_size=_step_size)
+    aos_ce(dat=particles_aos_ce, N=_N, steps=_steps, step_size=_step_size)
+    soa_ce(dat=particles_soa_ce, N=_N, steps=_steps, step_size=_step_size)
     assert_allclose(particles_aos, particles_soa.T)
+    assert_allclose(particles_aos_ce, particles_soa_ce.T)
+    assert_allclose(particles_aos, particles_aos_ce)
+    assert_allclose(particles_soa, particles_soa_ce)
     return True
 
 
@@ -67,6 +83,9 @@ def run_benchmark(csv_filepath: str) -> None:
     # Segfaults:
     # auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
     # auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+
+    aos.apply_transformations_repeated(CopyElimination)
+    soa.apply_transformations_repeated(CopyElimination)
 
     aos.instrument = dace.InstrumentationType.Timer
     soa.instrument = dace.InstrumentationType.Timer

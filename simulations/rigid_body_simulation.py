@@ -1,8 +1,11 @@
 import dace
 import numpy as np
+import numpy as np
+import copy
 from numpy.testing import assert_allclose
 from dace.sdfg.state import SDFGState, LoopRegion
 from dace.transformation.auto.auto_optimize import auto_optimize
+from simulations.copy_elimination import CopyElimination
 
 # Simulation parameters
 N = dace.symbol("N")  # Number of bodies
@@ -85,6 +88,11 @@ def check_correctness(verbose=False) -> bool:
     # auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
     # auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
 
+    aos_ce = copy.deepcopy(aos)
+    soa_ce = copy.deepcopy(soa)
+    aos_ce.apply_transformations(CopyElimination)
+    soa_ce.apply_transformations(CopyElimination)
+
     _N = 100
     _steps = 100
     _dt = 0.01
@@ -92,9 +100,17 @@ def check_correctness(verbose=False) -> bool:
     bodies_soa = bodies_aos.T.copy()
     assert_allclose(bodies_aos, bodies_soa.T)
 
+    bodies_aos_ce = copy.deepcopy(bodies_aos)
+    bodies_soa_ce = copy.deepcopy(bodies_soa)
+
     aos(bodies=bodies_aos, N=_N, steps=_steps, dt=_dt)
     soa(bodies=bodies_soa, N=_N, steps=_steps, dt=_dt)
+    aos_ce(bodies=bodies_aos_ce, N=_N, steps=_steps, dt=_dt)
+    soa_ce(bodies=bodies_soa_ce, N=_N, steps=_steps, dt=_dt)
     assert_allclose(bodies_aos, bodies_soa.T)
+    assert_allclose(bodies_aos_ce, bodies_soa_ce.T)
+    assert_allclose(bodies_aos, bodies_aos_ce)
+    assert_allclose(bodies_soa, bodies_soa_ce)
     return True
 
 
@@ -107,6 +123,9 @@ def run_benchmark(csv_filepath: str) -> None:
     # breaks:
     # auto_optimize(aos, device=dace.dtypes.DeviceType.CPU)
     # auto_optimize(soa, device=dace.dtypes.DeviceType.CPU)
+
+    aos.apply_transformations(CopyElimination)
+    soa.apply_transformations(CopyElimination)
 
     aos.instrument = dace.InstrumentationType.Timer
     soa.instrument = dace.InstrumentationType.Timer
