@@ -17,38 +17,38 @@ ext_comps = dace.symbol("ext_comps")  # Number of external computations
 
 # Array of Structs version
 @dace.program
-def param_aos(dat: dace.float64[N, props]):
+def param_aos(dat: dace.float64[N, props], int_comps: int, ext_comps: int):
     for _ in range(steps):
         # Perform internal computations
-        for i1 in range(N):
-            for k1 in range(int_comps):
+        if int_comps > 0:
+            for i1 in range(N):
                 for p1 in range(props):
                     dat[i1, p1] += dat[i1, (p1 + 1) % props]
 
         # Perform external computations
-        for i2 in range(N):
-            for j2 in range(N):
-                if i2 != j2:
-                    for k2 in range(ext_comps):
+        if ext_comps > 0:
+            for i2 in range(N):
+                for j2 in range(N):
+                    if i2 != j2:
                         for p2 in range(props):
                             dat[i2, p2] += dat[j2, p2]
 
 
 # Struct of Arrays version
 @dace.program
-def param_soa(dat: dace.float64[props, N]):
+def param_soa(dat: dace.float64[props, N], int_comps: int, ext_comps: int):
     for _ in range(steps):
         # Perform internal computations
-        for i1 in range(N):
-            for k1 in range(int_comps):
+        if int_comps > 0:
+            for i1 in range(N):
                 for p1 in range(props):
                     dat[p1, i1] += dat[(p1 + 1) % props, i1]
 
         # Perform external computations
-        for i2 in range(N):
-            for j2 in range(N):
-                if i2 != j2:
-                    for k2 in range(ext_comps):
+        if ext_comps > 0:
+            for i2 in range(N):
+                for j2 in range(N):
+                    if i2 != j2:
                         for p2 in range(props):
                             dat[p2, i2] += dat[p2, j2]
 
@@ -71,8 +71,8 @@ def check_correctness(verbose=False) -> bool:
     _N = 1000
     _steps = 100
     _props = 13
-    _int_comps = 3
-    _ext_comps = 3
+    _int_comps = 1
+    _ext_comps = 1
     dat_aos = np.random.random((_N, _props)).astype(np.float64)
     dat_soa = dat_aos.T.copy()
     assert_allclose(dat_aos, dat_soa.T)
@@ -139,9 +139,9 @@ def run_benchmark(csv_filepath: str) -> None:
 
     # Parameters
     _steps = 1
-    _props = 2**3
+    _props = 1  # Larger => better AoS
     _int_comps = 0
-    _ext_comps = 100
+    _ext_comps = 1
     reps = 10
     Ns = [2 ** (i + 2) for i in range(10)]
 
@@ -222,8 +222,8 @@ if __name__ == "__main__":
     _N = 1000
     _steps = 100
     _props = 13
-    _int_comps = 20
-    _ext_comps = 0
+    _int_comps = 1
+    _ext_comps = 1
 
     # Generate random data
     dat = np.random.random((_N, _props)).astype(np.float64)
