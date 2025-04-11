@@ -6,16 +6,16 @@ import os
 import pandas as pd
 import seaborn as sns
 
-import AoSvsSoA.nbody_simulation
-import AoSvsSoA.particle_simulation
-import AoSvsSoA.rigid_body_simulation
-import AoSvsSoA.soft_body_simulation
+import simulations.nbody_simulation
+import simulations.particle_simulation
+import simulations.rigid_body_simulation
+import simulations.soft_body_simulation
 
 benchmarks = [
-    AoSvsSoA.nbody_simulation,
-    AoSvsSoA.particle_simulation,
-    AoSvsSoA.rigid_body_simulation,
-    AoSvsSoA.soft_body_simulation,
+    simulations.nbody_simulation,
+    simulations.particle_simulation,
+    simulations.rigid_body_simulation,
+    simulations.soft_body_simulation,
 ]
 
 # Check correctness of all benchmarks
