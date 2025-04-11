@@ -2,3 +2,4 @@
 *.sdfgz
 .dacecache/
 __pycache__/
+.vscode
