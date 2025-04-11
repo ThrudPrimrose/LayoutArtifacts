@@ -41,43 +41,45 @@ props = dace.struct(
 def soft_body_aos(points: dace.float64[N, 17]):
     for _ in range(steps):
         # Update the position and velocity of each point
-        for i in range(N):
-            for d in range(3):
-                points[i][d] += points[i][d + 3] * dt
-                points[i][d + 3] += points[i][d + 6] * dt
+        for i1 in range(N):
+            for d1 in range(3):
+                points[i1][d1] += points[i1][d1 + 3] * dt
+                points[i1][d1 + 3] += points[i1][d1 + 6] * dt
 
         # Calculate the spring forces between points
-        for i in range(N):
-            for d in range(3):
-                points[i][d + 9] = 0.0
+        for i2 in range(N):
+            for d2 in range(3):
+                points[i2][d2 + 9] = 0.0
             # process spring of left neighbor
-            idx = i - 1
-            if i == 0:
+            idx = i2 - 1
+            if i2 == 0:
                 idx = N - 1
             dist = 0.0
-            for d in range(3):
-                dist += (points[idx][d] - points[i][d]) ** 2
+            for d3 in range(3):
+                dist += (points[idx][d3] - points[i2][d3]) ** 2
             dist = dist**0.5
             elongation = dist - 1.0  # assuming rest length of 1.0
-            force_mag = -points[i][14] * points[i][12] * elongation
-            for d in range(3):
-                points[i][d + 9] += force_mag * (points[idx][d] - points[i][d]) / dist
+            force_mag = -points[i2][14] * points[i2][12] * elongation
+            for d4 in range(3):
+                points[i2][d4 + 9] += (
+                    force_mag * (points[idx][d4] - points[i2][d4]) / dist
+                )
             # process spring of right neighbor
             dist = 0.0
-            for d in range(3):
-                dist += (points[(i + 1) % N][d] - points[i][d]) ** 2
+            for d5 in range(3):
+                dist += (points[(i2 + 1) % N][d5] - points[i2][d5]) ** 2
             dist = dist**0.5
             elongation = dist - 1.0
-            force_mag = -points[i][14] * points[i][13] * elongation
-            for d in range(3):
-                points[i][d + 9] += (
-                    force_mag * (points[(i + 1) % N][d] - points[i][d]) / dist
+            force_mag = -points[i2][14] * points[i2][13] * elongation
+            for d6 in range(3):
+                points[i2][d6 + 9] += (
+                    force_mag * (points[(i2 + 1) % N][d6] - points[i2][d6]) / dist
                 )
 
         # Update acceleration based on the net force
-        for i in range(N):
-            for d in range(3):
-                points[i][d + 6] = points[i][d + 9] / points[i][16]
+        for i3 in range(N):
+            for d7 in range(3):
+                points[i3][d7 + 6] = points[i3][d7 + 9] / points[i3][16]
 
 
 # Struct of Arrays version
@@ -85,43 +87,45 @@ def soft_body_aos(points: dace.float64[N, 17]):
 def soft_body_soa(points: dace.float64[17, N]):
     for _ in range(steps):
         # Update the position and velocity of each point
-        for i in range(N):
-            for d in range(3):
-                points[d][i] += points[d + 3][i] * dt
-                points[d + 3][i] += points[d + 6][i] * dt
+        for i1 in range(N):
+            for d1 in range(3):
+                points[d1][i1] += points[d1 + 3][i1] * dt
+                points[d1 + 3][i1] += points[d1 + 6][i1] * dt
 
         # Calculate the spring forces between points
-        for i in range(N):
-            for d in range(3):
-                points[d + 9][i] = 0.0
+        for i2 in range(N):
+            for d2 in range(3):
+                points[d2 + 9][i2] = 0.0
             # process spring of left neighbor
-            idx = i - 1
-            if i == 0:
+            idx = i2 - 1
+            if i2 == 0:
                 idx = N - 1
             dist = 0.0
-            for d in range(3):
-                dist += (points[d][idx] - points[d][i]) ** 2
+            for d3 in range(3):
+                dist += (points[d3][idx] - points[d3][i2]) ** 2
             dist = dist**0.5
             elongation = dist - 1.0
-            force_mag = -points[14][i] * points[12][i] * elongation
-            for d in range(3):
-                points[d + 9][i] += force_mag * (points[d][idx] - points[d][i]) / dist
+            force_mag = -points[14][i2] * points[12][i2] * elongation
+            for d4 in range(3):
+                points[d4 + 9][i2] += (
+                    force_mag * (points[d4][idx] - points[d4][i2]) / dist
+                )
             # process spring of right neighbor
             dist = 0.0
-            for d in range(3):
-                dist += (points[d][(i + 1) % N] - points[d][i]) ** 2
+            for d5 in range(3):
+                dist += (points[d5][(i2 + 1) % N] - points[d5][i2]) ** 2
             dist = dist**0.5
             elongation = dist - 1.0
-            force_mag = -points[14][i] * points[13][i] * elongation
-            for d in range(3):
-                points[d + 9][i] += (
-                    force_mag * (points[d][(i + 1) % N] - points[d][i]) / dist
+            force_mag = -points[14][i2] * points[13][i2] * elongation
+            for d6 in range(3):
+                points[d6 + 9][i2] += (
+                    force_mag * (points[d6][(i2 + 1) % N] - points[d6][i2]) / dist
                 )
 
         # Update acceleration based on the net force
-        for i in range(N):
-            for d in range(3):
-                points[d + 6][i] = points[d + 9][i] / points[16][i]
+        for i3 in range(N):
+            for d7 in range(3):
+                points[d7 + 6][i3] = points[d7 + 9][i3] / points[16][i3]
 
 
 # Function to check correctness of both implemenations

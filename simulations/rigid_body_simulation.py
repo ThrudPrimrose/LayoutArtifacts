@@ -51,12 +51,12 @@ def rigid_body_aos(bodies: dace.float64[N, 22]):
             # Assume I is already inverted and all are in the local frame:
             # w = I * L
             w = np.zeros(3)
-            for d in range(3):
+            for d2 in range(3):
                 for j in range(3):
-                    w[d] += bodies[i][12 + d * 3 + j] * bodies[i][j + 9]
+                    w[d2] += bodies[i][12 + d2 * 3 + j] * bodies[i][j + 9]
             # Update orientation
-            for d in range(3):
-                bodies[i][d + 3] += dt * w[d]
+            for d3 in range(3):
+                bodies[i][d3 + 3] += dt * w[d3]
 
 
 # Struct of Arrays version
@@ -70,12 +70,12 @@ def rigid_body_soa(bodies: dace.float64[22, N]):
             # Assume I is already inverted and all are in the local frame:
             # w = I * L
             w = np.zeros(3)
-            for d in range(3):
+            for d2 in range(3):
                 for j in range(3):
-                    w[d] += bodies[12 + d * 3 + j][i] * bodies[j + 9][i]
+                    w[d2] += bodies[12 + d2 * 3 + j][i] * bodies[j + 9][i]
             # Update orientation
-            for d in range(3):
-                bodies[d + 3][i] += dt * w[d]
+            for d3 in range(3):
+                bodies[d3 + 3][i] += dt * w[d3]
 
 
 # Function to check correctness of both implemenations

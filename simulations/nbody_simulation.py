@@ -36,34 +36,36 @@ props = dace.struct(
 def nbody_aos(bodies: dace.float64[N, 4 * dims + 1]):
     for _ in range(steps):
         # Update the position and velocity of each body
-        for i in range(N):
-            for d in range(dims):
-                bodies[i][d] += bodies[i][d + dims] * dt
-                bodies[i][d + dims] += bodies[i][d + 2 * dims] * dt
+        for i1 in range(N):
+            for d1 in range(dims):
+                bodies[i1][d1] += bodies[i1][d1 + dims] * dt
+                bodies[i1][d1 + dims] += bodies[i1][d1 + 2 * dims] * dt
 
         # Calculate forces between bodies
-        for i in range(N):
-            for d in range(dims):
-                bodies[i][d + 3 * dims] = 0.0
+        for i2 in range(N):
+            for d2 in range(dims):
+                bodies[i2][d2 + 3 * dims] = 0.0
             for j in range(N):
-                if i != j:
+                if i2 != j:
                     dist = 0.0
-                    for d in range(dims):
-                        dist += (bodies[j][d] - bodies[i][d]) ** 2
+                    for d3 in range(dims):
+                        dist += (bodies[j][d3] - bodies[i2][d3]) ** 2
                     dist = dist**0.5
 
-                    force_mag = (bodies[i][4 * dims - 1] * bodies[j][4 * dims]) / (
+                    force_mag = (bodies[i2][4 * dims - 1] * bodies[j][4 * dims]) / (
                         dist**2
                     )
-                    for d in range(dims):
-                        bodies[i][d + 3 * dims] += (
-                            force_mag * (bodies[j][d] - bodies[i][d]) / dist
+                    for d4 in range(dims):
+                        bodies[i2][d4 + 3 * dims] += (
+                            force_mag * (bodies[j][d4] - bodies[i2][d4]) / dist
                         )
 
         # Update acceleration based on the net force
-        for i in range(N):
-            for d in range(dims):
-                bodies[i][d + 2 * dims] = bodies[i][d + 3 * dims] / bodies[i][4 * dims]
+        for i3 in range(N):
+            for d5 in range(dims):
+                bodies[i3][d5 + 2 * dims] = (
+                    bodies[i3][d5 + 3 * dims] / bodies[i3][4 * dims]
+                )
 
 
 # Struct of Arrays version
@@ -71,34 +73,36 @@ def nbody_aos(bodies: dace.float64[N, 4 * dims + 1]):
 def nbody_soa(bodies: dace.float64[4 * dims + 1, N]):
     for _ in range(steps):
         # Update the position and velocity of each body
-        for i in range(N):
-            for d in range(dims):
-                bodies[d][i] += bodies[d + dims][i] * dt
-                bodies[d + dims][i] += bodies[d + 2 * dims][i] * dt
+        for i1 in range(N):
+            for d1 in range(dims):
+                bodies[d1][i1] += bodies[d1 + dims][i1] * dt
+                bodies[d1 + dims][i1] += bodies[d1 + 2 * dims][i1] * dt
 
         # Calculate forces between bodies
-        for i in range(N):
-            for d in range(dims):
-                bodies[d + 3 * dims][i] = 0.0
+        for i2 in range(N):
+            for d2 in range(dims):
+                bodies[d2 + 3 * dims][i2] = 0.0
             for j in range(N):
-                if i != j:
+                if i2 != j:
                     dist = 0.0
-                    for d in range(dims):
-                        dist += (bodies[d][j] - bodies[d][i]) ** 2
+                    for d3 in range(dims):
+                        dist += (bodies[d3][j] - bodies[d3][i2]) ** 2
                     dist = dist**0.5
 
-                    force_mag = (bodies[4 * dims - 1][i] * bodies[4 * dims][j]) / (
+                    force_mag = (bodies[4 * dims - 1][i2] * bodies[4 * dims][j]) / (
                         dist**2
                     )
-                    for d in range(dims):
-                        bodies[d + 3 * dims][i] += (
-                            force_mag * (bodies[d][j] - bodies[d][i]) / dist
+                    for d4 in range(dims):
+                        bodies[d4 + 3 * dims][i2] += (
+                            force_mag * (bodies[d4][j] - bodies[d4][i2]) / dist
                         )
 
         # Update acceleration based on the net force
-        for i in range(N):
-            for d in range(dims):
-                bodies[d + 2 * dims][i] = bodies[d + 3 * dims][i] / bodies[4 * dims][i]
+        for i3 in range(N):
+            for d5 in range(dims):
+                bodies[d5 + 2 * dims][i3] = (
+                    bodies[d5 + 3 * dims][i3] / bodies[4 * dims][i3]
+                )
 
 
 # Function to check correctness of both implemenations
