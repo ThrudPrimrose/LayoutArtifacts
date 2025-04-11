@@ -8,18 +8,20 @@ import seaborn as sns
 import warnings
 
 # Turn off warnings
-warnings.filterwarnings("ignore")
+# warnings.filterwarnings("ignore")
 
 import simulations.nbody_simulation
 import simulations.particle_simulation
 import simulations.rigid_body_simulation
 import simulations.soft_body_simulation
+import simulations.param_simulation
 
 benchmarks = [
     simulations.nbody_simulation,
     simulations.particle_simulation,
     simulations.rigid_body_simulation,
     simulations.soft_body_simulation,
+    simulations.param_simulation,
 ]
 
 # Check correctness of all benchmarks
@@ -53,14 +55,14 @@ for b in benchmarks:
     sns.set_theme(style="whitegrid")
     df_min = df.groupby(["Name", "N"], as_index=False)["Time(ms)"].min()
     g = sns.relplot(
-      data=df_min,
-      x="N",
-      y="Time(ms)",
-      hue="Name",
-      kind="line",
-      height=5,
-      aspect=2,
-      palette="muted",
+        data=df_min,
+        x="N",
+        y="Time(ms)",
+        hue="Name",
+        kind="line",
+        height=5,
+        aspect=2,
+        palette="muted",
     )
     title = b.__name__.split(".")[-1]
     title = title.replace("_", " ").title()
