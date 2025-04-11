@@ -5,6 +5,10 @@
 import os
 import pandas as pd
 import seaborn as sns
+import warnings
+
+# Turn off warnings
+warnings.filterwarnings("ignore")
 
 import simulations.nbody_simulation
 import simulations.particle_simulation
@@ -47,18 +51,21 @@ for b in benchmarks:
     df["Time(ms)"] = df["Time(us)"] / 1000
     df["Time(s)"] = df["Time(ms)"] / 1000
     sns.set_theme(style="whitegrid")
+    df_min = df.groupby(["Name", "N"], as_index=False)["Time(ms)"].min()
     g = sns.relplot(
-        data=df,
-        x="N",
-        y="Time(ms)",
-        hue="Name",
-        kind="line",
-        height=5,
-        aspect=2,
-        palette="muted",
+      data=df_min,
+      x="N",
+      y="Time(ms)",
+      hue="Name",
+      kind="line",
+      height=5,
+      aspect=2,
+      palette="muted",
     )
     title = b.__name__.split(".")[-1]
     title = title.replace("_", " ").title()
     title = " ".join([word.capitalize() for word in title.split()])
-    g.set(xscale="log", yscale="log", title=title)
+    g.set(title=title)
+    g.ax.set_xscale("log", base=2)
+    g.ax.set_yscale("log", base=10)
     g.savefig(f"plots/{b.__name__.split('.')[-1]}.pdf")

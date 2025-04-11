@@ -96,11 +96,7 @@ def run_benchmark(csv_filepath: str) -> None:
     _steps = 1
     _step_size = 0.01
     reps = 10
-    Ns = (
-        [10 ** (i + 2) for i in range(6)]
-        + [2 * 10 ** (i + 2) for i in range(6)]
-        + [5 * 10 ** (i + 2) for i in range(6)]
-    )
+    Ns = [2 ** (i + 2) for i in range(20)]
 
     # write csv file header
     with open(csv_filepath, "w") as f:
