@@ -30,8 +30,7 @@ def param_aos(dat: dace.float64[N, props], int_comps: int, ext_comps: int):
             for i2 in range(N):
                 for j2 in range(N):
                     if i2 != j2:
-                        for p2 in range(props):
-                            dat[i2, p2] += dat[j2, p2]
+                        dat[i2, 0] += dat[j2, 0]
 
 
 # Struct of Arrays version
@@ -49,8 +48,7 @@ def param_soa(dat: dace.float64[props, N], int_comps: int, ext_comps: int):
             for i2 in range(N):
                 for j2 in range(N):
                     if i2 != j2:
-                        for p2 in range(props):
-                            dat[p2, i2] += dat[p2, j2]
+                         dat[0, i2] += dat[0, j2]
 
 
 # Function to check correctness of both implemenations
@@ -137,13 +135,21 @@ def run_benchmark(csv_filepath: str) -> None:
     aos_obj = aos.compile()
     soa_obj = soa.compile()
 
-    # Parameters
+    # Parameters (for AoS)
     _steps = 1
-    _props = 1  # Larger => better AoS
-    _int_comps = 0
-    _ext_comps = 1
+    _props = 2**14 
+    _int_comps = 1
+    _ext_comps = 0
     reps = 10
-    Ns = [2 ** (i + 2) for i in range(10)]
+    Ns = [2 ** (i + 4) for i in range(10)]
+
+    # # For SoA
+    #  _steps = 2
+    # _props = 2**18
+    # _int_comps = 0
+    # _ext_comps = 1
+    # reps = 10
+    # Ns = [2 ** (i + 4) for i in range(10)]
 
     # write csv file header
     with open(csv_filepath, "w") as f:
