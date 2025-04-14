@@ -6,6 +6,7 @@ import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib.ticker import LogFormatter
 import warnings
 
 # Turn off warnings
@@ -70,6 +71,7 @@ for b in benchmarks:
         palette=["b", "orange"],
         legend=True,
     )
+
     title = b.__name__.split(".")[-1]
     title = title.replace("_", " ").title()
     title = " ".join([word.capitalize() for word in title.split()])
@@ -79,6 +81,51 @@ for b in benchmarks:
     g.ax.set_xlabel("N (Problem Size)")
     g.ax.set_ylabel("Median Runtime (ms)")
     g.ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
+    g.ax.yaxis.set_major_formatter(LogFormatter(base=10.0))
+    g.ax.grid(True, which='both', linestyle='--', alpha=0.7)
     g.legend.remove()
     g.figure.tight_layout()
+   
+    # Annotate the bars with speedup
+    medians = df.groupby(["N", "Name"])["Time(ms)"].median().reset_index()
+    pivot = medians.pivot(index="N", columns="Name", values="Time(ms)")
+
+    for i, n in enumerate(pivot.index):
+        times = pivot.loc[n]
+        names = times.index.tolist()
+        if len(names) != 2:
+            continue  # skip if not exactly two methods
+
+        t1, t2 = times[names[0]], times[names[1]]
+        if t1 == t2:
+            continue  # skip equal runtimes
+
+        # Determine which is faster
+        off = 0
+        if t1 < t2:
+            faster_time, slower_time = t1, t2
+            faster_name = names[0]
+        else:
+            off = len(pivot.index)
+            faster_time, slower_time = t2, t1
+            faster_name = names[1]
+
+        speedup = slower_time / faster_time
+        speedup_text = f"{speedup:.3g}x"
+
+        # Find the bar's position to annotate
+        for j, bar in enumerate(g.ax.patches):
+                if i == j - off:
+                  g.ax.text(
+                      bar.get_x() + bar.get_width() / 2,
+                      bar.get_height() * 1.15,
+                      speedup_text,
+                      ha="center",
+                      va="bottom",
+                      fontsize=10,
+                      color="black",
+                  )
+                  break
+
+    
     g.figure.savefig(f"plots/{b.__name__.split('.')[-1]}.pdf")
