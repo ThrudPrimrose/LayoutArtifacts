@@ -135,21 +135,13 @@ def run_benchmark(csv_filepath: str) -> None:
     aos_obj = aos.compile()
     soa_obj = soa.compile()
 
-    # Parameters (for AoS)
-    _steps = 1
-    _props = 2**14 
-    _int_comps = 1
-    _ext_comps = 0
+    # Parameters (for SoA)
+    _steps = 2
+    _props = 2**18
+    _int_comps = 0
+    _ext_comps = 1
     reps = 10
     Ns = [2 ** (i + 4) for i in range(10)]
-
-    # # For SoA
-    #  _steps = 2
-    # _props = 2**18
-    # _int_comps = 0
-    # _ext_comps = 1
-    # reps = 10
-    # Ns = [2 ** (i + 4) for i in range(10)]
 
     # write csv file header
     with open(csv_filepath, "w") as f:

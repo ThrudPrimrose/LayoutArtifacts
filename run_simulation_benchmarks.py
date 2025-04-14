@@ -14,14 +14,16 @@ import simulations.nbody_simulation
 import simulations.particle_simulation
 import simulations.rigid_body_simulation
 import simulations.soft_body_simulation
-import simulations.param_simulation
+import simulations.param_simulation_AoS
+import simulations.param_simulation_SoA
 
 benchmarks = [
-    simulations.nbody_simulation,
-    simulations.particle_simulation,
-    simulations.rigid_body_simulation,
-    simulations.soft_body_simulation,
-    simulations.param_simulation,
+    # simulations.nbody_simulation,
+    # simulations.particle_simulation,
+    # simulations.rigid_body_simulation,
+    # simulations.soft_body_simulation,
+    simulations.param_simulation_AoS,
+    simulations.param_simulation_SoA,
 ]
 
 # Check correctness of all benchmarks
@@ -53,9 +55,9 @@ for b in benchmarks:
     df["Time(ms)"] = df["Time(us)"] / 1000
     df["Time(s)"] = df["Time(ms)"] / 1000
     sns.set_theme(style="whitegrid")
-    df_min = df.groupby(["Name", "N"], as_index=False)["Time(ms)"].min()
+    # df_min = df.groupby(["Name", "N"], as_index=False)["Time(ms)"].min()
     g = sns.relplot(
-        data=df_min,
+        data=df,
         x="N",
         y="Time(ms)",
         hue="Name",
