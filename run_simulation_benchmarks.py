@@ -5,6 +5,7 @@
 import os
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
 import warnings
 
 # Turn off warnings
@@ -54,8 +55,10 @@ for b in benchmarks:
     df = pd.read_csv(f"measurements/{b.__name__.split('.')[-1]}.csv")
     df["Time(ms)"] = df["Time(us)"] / 1000
     df["Time(s)"] = df["Time(ms)"] / 1000
-    sns.set_theme(style="whitegrid")
-    # df_min = df.groupby(["Name", "N"], as_index=False)["Time(ms)"].min()
+
+    sns.set(style="whitegrid")
+    fig, ax = plt.subplots(figsize=(6, 6))
+
     g = sns.catplot(
         data=df,
         x="N",
@@ -64,15 +67,18 @@ for b in benchmarks:
         kind="bar",
         height=5,
         aspect=2,
-        palette="muted",
+        palette=["b", "orange"],
         legend=True,
     )
     title = b.__name__.split(".")[-1]
     title = title.replace("_", " ").title()
     title = " ".join([word.capitalize() for word in title.split()])
+    title = title.replace("Aos", "AoS").replace("Soa", "SoA").replace("Param", "Parameterized")
     g.set(title=title)
     g.ax.set_yscale("log")
-    g.ax.legend()
+    g.ax.set_xlabel("N (Problem Size)")
+    g.ax.set_ylabel("Median Runtime (ms)")
+    g.ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
     g.legend.remove()
     g.figure.tight_layout()
     g.figure.savefig(f"plots/{b.__name__.split('.')[-1]}.pdf")
