@@ -56,20 +56,23 @@ for b in benchmarks:
     df["Time(s)"] = df["Time(ms)"] / 1000
     sns.set_theme(style="whitegrid")
     # df_min = df.groupby(["Name", "N"], as_index=False)["Time(ms)"].min()
-    g = sns.relplot(
+    g = sns.catplot(
         data=df,
         x="N",
         y="Time(ms)",
         hue="Name",
-        kind="line",
+        kind="bar",
         height=5,
         aspect=2,
         palette="muted",
+        legend=True,
     )
     title = b.__name__.split(".")[-1]
     title = title.replace("_", " ").title()
     title = " ".join([word.capitalize() for word in title.split()])
     g.set(title=title)
-    g.ax.set_xscale("log", base=2)
-    g.ax.set_yscale("log", base=10)
-    g.savefig(f"plots/{b.__name__.split('.')[-1]}.pdf")
+    g.ax.set_yscale("log")
+    g.ax.legend()
+    g.legend.remove()
+    g.figure.tight_layout()
+    g.figure.savefig(f"plots/{b.__name__.split('.')[-1]}.pdf")
