@@ -1,0 +1,399 @@
+Iteration 1
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3486.08 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4497.57 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8211.96 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4143.64 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5235.1 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9589.37 ms
+Iteration 2
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3496.95 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4489.95 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8158.99 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4191.94 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5217.88 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9609.68 ms
+Iteration 3
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3489.64 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4500.83 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8193.57 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4154.65 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5257.71 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9615.78 ms
+Iteration 4
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3479.59 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4489.26 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8214.31 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4125.54 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5282.2 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9611.9 ms
+Iteration 5
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3510.1 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4479.65 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8231.91 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4143.68 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5245.74 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9568.33 ms
+Iteration 6
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3407.62 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4497.02 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8205.47 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4177.84 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5257 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9619.19 ms
+Iteration 7
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3416.8 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4507.49 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8274 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4137.44 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5251.6 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9578.24 ms
+Iteration 8
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3161.2 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4556.76 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8176.33 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4166.83 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5271.39 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9556.85 ms
+Iteration 9
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3508.87 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4501.55 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8173.81 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3816.14 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5233.09 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9623 ms
+Iteration 10
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3489.56 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4496.17 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8182.09 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4094.68 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4892.57 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9592.16 ms
+Iteration 11
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3519.76 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4503.44 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8195.06 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3618.45 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5265.08 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9599.51 ms
+Iteration 12
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3353.67 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4555.51 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8212.73 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4137.57 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5253.66 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9577.08 ms
+Iteration 13
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3525.62 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4482.59 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8236.35 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4177.78 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5257.62 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9570.15 ms
+Iteration 14
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3119.92 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4498.08 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8200.41 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4162.81 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5244.11 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9646.13 ms
+Iteration 15
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3554 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4531.21 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8332.36 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4211.59 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5233.22 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9621.22 ms
+Iteration 16
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3518.52 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4511.87 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8211.58 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4182.38 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5301.96 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9645.89 ms
+Iteration 17
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3532.01 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4502.55 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8314.11 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4194.82 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5241.78 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9580.93 ms
+Iteration 18
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3213.56 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4489.56 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8220.76 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4165.42 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5305.23 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9599.8 ms
+Iteration 19
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3414.75 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4501.41 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8134.45 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4206.04 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5296.44 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9625.1 ms
+Iteration 20
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3527.38 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4493.9 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8220.69 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4115.69 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5323.3 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9745.51 ms
+Iteration 21
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 3468.41 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 4495.65 ms
+Page size:4KB
+Stencil aligned to page size. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 8191.74 ms
+Page size:4KB
+Unaligned. Num GPUs: 4
+Multi-GPU Kernel Execution Time: 4125.87 ms
+Page size:4KB
+Unaligned. Num GPUs: 2
+Multi-GPU Kernel Execution Time: 5305.13 ms
+Page size:4KB
+Unaligned. Num GPUs: 1
+Multi-GPU Kernel Execution Time: 9591.59 ms

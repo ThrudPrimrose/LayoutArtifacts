@@ -1,0 +1,50 @@
+{
+    "benchmark": {
+        "name": "2-D Jacobi stencil computation",
+        "short_name": "jacobi2d",
+        "relative_path": "polybench/jacobi_2d",
+        "module_name": "jacobi_2d",
+        "func_name": "kernel",
+        "autotuner_name": "autotuner",
+        "kind": "microbench",
+        "domain": "Physics",
+        "dwarf": "structured_grids",
+        "parameters": {
+            "S": { "TSTEPS": 50, "N": 150 },
+            "M": { "TSTEPS": 80, "N": 350 },
+            "L": { "TSTEPS": 200, "N": 700 },
+            "paper": { "TSTEPS": 1000, "N": 2800 },
+            "XL": { "TSTEPS": 200, "N": 8194 }
+        },
+        "init": {
+            "func_name": "initialize",
+            "input_args": ["N"],
+            "output_args": ["A", "B"]
+        },
+        "input_args": ["TSTEPS", "A", "B"],
+        "array_args": ["A", "B"],
+        "output_args": ["A", "B"],
+        "roofline": {
+            "S":{
+                "flops": 0,
+                "bytes": 0
+            },
+            "M": {
+                "flops": 0,
+                "bytes": 0
+            },
+            "L": {
+                "flops": 0,
+                "bytes": 0
+            },
+            "paper":{
+                "flops": 0,
+                "bytes": 0
+            },
+            "XL": {
+                "flops": 133546639360,
+                "bytes": 427557938048
+            }
+        }
+    }
+}
