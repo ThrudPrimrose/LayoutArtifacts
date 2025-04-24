@@ -9,6 +9,7 @@ The readme is structured as follows:
 + Reproducing AutoSchedule / Implicit Layout Transformation benchmark
 + Reproducing AoSvsSoA Simulation benchmark
 + Reproducing Semi-Structured Stencil benchmark
++ Reproducing Automated Schedule Search Benchmark
 + Reproducing ICON Velocity Tendencies benchmark
 
 All chapters provide how to reproduce the experiment as well as the plots from the data obtained from the experiments.
@@ -37,7 +38,31 @@ cd /workspace/artifacts/ComplexGEMM
 ./reproduce.sh
 ```
 
-It generates the scripts used to run the experiments and runs them one by one. Illegal tiling configurations can result with an abortion of the program therefore the job is launched repeatedly. (Illegal tiling configurations are discarded).
+The script runs the following commands:
+```bash
+# Checkout correct DaCe branch and version
+cd /workspace/dace
+git checkout 2d370ba
+cd /workspace/artifacts/ComplexGEMM
+
+# Generate submission scripts for the Docker version
+python3.10 submit_docker.py
+
+# Run the generated scripts
+for script in ./temp_*; do
+    if [[ -f "$script" ]]; then
+        # Make the script executable if it is not
+        if [[ ! -x "$script" ]]; then
+            echo "Making $script executable..."
+            chmod +x "$script"
+        fi
+        echo "Running $script..."
+        "$script"
+    fi
+done
+```
+
+It generates the scripts used to run the experiments and runs them one by one. Illegal tiling configurations can result with an abortion of the program therefore the job is launched repeatedly. (Illegal tiling configurations are discarded from output).
 
 To reproduce the plots used in the publication:
 ```bash
@@ -78,6 +103,27 @@ python3.10 merge.py
 python3.10 roofline3.py
 ```
 
-The reproduce script in the folder runs the same commands.
+The reproduce script in the folder runs the same commands to reproduce the.
 
 ## Reproducing AoS-vs-SoA Benchmark
+
+This benchmark runs on CPUs. To reproduce the results:
+
+```bash
+cd /workspace/dace
+git checkout 80756d9
+cd /workspace/artifacts/AoSvsSoASimulations
+python3.10 run_simulation_benchmarks.py
+```
+
+To plot:
+```bash
+cd /workspace/artifacts/AoSvsSoASimulations
+#TODO
+```
+
+## Reproducing Semi-Structured Stencil benchmark
+
+## Reproducing Automated Schedule Search Benchmark
+
+## Reproducing ICON Velocity Tendencies benchmark
