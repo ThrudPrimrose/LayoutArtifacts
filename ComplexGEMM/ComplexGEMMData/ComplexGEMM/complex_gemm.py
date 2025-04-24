@@ -95,7 +95,7 @@ if args.layout == "AoS":
             if isinstance(n, dace.nodes.MapEntry):
                 _move_acc_to_tmp(s, n)
 
-    sdfg1.name += f"_{args.layout}_{args.m}_{args.m}_{args.k}"
+    sdfg1.name += f"_{args.layout}_{args.m}_{args.n}_{args.k}"
     #sdfg1.save("complex_gemm_aos.sdfgz", compress=True)
 
 else:
@@ -378,7 +378,7 @@ if gpu == "nvidia":
     static_sram = 48*1024
 elif gpu == "amd":
     warp_size = 64
-    static_sram = 64*1024
+    static_sram = 48*1024 #64*1024
 
 memory_tiling = [(16,), (32,), (64,), (128,)]
 
@@ -433,7 +433,7 @@ if args.layout == "SoA":
         device_schedule = dace.dtypes.ScheduleType.GPU_Device,
         re_apply=False,
         verbose=True,
-        timeout=500,
+        timeout=5000,
         random_iter=True,
         static_sram_limit=static_sram,
         bound_dims=[_M, _N],
@@ -454,7 +454,7 @@ else:
         device_schedule = dace.dtypes.ScheduleType.GPU_Device,
         re_apply=False,
         verbose=True,
-        timeout=500,
+        timeout=5000,
         random_iter=True,
         static_sram_limit=static_sram,
         bound_dims=[_M, _N],
