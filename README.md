@@ -107,7 +107,7 @@ The reproduce script in the folder runs the same commands to reproduce the.
 
 ## Reproducing AoS-vs-SoA Benchmark
 
-This benchmark runs on CPUs. To reproduce the results:
+This benchmark runs on CPUs. To reproduce the results and to plot the results (the plot will have a different format than in the publication):
 
 ```bash
 cd /workspace/dace
@@ -116,7 +116,7 @@ cd /workspace/artifacts/AoSvsSoASimulations
 python3.10 run_simulation_benchmarks.py
 ```
 
-To plot:
+To plot using the publication data (to get the plot used in the publication):
 ```bash
 cd /workspace/artifacts/AoSvsSoASimulations
 #TODO
@@ -125,5 +125,28 @@ cd /workspace/artifacts/AoSvsSoASimulations
 ## Reproducing Semi-Structured Stencil benchmark
 
 ## Reproducing Automated Schedule Search Benchmark
+
+To run varying GEMM configurations and create the data for A100 run:
+```bash
+cd /workspace/artifacts/MatMulJourney/publication_data
+# Generate random matrix data, binary
+python3.10 gen_data.py
+# Compile with different template parameters and run
+python3.10 runner.py
+mv output.csv output_16k_a100.csv
+# To plot:
+python3.10 plotter2.py
+```
+
+To run on other devices and matrix sizes the scripts need to be manually changes.
+In publication it was run on an A100 GPU and on dimensions M=N=K=16384.
+
+To plot using the publication data (to get the plot used in the publication):
+```bash
+cd /workspace/artifacts/MatMulJourney/publication_data
+python3.10 plotter2.py
+```
+
+The plot named `16k_a100_Inner-ProductHistory_16k_a100.pdf` was used for the publication.
 
 ## Reproducing ICON Velocity Tendencies benchmark
