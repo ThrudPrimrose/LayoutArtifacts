@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_cpu.py", line 4, in <module>
+    import dace
+ModuleNotFoundError: No module named 'dace'

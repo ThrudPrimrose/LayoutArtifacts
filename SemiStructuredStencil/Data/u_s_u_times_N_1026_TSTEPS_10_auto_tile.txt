@@ -1,0 +1,2 @@
+N: 1026, TSTEPS: 10
+Repeat: 0

@@ -1,0 +1,45 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "kernel_22". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+AMD GPU detected: AMD Radeon Graphics
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/compiler.py", line 245, in configure_and_compile
+    _run_liveoutput("cmake --build . --config %s" % (Config.get('compiler', 'build_type')),
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/compiler.py", line 429, in _run_liveoutput
+    raise subprocess.CalledProcessError(process.returncode, command, output.getvalue())
+subprocess.CalledProcessError: Command 'cmake --build . --config RelWithDebInfo' returned non-zero exit status 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 231, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 911, in auto_tile_gpu
+    best_config = _tile_gpu(
+                  ^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 119, in _tile_gpu
+    _kernel_sdfg(**copy_inputs)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2472, in __call__
+    binaryobj = sdfg.compile()
+                ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2396, in compile
+    shared_library = compiler.configure_and_compile(program_folder, sdfg.name)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/compiler.py", line 254, in configure_and_compile
+    raise cgx.CompilationError('Compiler failure:\n' + ex.output)
+dace.codegen.exceptions.CompilationError: Compiler failure:
+[ 20%] Building CXX object CMakeFiles/gpu_usu_transposed_258_auto_tiled_0.dir/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/gpu_usu_transposed_258_auto_tiled_0_6f3e0bd5f4d25a77e854bbacf112a2c1/src/cpu/gpu_usu_transposed_258_auto_tiled_0.cpp.o
+[ 40%] Building HIP object CMakeFiles/gpu_usu_transposed_258_auto_tiled_0.dir/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/gpu_usu_transposed_258_auto_tiled_0_6f3e0bd5f4d25a77e854bbacf112a2c1/src/cuda/hip/gpu_usu_transposed_258_auto_tiled_0_cuda.cpp.o
+In file included from /capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/gpu_usu_transposed_258_auto_tiled_0_6f3e0bd5f4d25a77e854bbacf112a2c1/src/cuda/hip/gpu_usu_transposed_258_auto_tiled_0_cuda.cpp:3:
+In file included from /capstor/scratch/cscs/ybudanaz/dace/dace/codegen/../runtime/include/dace/dace.h:14:
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/../runtime/include/dace/types.h:46:14: fatal error: 'thrust/complex.h' file not found
+   46 |     #include <thrust/complex.h>
+      |              ^~~~~~~~~~~~~~~~~~
+1 error generated when compiling for gfx942.
+gmake[2]: *** [CMakeFiles/gpu_usu_transposed_258_auto_tiled_0.dir/build.make:89: CMakeFiles/gpu_usu_transposed_258_auto_tiled_0.dir/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/gpu_usu_transposed_258_auto_tiled_0_6f3e0bd5f4d25a77e854bbacf112a2c1/src/cuda/hip/gpu_usu_transposed_258_auto_tiled_0_cuda.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/gpu_usu_transposed_258_auto_tiled_0.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2
+

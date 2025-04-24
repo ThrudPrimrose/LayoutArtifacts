@@ -1,0 +1,2100 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 53 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 211, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2602, in simplify
+    pass_options=options, skip=skip).apply_pass(self, {})
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 163, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 608, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 563, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 133, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 78, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 250, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1024, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 722, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.

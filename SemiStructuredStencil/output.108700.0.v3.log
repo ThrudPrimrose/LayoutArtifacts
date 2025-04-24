@@ -1,0 +1,47 @@
+AMD GPU detected: AMD Radeon Graphics
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 230, in <module>
+    tsdfg.name = f"gpu_usu_transposed_{_N}"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "kernel_22". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+AMD GPU detected: AMD Radeon Graphics
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 231, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 911, in auto_tile_gpu
+    best_config = _tile_gpu(
+                  ^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 120, in _tile_gpu
+    output_from_non_transformed = copy.deepcopy(copy_inputs[output_name])
+                                                ~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'Cr'
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "kernel_22". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+AMD GPU detected: AMD Radeon Graphics
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 231, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 911, in auto_tile_gpu
+    best_config = _tile_gpu(
+                  ^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 120, in _tile_gpu
+    output_from_non_transformed = copy.deepcopy(copy_inputs[output_name])
+                                                ~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'Cr'
+slurmstepd: error: *** STEP 108700.0 ON nid002922 CANCELLED AT 2025-04-11T20:57:50 ***

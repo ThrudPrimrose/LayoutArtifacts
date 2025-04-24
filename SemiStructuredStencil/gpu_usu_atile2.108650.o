@@ -1,0 +1,33 @@
+Launching 3 jobs on different GPUs...
+Job steps submitted...
+         STEPID     NAME PARTITION     USER      TIME NODELIST
+  108629.extern   extern     mi300 ybudanaz   1:46:58 nid002922
+   108629.batch    batch     mi300 ybudanaz   1:46:58 nid002922
+  108630.extern   extern     mi300 ybudanaz   1:46:58 nid002926
+   108630.batch    batch     mi300 ybudanaz   1:46:58 nid002926
+  108631.extern   extern     mi300 ybudanaz   1:46:58 nid002928
+   108631.batch    batch     mi300 ybudanaz   1:46:58 nid002928
+  108632.extern   extern     mi300 ybudanaz   1:46:58 nid002932
+   108632.batch    batch     mi300 ybudanaz   1:46:58 nid002932
+  108633.extern   extern     mi300 ybudanaz   1:46:58 nid002934
+   108633.batch    batch     mi300 ybudanaz   1:46:58 nid002934
+  108634.extern   extern     mi300 ybudanaz   1:46:58 nid002936
+   108634.batch    batch     mi300 ybudanaz   1:46:58 nid002936
+  108635.extern   extern     mi300 ybudanaz   1:46:58 nid002938
+   108635.batch    batch     mi300 ybudanaz   1:46:58 nid002938
+  108636.extern   extern     mi300 ybudanaz   1:46:58 nid002952
+   108636.batch    batch     mi300 ybudanaz   1:46:58 nid002952
+  108648.extern   extern     mi300 ybudanaz      0:34 nid[002958,002960,002962,002964]
+   108648.batch    batch     mi300 ybudanaz      0:34 nid002958
+       108648.0     bash     mi300 ybudanaz      0:16 nid002958
+       108648.1     bash     mi300 ybudanaz      0:16 nid002960
+       108648.2     bash     mi300 ybudanaz      0:16 nid002962
+       108648.3     bash     mi300 ybudanaz      0:16 nid002964
+  108649.extern   extern     mi300 ybudanaz      0:16 nid[002966,002968]
+   108649.batch    batch     mi300 ybudanaz      0:16 nid002966
+       108649.0     bash     mi300 ybudanaz      0:03 nid002966
+       108649.1     bash     mi300 ybudanaz      0:03 nid002968
+  108650.extern   extern     mi300 ybudanaz      0:13 nid[002970,002984]
+   108650.batch    batch     mi300 ybudanaz      0:13 nid002970
+       108650.0     bash     mi300 ybudanaz      0:01 nid002970
+       108650.1     bash     mi300 ybudanaz      0:01 nid002984

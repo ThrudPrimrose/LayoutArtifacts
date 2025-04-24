@@ -1,0 +1,255 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "kernel_22". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+AMD GPU detected: AMD Radeon Graphics
+Read best config and time as ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False), 14.493799999999998, continuing search
+Skipping ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 2), (4, 32, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 16), (4, 2, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 4), (256, 1, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 2, 1), (32, 2, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 4), (64, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 2, 2), (64, 2, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 2, 1), (4, 32, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 16), (16, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 2, 1), (16, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 2, 1), (32, 8, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 1), (64, 4, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 16, 2), (128, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 8), (8, 16, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 2), (4, 16, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 1), (64, 2, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 2), (2, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 16), (8, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 4), (16, 32, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 8, 2), (2, 32, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 2, 4), (4, 16, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 16, 1), (8, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 1), (2, 32, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 4), (8, 2, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 8), (64, 4, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 2, 1), (32, 32, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 2, 1), (32, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 1, 1), (2, 8, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 2, 1), (2, 32, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 16, 1), (256, 1, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 8, 2), (128, 4, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 2), (64, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 2, 8), (1, 32, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 16), (32, 8, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 8, 2), (1, 16, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 2), (32, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 1), (1, 8, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 16, 2), (4, 16, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 1), (32, 32, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 1, 2), (32, 4, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 16, 1), (1, 16, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 1), (16, 2, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 1), (1, 16, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 2), (4, 32, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 1), (16, 8, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 2), (8, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 2), (4, 32, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 4), (4, 8, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 2), (8, 8, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 4), (32, 4, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 8), (128, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 4), (256, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 1), (16, 32, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 2), (8, 4, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 1), (4, 16, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 8), (256, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 4), (2, 8, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 16, 1), (64, 8, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 2, 2), (32, 2, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 2), (2, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 2, 4), (2, 2, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 2, 1), (32, 8, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 4), (2, 32, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 1), (4, 4, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 8, 1), (256, 4, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 2), (256, 4, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 2, 2), (16, 8, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 8), (2, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 8, 1), (8, 8, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 2), (64, 8, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 2, 1), (8, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 2, 4), (16, 2, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 16, 1), (32, 16, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 1), (2, 16, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 1), (32, 4, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 16), (2, 16, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 16), (128, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 2), (2, 32, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 2, 2), (8, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 1), (8, 32, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 4), (16, 32, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 8, 1), (4, 16, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 2), (128, 4, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 8, 1), (32, 8, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 4), (8, 16, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 2), (1, 2, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 2), (2, 32, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 4), (1, 16, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 2, 4), (32, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 1), (32, 4, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 1), (2, 16, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 4), (32, 2, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 2), (2, 32, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 16, 1), (8, 4, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 8), (4, 8, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 16), (128, 2, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 2), (32, 8, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 2), (32, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 4), (64, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 2), (2, 16, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 1, 2), (16, 32, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 4), (16, 4, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 4), (32, 4, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 4), (1, 2, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 2), (8, 16, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 16), (16, 16, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 8), (8, 4, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 2, 8), (4, 16, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 16), (4, 4, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 1, 1), (1, 32, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 16, 1), (256, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 8), (256, 1, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 4), (16, 4, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 16), (8, 16, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 2, 1), (32, 32, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 4), (1, 32, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 8), (32, 2, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 16), (1, 32, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 4, 1), (2, 16, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 4, 1), (64, 2, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 16), (8, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 16, 1), (8, 32, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 8, 1), (2, 4, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 2), (8, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 2, 8), (32, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 4), (1, 8, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 4), (2, 16, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 2, 1), (4, 16, 8), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 2, 1), (32, 2, 4), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 2), (8, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 16, 2), (1, 2, 32), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 2, 4), (1, 16, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 2, 1), (8, 2, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 8), (8, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (16, 2, 1), (1, 32, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (2, 1, 1), (32, 16, 2), (False, False, False), False) it was profiled before
+Skipping ((1,), (1, 1, 2), (2, 16, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 1, 2), (8, 8, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (4, 4, 1), (8, 4, 16), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 1, 4), (32, 16, 1), (False, False, False), False) it was profiled before
+Skipping ((1,), (8, 2, 1), (32, 16, 1), (False, False, False), False) it was profiled before
+Current config: ((1,), (16, 2, 1), (128, 2, 1), (False, False, False), False)
+Skipping ((1,), (16, 2, 1), (128, 2, 1), (False, False, False), False) as it exceeds bound dims
+
+Numerical verification failed!
+  SDFG: gpu_usu_transposed_1026
+  Entry node: kernel_22
+  Config: ((1,), (16, 2, 1), (128, 2, 1), (False, False, False), False)
+  Max absolute difference: 5.266262e+05
+  Max relative difference: 2.716368e+04
+  Saved failing SDFG as 'failing.sdfgz'
+tensor([[[0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00]],
+
+        [[0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 1.6791e+02, 3.3583e+02,  ..., 1.7178e+05,
+          1.7194e+05, 0.0000e+00]],
+
+        [[0.0000e+00, 1.5774e+02, 3.1547e+02,  ..., 1.6136e+05,
+          1.6152e+05, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 3.7871e+02, 7.5742e+02,  ..., 3.8742e+05,
+          3.8780e+05, 0.0000e+00]],
+
+        ...,
+
+        [[0.0000e+00, 2.0015e+02, 4.0030e+02,  ..., 2.0476e+05,
+          2.0496e+05, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 2.5951e+02, 5.1902e+02,  ..., 2.6548e+05,
+          2.6574e+05, 0.0000e+00]],
+
+        [[0.0000e+00, 3.7220e+02, 7.4439e+02,  ..., 3.8076e+05,
+          3.8113e+05, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 2.0755e+02, 4.1510e+02,  ..., 2.1232e+05,
+          2.1253e+05, 0.0000e+00]],
+
+        [[0.0000e+00, 1.8226e+02, 3.6452e+02,  ..., 1.8645e+05,
+          1.8663e+05, 0.0000e+00],
+         [0.0000e+00, 1.2695e+02, 2.5390e+02,  ..., 1.2987e+05,
+          1.3000e+05, 0.0000e+00],
+         [0.0000e+00, 2.8608e+02, 5.7217e+02,  ..., 2.9266e+05,
+          2.9295e+05, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00]]], device='cuda:0', dtype=torch.float64)
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 233, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 911, in auto_tile_gpu
+    best_config = _tile_gpu(
+                  ^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 443, in _tile_gpu
+    np.savetxt("matrix.txt", abs_diff.cpu().numpy(), fmt="%.4f")
+  File "/capstor/scratch/cscs/ybudanaz/.def/lib64/python3.11/site-packages/numpy/lib/npyio.py", line 1570, in savetxt
+    raise ValueError(
+ValueError: Expected 1D or 2D array, got 3D array instead

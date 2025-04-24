@@ -1,0 +1,1798 @@
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 244, in <module>
+    sdfg = kernel.to_sdfg(use_cache=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 283, in to_sdfg
+    sdfg = self._parse(args, kwargs, simplify=simplify, save=save, validate=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/frontend/python/parser.py", line 509, in _parse
+    sdfg.simplify(validate=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2532, in simplify
+    pass_options=options).apply_pass(self, {})
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 156, in apply_pass
+    result = super().apply_pass(sdfg, pipeline_results)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 614, in apply_pass
+    newret = super().apply_pass(sdfg, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/pass_pipeline.py", line 574, in apply_pass
+    r = self.apply_subpass(sdfg, p, state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py", line 126, in apply_subpass
+    subret = p.apply_pass(sd, state)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 76, in apply_pass
+    removed_nodes |= self.remove_redundant_copies(sdfg, state, removable_data, access_nodes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/array_elimination.py", line 255, in remove_redundant_copies
+    ret = xform.apply(state, sdfg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 1016, in apply
+    e3.data.subset = compose_and_push_back(aset, bset, a_dims_to_pop, popped)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/dataflow/redundant_array.py", line 147, in compose_and_push_back
+    subset = first.compose(second)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/subsets.py", line 718, in compose
+    raise ValueError("Dimension mismatch in composition: "
+ValueError: Dimension mismatch in composition: Subset composed must be either completely stripped of all non-data dimensions or be not stripped of latter at all.
+usage: unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py [-h]
+                                                          N_values
+                                                          [N_values ...]
+unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py: error: argument N_values: invalid int value: '1026v'

@@ -1,0 +1,31 @@
+Launching 3 jobs on different GPUs...
+Job steps submitted...
+         STEPID     NAME PARTITION     USER      TIME NODELIST
+  108633.extern   extern     mi300 ybudanaz   7:44:58 nid002934
+   108633.batch    batch     mi300 ybudanaz   7:44:58 nid002934
+  108634.extern   extern     mi300 ybudanaz   7:44:58 nid002936
+   108634.batch    batch     mi300 ybudanaz   7:44:58 nid002936
+  108648.extern   extern     mi300 ybudanaz   5:58:34 nid[002958,002960,002962,002964]
+   108648.batch    batch     mi300 ybudanaz   5:58:34 nid002958
+       108648.0     bash     mi300 ybudanaz   5:58:16 nid002958
+       108648.1     bash     mi300 ybudanaz   5:58:16 nid002960
+       108648.2     bash     mi300 ybudanaz   5:58:16 nid002962
+       108648.3     bash     mi300 ybudanaz   5:58:16 nid002964
+  108663.extern   extern     mi300 ybudanaz   4:40:57 nid002932
+   108663.batch    batch     mi300 ybudanaz   4:40:57 nid002932
+  108664.extern   extern     mi300 ybudanaz   4:40:57 nid002938
+   108664.batch    batch     mi300 ybudanaz   4:40:57 nid002938
+  108698.extern   extern     mi300 ybudanaz     22:33 nid002970
+   108698.batch    batch     mi300 ybudanaz     22:33 nid002970
+       108698.2     bash     mi300 ybudanaz     14:30 nid002970
+  108699.extern   extern     mi300 ybudanaz     22:30 nid002984
+   108699.batch    batch     mi300 ybudanaz     22:30 nid002984
+       108699.3     bash     mi300 ybudanaz      1:06 nid002984
+  108700.extern   extern     mi300 ybudanaz      0:36 nid[002922,002924]
+   108700.batch    batch     mi300 ybudanaz      0:36 nid002922
+       108700.0     bash     mi300 ybudanaz      0:01 nid002922
+       108700.1     bash     mi300 ybudanaz      0:01 nid002924
+  108701.extern   extern     mi300 ybudanaz      0:33 nid[002926,002928]
+   108701.batch    batch     mi300 ybudanaz      0:33 nid002926
+       108701.0     bash     mi300 ybudanaz      0:01 nid002926
+       108701.1     bash     mi300 ybudanaz      0:01 nid002928

@@ -1,0 +1,69 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "kernel_21". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+Cannot inline SDFG kernel_21_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_21_8: 2 nested SDFG must have exactly one state. BinOp_23_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_21_8: 2 nested SDFG must have exactly one state. BinOp_23_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_21_8: 2 nested SDFG must have exactly one state. BinOp_23_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_21_8: 2 nested SDFG must have exactly one state. BinOp_23_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_21_8: 2 nested SDFG must have exactly one state. BinOp_23_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_21_8: 2 nested SDFG must have exactly one state. BinOp_23_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/compiler.py", line 245, in configure_and_compile
+    _run_liveoutput("cmake --build . --config %s" % (Config.get('compiler', 'build_type')),
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/compiler.py", line 429, in _run_liveoutput
+    raise subprocess.CalledProcessError(process.returncode, command, output.getvalue())
+subprocess.CalledProcessError: Command 'cmake --build . --config RelWithDebInfo' returned non-zero exit status 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_v2.py", line 198, in <module>
+    sdfg(vals_A=vals_A2, vals_B=vals_B2, neighbors=neighbors, N=_N, TSTEPS=_TSTEPS)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2545, in __call__
+    binaryobj = sdfg.compile()
+                ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2469, in compile
+    shared_library = compiler.configure_and_compile(program_folder, sdfg.name)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/compiler.py", line 254, in configure_and_compile
+    raise cgx.CompilationError('Compiler failure:\n' + ex.output)
+dace.codegen.exceptions.CompilationError: Compiler failure:
+[ 20%] Building CXX object CMakeFiles/kernel.dir/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp.o
+/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp:33:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   33 |             hipEventCreate(&__dace_ev_b1_0_0);
+      |             ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~
+/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp:35:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   35 |             hipEventCreate(&__dace_ev_e1_0_0);
+      |             ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~
+/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp:36:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   36 |             hipEventRecord(__dace_ev_b1_0_0, __state->gpu_context->streams[0]);
+      |             ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp:38:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   38 |             hipEventRecord(__dace_ev_e1_0_0, __state->gpu_context->streams[0]);
+      |             ^~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp:40:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   40 |             hipEventSynchronize(__dace_ev_e1_0_0);
+      |             ^~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~
+/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp:41:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   41 |             hipEventElapsedTime(&__dace_ms_1_0_0, __dace_ev_b1_0_0, __dace_ev_e1_0_0);
+      |             ^~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp:48:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   48 |             hipEventDestroy(__dace_ev_b1_0_0);
+      |             ^~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~
+/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cpu/kernel.cpp:49:13: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+   49 |             hipEventDestroy(__dace_ev_e1_0_0);
+      |             ^~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~
+8 warnings generated.
+[ 40%] Building HIP object CMakeFiles/kernel.dir/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cuda/hip/kernel_cuda.cpp.o
+In file included from /capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cuda/hip/kernel_cuda.cpp:3:
+In file included from /capstor/scratch/cscs/ybudanaz/dace/dace/codegen/../runtime/include/dace/dace.h:14:
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/../runtime/include/dace/types.h:44:14: fatal error: 'thrust/complex.h' file not found
+   44 |     #include <thrust/complex.h>
+      |              ^~~~~~~~~~~~~~~~~~
+1 error generated when compiling for gfx942.
+gmake[2]: *** [CMakeFiles/kernel.dir/build.make:89: CMakeFiles/kernel.dir/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/.dacecache/kernel_669e3876ba6dab37e11e5237f2c8017e/src/cuda/hip/kernel_cuda.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/kernel.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2
+

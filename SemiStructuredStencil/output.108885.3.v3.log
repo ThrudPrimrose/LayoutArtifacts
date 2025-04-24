@@ -1,0 +1,4 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "kernel_22". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+:0:rocdevice.cpp            :2986: 2684149234652 us: [pid:60084 tid:0x1466ce5ff700] Callback: Queue 0x1466cd400000 aborting with error : HSA_STATUS_ERROR_MEMORY_APERTURE_VIOLATION: The agent attempted to access memory beyond the largest legal address. code: 0x29
+/usr/local/bin/bash: line 2: 60084 Aborted                 (core dumped) /capstor/scratch/cscs/ybudanaz/.def/bin/python unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py 258

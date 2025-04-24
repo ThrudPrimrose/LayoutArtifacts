@@ -1,0 +1,1 @@
+slurmstepd: error: *** JOB 108701 ON nid002926 CANCELLED AT 2025-04-11T20:57:43 ***

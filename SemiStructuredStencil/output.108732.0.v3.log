@@ -1,0 +1,678 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "kernel_22". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+AMD GPU detected: AMD Radeon Graphics
+Read best config and time as None, None, continuing search
+Current config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Transformed SDFG: 14.4938000000 ms
+Current config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 2), (4, 32, 8), (False, False, False), False)
+Transformed SDFG: 123.7222000000 ms
+Current config: ((1,), (1, 2, 2), (4, 32, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 16), (4, 2, 32), (False, False, False), False)
+Transformed SDFG: 482.8384000000 ms
+Current config: ((1,), (1, 2, 16), (4, 2, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 4), (256, 1, 1), (False, False, False), False)
+Transformed SDFG: 1490.0870000000 ms
+Current config: ((1,), (2, 4, 4), (256, 1, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 2, 1), (32, 2, 8), (False, False, False), False)
+Transformed SDFG: 850.7906000000 ms
+Current config: ((1,), (8, 2, 1), (32, 2, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 4), (64, 2, 1), (False, False, False), False)
+Transformed SDFG: 1095.1164000000 ms
+Current config: ((1,), (8, 1, 4), (64, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 2, 2), (64, 2, 2), (False, False, False), False)
+Transformed SDFG: 936.3364000000 ms
+Current config: ((1,), (2, 2, 2), (64, 2, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 2, 1), (4, 32, 4), (False, False, False), False)
+Transformed SDFG: 254.0456000000 ms
+Current config: ((1,), (16, 2, 1), (4, 32, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 16), (16, 16, 1), (False, False, False), False)
+Transformed SDFG: 152.9786000000 ms
+Current config: ((1,), (1, 2, 16), (16, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 2, 1), (16, 16, 1), (False, False, False), False)
+Transformed SDFG: 316.1168000000 ms
+Current config: ((1,), (8, 2, 1), (16, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 2, 1), (32, 8, 2), (False, False, False), False)
+Transformed SDFG: 359.8818000000 ms
+Current config: ((1,), (2, 2, 1), (32, 8, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 1), (64, 4, 2), (False, False, False), False)
+Transformed SDFG: 422.4872000000 ms
+Current config: ((1,), (2, 1, 1), (64, 4, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 16, 2), (128, 2, 1), (False, False, False), False)
+Transformed SDFG: 1444.5678000000 ms
+Current config: ((1,), (1, 16, 2), (128, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 8), (8, 16, 8), (False, False, False), False)
+Transformed SDFG: 154.3548000000 ms
+Current config: ((1,), (1, 2, 8), (8, 16, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 2), (4, 16, 4), (False, False, False), False)
+Transformed SDFG: 193.1336000000 ms
+Current config: ((1,), (2, 1, 2), (4, 16, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 1), (64, 2, 2), (False, False, False), False)
+Transformed SDFG: 935.6188000000 ms
+Current config: ((1,), (8, 1, 1), (64, 2, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 2), (2, 2, 16), (False, False, False), False)
+Transformed SDFG: 830.3564000000 ms
+Current config: ((1,), (2, 1, 2), (2, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 16), (8, 2, 16), (False, False, False), False)
+Transformed SDFG: 485.1508000000 ms
+Current config: ((1,), (1, 2, 16), (8, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 4), (16, 32, 2), (False, False, False), False)
+Transformed SDFG: 138.1360000000 ms
+Current config: ((1,), (1, 2, 4), (16, 32, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 8, 2), (2, 32, 8), (False, False, False), False)
+Transformed SDFG: 822.2296000000 ms
+Current config: ((1,), (2, 8, 2), (2, 32, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 2, 4), (4, 16, 4), (False, False, False), False)
+Transformed SDFG: 275.6596000000 ms
+Current config: ((1,), (4, 2, 4), (4, 16, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 16, 1), (8, 2, 16), (False, False, False), False)
+Transformed SDFG: 1483.0182000000 ms
+Current config: ((1,), (1, 16, 1), (8, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 1), (2, 32, 8), (False, False, False), False)
+Transformed SDFG: 123.5088000000 ms
+Current config: ((1,), (1, 2, 1), (2, 32, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 4), (8, 2, 32), (False, False, False), False)
+Transformed SDFG: 835.7252000000 ms
+Current config: ((1,), (1, 1, 4), (8, 2, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 8), (64, 4, 1), (False, False, False), False)
+Transformed SDFG: 738.1266000000 ms
+Current config: ((1,), (4, 1, 8), (64, 4, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 2, 1), (32, 32, 1), (False, False, False), False)
+Transformed SDFG: 471.8068000000 ms
+Current config: ((1,), (16, 2, 1), (32, 32, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 2, 1), (32, 2, 1), (False, False, False), False)
+Transformed SDFG: 713.1604000000 ms
+Current config: ((1,), (4, 2, 1), (32, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 1, 1), (2, 8, 32), (False, False, False), False)
+Transformed SDFG: 290.6826000000 ms
+Current config: ((1,), (16, 1, 1), (2, 8, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 2, 1), (2, 32, 4), (False, False, False), False)
+Transformed SDFG: 230.3716000000 ms
+Current config: ((1,), (4, 2, 1), (2, 32, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 16, 1), (256, 1, 1), (False, False, False), False)
+Transformed SDFG: 1558.9732000000 ms
+Current config: ((1,), (2, 16, 1), (256, 1, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 8, 2), (128, 4, 1), (False, False, False), False)
+Transformed SDFG: 388.1924000000 ms
+Current config: ((1,), (1, 8, 2), (128, 4, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 2), (64, 16, 1), (False, False, False), False)
+Transformed SDFG: 269.8486000000 ms
+Current config: ((1,), (1, 2, 2), (64, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 2, 8), (1, 32, 32), (False, False, False), False)
+Transformed SDFG: 124.2376000000 ms
+Current config: ((1,), (2, 2, 8), (1, 32, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 16), (32, 8, 1), (False, False, False), False)
+Transformed SDFG: 341.5970000000 ms
+Current config: ((1,), (1, 1, 16), (32, 8, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 8, 2), (1, 16, 4), (False, False, False), False)
+Transformed SDFG: 143.0950000000 ms
+Current config: ((1,), (1, 8, 2), (1, 16, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 2), (32, 2, 16), (False, False, False), False)
+Transformed SDFG: 979.8710000000 ms
+Current config: ((1,), (4, 4, 2), (32, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 1), (1, 8, 32), (False, False, False), False)
+Transformed SDFG: 286.5482000000 ms
+Current config: ((1,), (8, 1, 1), (1, 8, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 16, 2), (4, 16, 8), (False, False, False), False)
+Transformed SDFG: 1483.6258000000 ms
+Current config: ((1,), (1, 16, 2), (4, 16, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 1), (32, 32, 1), (False, False, False), False)
+Transformed SDFG: 540.4604000000 ms
+Current config: ((1,), (2, 4, 1), (32, 32, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 1, 2), (32, 4, 8), (False, False, False), False)
+Transformed SDFG: 593.2640000000 ms
+Current config: ((1,), (16, 1, 2), (32, 4, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 16, 1), (1, 16, 4), (False, False, False), False)
+Transformed SDFG: 1306.9330000000 ms
+Current config: ((1,), (2, 16, 1), (1, 16, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 1), (16, 2, 2), (False, False, False), False)
+Transformed SDFG: 289.5374000000 ms
+Current config: ((1,), (1, 4, 1), (16, 2, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 1), (1, 16, 32), (False, False, False), False)
+Transformed SDFG: 124.1960000000 ms
+Current config: ((1,), (1, 4, 1), (1, 16, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 2), (4, 32, 8), (False, False, False), False)
+Transformed SDFG: 454.2114000000 ms
+Current config: ((1,), (4, 4, 2), (4, 32, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 1), (16, 8, 8), (False, False, False), False)
+Transformed SDFG: 570.5086000000 ms
+Current config: ((1,), (2, 4, 1), (16, 8, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 2), (8, 16, 1), (False, False, False), False)
+Transformed SDFG: 134.9972000000 ms
+Current config: ((1,), (1, 4, 2), (8, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 2), (4, 32, 4), (False, False, False), False)
+Transformed SDFG: 149.1638000000 ms
+Current config: ((1,), (4, 1, 2), (4, 32, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 4), (4, 8, 32), (False, False, False), False)
+Transformed SDFG: 147.6384000000 ms
+Current config: ((1,), (1, 4, 4), (4, 8, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 2), (8, 8, 16), (False, False, False), False)
+Transformed SDFG: 285.5760000000 ms
+Current config: ((1,), (1, 1, 2), (8, 8, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 4), (32, 4, 1), (False, False, False), False)
+Transformed SDFG: 255.4770000000 ms
+Current config: ((1,), (1, 4, 4), (32, 4, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 8), (128, 2, 1), (False, False, False), False)
+Transformed SDFG: 528.4496000000 ms
+Current config: ((1,), (1, 2, 8), (128, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 4), (256, 2, 1), (False, False, False), False)
+Transformed SDFG: 906.7618000000 ms
+Current config: ((1,), (1, 2, 4), (256, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 1), (16, 32, 1), (False, False, False), False)
+Transformed SDFG: 147.3332000000 ms
+Current config: ((1,), (2, 1, 1), (16, 32, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 2), (8, 4, 16), (False, False, False), False)
+Transformed SDFG: 289.8374000000 ms
+Current config: ((1,), (1, 2, 2), (8, 4, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 1), (4, 16, 4), (False, False, False), False)
+Transformed SDFG: 123.6406000000 ms
+Current config: ((1,), (1, 4, 1), (4, 16, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 8), (256, 2, 1), (False, False, False), False)
+Transformed SDFG: 810.3498000000 ms
+Current config: ((1,), (1, 4, 8), (256, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 4), (2, 8, 32), (False, False, False), False)
+Transformed SDFG: 288.5794000000 ms
+Current config: ((1,), (8, 1, 4), (2, 8, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 16, 1), (64, 8, 2), (False, False, False), False)
+Transformed SDFG: 1484.5394000000 ms
+Current config: ((1,), (1, 16, 1), (64, 8, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 2, 2), (32, 2, 4), (False, False, False), False)
+Transformed SDFG: 773.4318000000 ms
+Current config: ((1,), (2, 2, 2), (32, 2, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 2), (2, 2, 16), (False, False, False), False)
+Transformed SDFG: 810.4418000000 ms
+Current config: ((1,), (8, 1, 2), (2, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 2, 4), (2, 2, 32), (False, False, False), False)
+Transformed SDFG: 861.7946000000 ms
+Current config: ((1,), (4, 2, 4), (2, 2, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 2, 1), (32, 8, 1), (False, False, False), False)
+Transformed SDFG: 469.0392000000 ms
+Current config: ((1,), (16, 2, 1), (32, 8, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 4), (2, 32, 8), (False, False, False), False)
+Transformed SDFG: 112.1376000000 ms
+Current config: ((1,), (1, 4, 4), (2, 32, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 1), (4, 4, 16), (False, False, False), False)
+Transformed SDFG: 684.4132000000 ms
+Current config: ((1,), (4, 4, 1), (4, 4, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 8, 1), (256, 4, 1), (False, False, False), False)
+Transformed SDFG: 1454.8498000000 ms
+Current config: ((1,), (2, 8, 1), (256, 4, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 2), (256, 4, 1), (False, False, False), False)
+Transformed SDFG: 1543.9692000000 ms
+Current config: ((1,), (4, 4, 2), (256, 4, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 2, 2), (16, 8, 1), (False, False, False), False)
+Transformed SDFG: 396.3890000000 ms
+Current config: ((1,), (4, 2, 2), (16, 8, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 8), (2, 2, 16), (False, False, False), False)
+Transformed SDFG: 296.7728000000 ms
+Current config: ((1,), (1, 4, 8), (2, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 8, 1), (8, 8, 16), (False, False, False), False)
+Transformed SDFG: 891.1902000000 ms
+Current config: ((1,), (4, 8, 1), (8, 8, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 2), (64, 8, 2), (False, False, False), False)
+Transformed SDFG: 402.1050000000 ms
+Current config: ((1,), (1, 1, 2), (64, 8, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 2, 1), (8, 16, 1), (False, False, False), False)
+Transformed SDFG: 308.8168000000 ms
+Current config: ((1,), (16, 2, 1), (8, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 2, 4), (16, 2, 32), (False, False, False), False)
+Transformed SDFG: 848.9574000000 ms
+Current config: ((1,), (4, 2, 4), (16, 2, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 16, 1), (32, 16, 2), (False, False, False), False)
+Transformed SDFG: 1493.5982000000 ms
+Current config: ((1,), (1, 16, 1), (32, 16, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 1), (2, 16, 4), (False, False, False), False)
+Transformed SDFG: 440.8144000000 ms
+Current config: ((1,), (4, 4, 1), (2, 16, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 1), (32, 4, 2), (False, False, False), False)
+Transformed SDFG: 379.0194000000 ms
+Current config: ((1,), (4, 1, 1), (32, 4, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 16), (2, 16, 8), (False, False, False), False)
+Transformed SDFG: 194.1298000000 ms
+Current config: ((1,), (2, 1, 16), (2, 16, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 16), (128, 2, 1), (False, False, False), False)
+Transformed SDFG: 1105.1300000000 ms
+Current config: ((1,), (2, 1, 16), (128, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 2), (2, 32, 1), (False, False, False), False)
+Transformed SDFG: 356.5706000000 ms
+Current config: ((1,), (2, 4, 2), (2, 32, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 2, 2), (8, 16, 1), (False, False, False), False)
+Transformed SDFG: 310.6850000000 ms
+Current config: ((1,), (8, 2, 2), (8, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 1), (8, 32, 1), (False, False, False), False)
+Transformed SDFG: 448.3476000000 ms
+Current config: ((1,), (4, 4, 1), (8, 32, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 4), (16, 32, 2), (False, False, False), False)
+Transformed SDFG: 125.5074000000 ms
+Current config: ((1,), (1, 4, 4), (16, 32, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 8, 1), (4, 16, 16), (False, False, False), False)
+Transformed SDFG: 847.0294000000 ms
+Current config: ((1,), (2, 8, 1), (4, 16, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 2), (128, 4, 1), (False, False, False), False)
+Transformed SDFG: 1134.4970000000 ms
+Current config: ((1,), (8, 1, 2), (128, 4, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 8, 1), (32, 8, 1), (False, False, False), False)
+Transformed SDFG: 1013.5054000000 ms
+Current config: ((1,), (4, 8, 1), (32, 8, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 4), (8, 16, 8), (False, False, False), False)
+Transformed SDFG: 194.3862000000 ms
+Current config: ((1,), (1, 1, 4), (8, 16, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 2), (1, 2, 32), (False, False, False), False)
+Transformed SDFG: 978.6826000000 ms
+Current config: ((1,), (4, 4, 2), (1, 2, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 2), (2, 32, 16), (False, False, False), False)
+Transformed SDFG: 433.2762000000 ms
+Current config: ((1,), (4, 4, 2), (2, 32, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 4), (1, 16, 8), (False, False, False), False)
+Transformed SDFG: 124.2728000000 ms
+Current config: ((1,), (2, 4, 4), (1, 16, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 2, 4), (32, 2, 16), (False, False, False), False)
+Transformed SDFG: 839.0994000000 ms
+Current config: ((1,), (2, 2, 4), (32, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 1), (32, 4, 2), (False, False, False), False)
+Transformed SDFG: 338.2468000000 ms
+Current config: ((1,), (1, 1, 1), (32, 4, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 1), (2, 16, 16), (False, False, False), False)
+Transformed SDFG: 463.5592000000 ms
+Current config: ((1,), (2, 4, 1), (2, 16, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 4), (32, 2, 4), (False, False, False), False)
+Transformed SDFG: 785.9810000000 ms
+Current config: ((1,), (8, 1, 4), (32, 2, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 2), (2, 32, 4), (False, False, False), False)
+Transformed SDFG: 146.8808000000 ms
+Current config: ((1,), (8, 1, 2), (2, 32, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 16, 1), (8, 4, 32), (False, False, False), False)
+Transformed SDFG: 1492.2082000000 ms
+Current config: ((1,), (1, 16, 1), (8, 4, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 8), (4, 8, 32), (False, False, False), False)
+Transformed SDFG: 148.1362000000 ms
+Current config: ((1,), (1, 4, 8), (4, 8, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 16), (128, 2, 2), (False, False, False), False)
+Transformed SDFG: 1171.4530000000 ms
+Current config: ((1,), (2, 1, 16), (128, 2, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 2), (32, 8, 1), (False, False, False), False)
+Transformed SDFG: 310.0300000000 ms
+Current config: ((1,), (4, 1, 2), (32, 8, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 2), (32, 2, 1), (False, False, False), False)
+Transformed SDFG: 463.2422000000 ms
+Current config: ((1,), (1, 1, 2), (32, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 4), (64, 2, 1), (False, False, False), False)
+Transformed SDFG: 440.6354000000 ms
+Current config: ((1,), (1, 4, 4), (64, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 2), (2, 16, 32), (False, False, False), False)
+Transformed SDFG: 194.6616000000 ms
+Current config: ((1,), (4, 1, 2), (2, 16, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 1, 2), (16, 32, 1), (False, False, False), False)
+Transformed SDFG: 234.6922000000 ms
+Current config: ((1,), (16, 1, 2), (16, 32, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 4), (16, 4, 2), (False, False, False), False)
+Transformed SDFG: 434.0176000000 ms
+Current config: ((1,), (1, 1, 4), (16, 4, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 4), (32, 4, 1), (False, False, False), False)
+Transformed SDFG: 449.6786000000 ms
+Current config: ((1,), (2, 1, 4), (32, 4, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 4), (1, 2, 32), (False, False, False), False)
+Transformed SDFG: 303.1000000000 ms
+Current config: ((1,), (2, 4, 4), (1, 2, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 2), (8, 16, 2), (False, False, False), False)
+Transformed SDFG: 420.7590000000 ms
+Current config: ((1,), (2, 4, 2), (8, 16, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 16), (16, 16, 2), (False, False, False), False)
+Transformed SDFG: 176.8976000000 ms
+Current config: ((1,), (1, 2, 16), (16, 16, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 8), (8, 4, 32), (False, False, False), False)
+Transformed SDFG: 465.9046000000 ms
+Current config: ((1,), (4, 1, 8), (8, 4, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 2, 8), (4, 16, 2), (False, False, False), False)
+Transformed SDFG: 254.9872000000 ms
+Current config: ((1,), (2, 2, 8), (4, 16, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 16), (4, 4, 32), (False, False, False), False)
+Transformed SDFG: 471.1978000000 ms
+Current config: ((1,), (2, 1, 16), (4, 4, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 1, 1), (1, 32, 8), (False, False, False), False)
+Transformed SDFG: 146.9856000000 ms
+Current config: ((1,), (16, 1, 1), (1, 32, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 16, 1), (256, 2, 1), (False, False, False), False)
+Transformed SDFG: 1454.3304000000 ms
+Current config: ((1,), (1, 16, 1), (256, 2, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 8), (256, 1, 1), (False, False, False), False)
+Transformed SDFG: 1034.2186000000 ms
+Current config: ((1,), (1, 4, 8), (256, 1, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 4), (16, 4, 4), (False, False, False), False)
+Transformed SDFG: 449.9424000000 ms
+Current config: ((1,), (2, 1, 4), (16, 4, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 16), (8, 16, 2), (False, False, False), False)
+Transformed SDFG: 204.7032000000 ms
+Current config: ((1,), (1, 1, 16), (8, 16, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 2, 1), (32, 32, 1), (False, False, False), False)
+Transformed SDFG: 342.7320000000 ms
+Current config: ((1,), (4, 2, 1), (32, 32, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 4), (1, 32, 32), (False, False, False), False)
+Transformed SDFG: 153.6650000000 ms
+Current config: ((1,), (4, 1, 4), (1, 32, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 8), (32, 2, 8), (False, False, False), False)
+Transformed SDFG: 300.2372000000 ms
+Current config: ((1,), (1, 4, 8), (32, 2, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 16), (1, 32, 16), (False, False, False), False)
+Transformed SDFG: 123.8702000000 ms
+Current config: ((1,), (1, 2, 16), (1, 32, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 4, 1), (2, 16, 2), (False, False, False), False)
+Transformed SDFG: 368.3140000000 ms
+Current config: ((1,), (2, 4, 1), (2, 16, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 4, 1), (64, 2, 2), (False, False, False), False)
+Transformed SDFG: 305.2074000000 ms
+Current config: ((1,), (1, 4, 1), (64, 2, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 16), (8, 16, 1), (False, False, False), False)
+Transformed SDFG: 148.7064000000 ms
+Current config: ((1,), (1, 2, 16), (8, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 16, 1), (8, 32, 1), (False, False, False), False)
+Transformed SDFG: 1524.8672000000 ms
+Current config: ((1,), (2, 16, 1), (8, 32, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 8, 1), (2, 4, 16), (False, False, False), False)
+Transformed SDFG: 862.3570000000 ms
+Current config: ((1,), (2, 8, 1), (2, 4, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 2), (8, 2, 16), (False, False, False), False)
+Transformed SDFG: 752.4036000000 ms
+Current config: ((1,), (8, 1, 2), (8, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 2, 8), (32, 2, 16), (False, False, False), False)
+Transformed SDFG: 844.3752000000 ms
+Current config: ((1,), (2, 2, 8), (32, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 4), (1, 8, 16), (False, False, False), False)
+Transformed SDFG: 289.8368000000 ms
+Current config: ((1,), (2, 1, 4), (1, 8, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 4), (2, 16, 8), (False, False, False), False)
+Transformed SDFG: 193.8434000000 ms
+Current config: ((1,), (1, 1, 4), (2, 16, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 2, 1), (4, 16, 8), (False, False, False), False)
+Transformed SDFG: 287.4452000000 ms
+Current config: ((1,), (16, 2, 1), (4, 16, 8), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 2, 1), (32, 2, 4), (False, False, False), False)
+Transformed SDFG: 750.8438000000 ms
+Current config: ((1,), (4, 2, 1), (32, 2, 4), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 2), (8, 16, 1), (False, False, False), False)
+Transformed SDFG: 148.7746000000 ms
+Current config: ((1,), (1, 2, 2), (8, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 16, 2), (1, 2, 32), (False, False, False), False)
+Transformed SDFG: 1253.6602000000 ms
+Current config: ((1,), (1, 16, 2), (1, 2, 32), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 2, 4), (1, 16, 16), (False, False, False), False)
+Transformed SDFG: 147.1866000000 ms
+Current config: ((1,), (1, 2, 4), (1, 16, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 2, 1), (8, 2, 16), (False, False, False), False)
+Transformed SDFG: 830.7840000000 ms
+Current config: ((1,), (16, 2, 1), (8, 2, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 8), (8, 16, 1), (False, False, False), False)
+Transformed SDFG: 220.0238000000 ms
+Current config: ((1,), (4, 1, 8), (8, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 2, 1), (1, 32, 16), (False, False, False), False)
+Transformed SDFG: 241.6946000000 ms
+Current config: ((1,), (16, 2, 1), (1, 32, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (2, 1, 1), (32, 16, 2), (False, False, False), False)
+Transformed SDFG: 202.2492000000 ms
+Current config: ((1,), (2, 1, 1), (32, 16, 2), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (1, 1, 2), (2, 16, 16), (False, False, False), False)
+Transformed SDFG: 194.2338000000 ms
+Current config: ((1,), (1, 1, 2), (2, 16, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 1, 2), (8, 8, 16), (False, False, False), False)
+Transformed SDFG: 288.0942000000 ms
+Current config: ((1,), (4, 1, 2), (8, 8, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (4, 4, 1), (8, 4, 16), (False, False, False), False)
+Transformed SDFG: 685.4724000000 ms
+Current config: ((1,), (4, 4, 1), (8, 4, 16), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 1, 4), (32, 16, 1), (False, False, False), False)
+Transformed SDFG: 409.9724000000 ms
+Current config: ((1,), (8, 1, 4), (32, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (8, 2, 1), (32, 16, 1), (False, False, False), False)
+Transformed SDFG: 424.6958000000 ms
+Current config: ((1,), (8, 2, 1), (32, 16, 1), (False, False, False), False), best config: ((1,), (1, 1, 1), (32, 4, 8), (False, False, False), False)
+Non-transformed SDFG: 21.9658000000 ms
+Current config: ((1,), (16, 2, 1), (128, 2, 1), (False, False, False), False)
+Skipping ((1,), (16, 2, 1), (128, 2, 1), (False, False, False), False) as it exceeds bound dims
+
+Numerical verification failed!
+  SDFG: gpu_usu_transposed_1026
+  Entry node: kernel_22
+  Config: ((1,), (16, 2, 1), (128, 2, 1), (False, False, False), False)
+  Max absolute difference: 5.266262e+05
+  Max relative difference: 2.716368e+04
+  Saved failing SDFG as 'failing.sdfgz'
+tensor([[[0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00]],
+
+        [[0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 1.6791e+02, 3.3583e+02,  ..., 1.7178e+05,
+          1.7194e+05, 0.0000e+00]],
+
+        [[0.0000e+00, 1.5774e+02, 3.1547e+02,  ..., 1.6136e+05,
+          1.6152e+05, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 3.7871e+02, 7.5742e+02,  ..., 3.8742e+05,
+          3.8780e+05, 0.0000e+00]],
+
+        ...,
+
+        [[0.0000e+00, 2.0015e+02, 4.0030e+02,  ..., 2.0476e+05,
+          2.0496e+05, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 2.5951e+02, 5.1902e+02,  ..., 2.6548e+05,
+          2.6574e+05, 0.0000e+00]],
+
+        [[0.0000e+00, 3.7220e+02, 7.4439e+02,  ..., 3.8076e+05,
+          3.8113e+05, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 2.0755e+02, 4.1510e+02,  ..., 2.1232e+05,
+          2.1253e+05, 0.0000e+00]],
+
+        [[0.0000e+00, 1.8226e+02, 3.6452e+02,  ..., 1.8645e+05,
+          1.8663e+05, 0.0000e+00],
+         [0.0000e+00, 1.2695e+02, 2.5390e+02,  ..., 1.2987e+05,
+          1.3000e+05, 0.0000e+00],
+         [0.0000e+00, 2.8608e+02, 5.7217e+02,  ..., 2.9266e+05,
+          2.9295e+05, 0.0000e+00],
+         ...,
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00],
+         [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00,
+          0.0000e+00, 0.0000e+00]]], device='cuda:0', dtype=torch.float64)
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 233, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 911, in auto_tile_gpu
+    best_config = _tile_gpu(
+                  ^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 443, in _tile_gpu
+    np.savetxt("matrix.txt", abs_diff.cpu().numpy(), fmt="%.4f")
+  File "/capstor/scratch/cscs/ybudanaz/.def/lib64/python3.11/site-packages/numpy/lib/npyio.py", line 1570, in savetxt
+    raise ValueError(
+ValueError: Expected 1D or 2D array, got 3D array instead

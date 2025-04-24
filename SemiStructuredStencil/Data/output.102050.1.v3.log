@@ -1,0 +1,81 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "kernel_22". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "kernel_32". Falling back to the configuration entry `compiler.cuda.default_block_size`: 64,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+AMD GPU detected: AMD Radeon Graphics
+Read best config and time as ((1,), (1, 1, 8), (8, 4, 32), (False, False, False), False), 28.924799999999998, continuing search
+Best Tiling Configuration for kernel_22: ((1,), (1, 1, 8), (8, 4, 32), (False, False, False), False)
+Read best config and time as None, None, continuing search
+Best Tiling Configuration for kernel_32: ((1,), (1, 1, 8), (8, 4, 32), (False, False, False), False)
+Read best config and time as ((1,), (1, 1, 8), (8, 4, 32), (False, False, False), False), 28.924799999999998, continuing search
+Current config: ((1,), (1, 1, 8), (8, 4, 32), (False, False, False), False)
+Read best config and time as None, None, continuing search
+Current config: ((1,), (1, 1, 8), (8, 4, 32), (False, False, False), False)
+Failing SDFG saved for inspection in /capstor/scratch/cscs/ybudanaz/LayoutArtifacts/_dacegraphs/failing.sdfgz
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile.py", line 280, in <module>
+    tuned_sdfg(vals_A=vals_A, vals_B=vals_B, neighbors=neighbors, N=_N, TSTEPS=_TSTEPS)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2472, in __call__
+    binaryobj = sdfg.compile()
+                ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/sdfg.py", line 2381, in compile
+    program_objects = codegen.generate_code(sdfg, validate=validate)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/codegen.py", line 234, in generate_code
+    (global_code, frame_code, used_targets, used_environments) = frame.generate_code(sdfg, None)
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/framecode.py", line 969, in generate_code
+    states_generated = self.generate_states(sdfg, global_stream, callsite_stream)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/framecode.py", line 511, in generate_states
+    callsite_stream.write(cft.as_cpp(self, sdfg.symbols), sdfg)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/control_flow.py", line 284, in as_cpp
+    expr += elem.as_cpp(codegen, symbols)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/control_flow.py", line 581, in as_cpp
+    expr += _clean_loop_body(self.body.as_cpp(codegen, symbols))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/control_flow.py", line 284, in as_cpp
+    expr += elem.as_cpp(codegen, symbols)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/control_flow.py", line 180, in as_cpp
+    expr += self.dispatch_state(self.state)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/framecode.py", line 484, in dispatch_state
+    self._dispatcher.dispatch_state(state, global_stream, stream)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/dispatcher.py", line 380, in dispatch_state
+    disp.generate_state(state.sdfg, state.parent_graph, state, function_stream, callsite_stream)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py", line 1250, in generate_state
+    self._frame.generate_state(sdfg, cfg, state, function_stream, callsite_stream, generate_state_footer=False)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/framecode.py", line 439, in generate_state
+    self._dispatcher.dispatch_subgraph(sdfg,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/dispatcher.py", line 416, in dispatch_subgraph
+    self.dispatch_scope(v.map.schedule, sdfg, cfg, scope_subgraph, state_id, function_stream,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/dispatcher.py", line 464, in dispatch_scope
+    self._map_dispatchers[map_schedule].generate_scope(sdfg, cfg, sub_dfg, state_id, function_stream,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py", line 1566, in generate_scope
+    self.generate_kernel_scope(sdfg, cfg, dfg_scope, state_id, scope_entry.map, kernel_name, grid_dims, block_dims,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py", line 2104, in generate_kernel_scope
+    self._dispatcher.dispatch_subgraph(sdfg,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/dispatcher.py", line 416, in dispatch_subgraph
+    self.dispatch_scope(v.map.schedule, sdfg, cfg, scope_subgraph, state_id, function_stream,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/dispatcher.py", line 464, in dispatch_scope
+    self._map_dispatchers[map_schedule].generate_scope(sdfg, cfg, sub_dfg, state_id, function_stream,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py", line 1409, in generate_scope
+    self.generate_devicelevel_scope(sdfg, cfg, dfg_scope, state_id, function_stream, callsite_stream)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py", line 2536, in generate_devicelevel_scope
+    self._dispatcher.dispatch_subgraph(sdfg,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/dispatcher.py", line 416, in dispatch_subgraph
+    self.dispatch_scope(v.map.schedule, sdfg, cfg, scope_subgraph, state_id, function_stream,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/dispatcher.py", line 464, in dispatch_scope
+    self._map_dispatchers[map_schedule].generate_scope(sdfg, cfg, sub_dfg, state_id, function_stream,
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpu.py", line 158, in generate_scope
+    self.generate_node(sdfg, cfg, dfg_scope, state_id, entry_node, function_stream, callsite_stream)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpu.py", line 177, in generate_node
+    gen(sdfg, cfg, dfg, state_id, node, function_stream, callsite_stream)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpu.py", line 1873, in _generate_MapEntry
+    instr.on_scope_entry(sdfg, cfg, state_dfg, node, callsite_stream, inner_stream, function_stream)
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/instrumentation/gpu_events.py", line 128, in on_scope_entry
+    raise TypeError('GPU Event instrumentation only applies to '
+TypeError: GPU Event instrumentation only applies to GPU_Device map scopes

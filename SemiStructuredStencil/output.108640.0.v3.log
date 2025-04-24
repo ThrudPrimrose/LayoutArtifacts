@@ -1,0 +1,1200 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/passes/simplify.py:117: UserWarning: LiftStructViews is not being applied due to incompatibility with experimental control flow blocks. If the SDFG does not contain experimental blocks, ensure the top level SDFG does not have `SDFG.using_explicit_control_flow` set to True. If LiftStructViews is compatible with experimental blocks, please annotate it with the class decorator `@dace.transformation.explicit_cf_compatible`. see `https://github.com/spcl/dace/wiki/Experimental-Control-Flow-Blocks` for more information.
+  warnings.warn(p.__class__.__name__ + ' is not being applied due to incompatibility with ' +
+Cannot inline SDFG kernel_22_8: 52 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+AMD GPU detected: AMD Radeon Graphics
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG kernel_22_8: 2 nested SDFG must have exactly one state. BinOp_24_2 <class 'dace.sdfg.state.SDFGState'>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 229, in <module>
+    tuned_sdfg = autotune(tsdfg, {"vals_A": vals_A, "vals_B": vals_B, "neighbors": neighbors, "TSTEPS": 10, "N": _N}, 3, [_N-2, _N-2, _N-2])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/LayoutArtifacts/SemiStructuredStencil/unstructured_stencil_3d_u_s_u_v2_dace_auto_tile_transposed.py", line 169, in autotune
+    tiled_sdfg, _ = auto_tile_gpu(
+                    ^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/ybudanaz/dace/dace/transformation/auto_tile/auto_tile_gpu.py", line 905, in auto_tile_gpu
+    assert len(kernel_guids) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
