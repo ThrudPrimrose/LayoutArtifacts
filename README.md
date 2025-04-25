@@ -20,6 +20,7 @@ To build the container use the Dockerfile available in the root of the repositor
 
 You need to install `nvidia-container-toolkit` to run CUDA experiments. Follow install instructions for [Nvidia Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) and [Installing Docker](https://docs.docker.com/engine/install/ubuntu/)
 
+For the microbenchmarks except the ICON microbenchmark the following docker image (built from the provided Dockerfile) can be used:
 ```bash
 sudo docker build -t dace-cuda-12.6 .
 ```
@@ -123,6 +124,17 @@ cd /workspace/artifacts/AoSvsSoASimulations
 ```
 
 ## Reproducing Semi-Structured Stencil benchmark
+
+To re-run the experiment:
+```bash
+cd /workspace/dace
+git checkout 2d370ba
+cd /workspace/artifacts/SemiStructuredStencil
+python3.10 unstructured_stencil_3d_u_s_u_v2_dace_v2.py 130
+python3.10 unstructured_stencil_3d_u_s_u_v2_dace_v2.py 258
+python3.10 unstructured_stencil_3d_u_s_u_v2_dace_v2.py 514
+python3.10 unstructured_stencil_3d_u_s_u_v2_dace_v2.py 1026
+```
 
 ## Reproducing Automated Schedule Search Benchmark
 
