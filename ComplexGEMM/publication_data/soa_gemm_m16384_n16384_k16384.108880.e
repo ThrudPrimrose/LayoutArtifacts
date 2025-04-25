@@ -1,0 +1,3 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1873: UserWarning: No `gpu_block_size` property specified on map "complex_gemm_soa_merged_111". Falling back to the configuration entry `compiler.cuda.default_block_size`: 32,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+slurmstepd: error: *** JOB 108880 ON nid002996 CANCELLED AT 2025-04-13T08:57:29 DUE TO TIME LIMIT ***

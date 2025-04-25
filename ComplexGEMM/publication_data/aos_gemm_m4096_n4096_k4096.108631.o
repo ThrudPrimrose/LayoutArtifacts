@@ -1,0 +1,56 @@
+Cannot inline SDFG complex_gemm_aos_67_4_68_8: 4 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG complex_gemm_aos_67_4: 2 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+The CPU and GPU arrays are different.
+AMD GPU detected: AMD Radeon Graphics
+Read best config and time as ((32,), (1, 16, 1), (128, 2, 1), (False, False, False), False), 6.8622, continuing search
+Current config: ((32,), (4, 4, 1), (256, 2, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (4, 4, 1), (256, 2, 1), (True, True, False), False), skipping.
+Current config: ((16,), (4, 8, 1), (256, 4, 1), (False, False, False), False)
+Transformed SDFG: 77.2740000000 ms
+Current config: ((16,), (4, 8, 1), (256, 4, 1), (False, False, False), False), best config: ((32,), (1, 16, 1), (128, 2, 1), (False, False, False), False)
+Non-transformed SDFG: 35.5668000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096_auto_tiled_0_c2
+Current config: ((16,), (1, 8, 1), (16, 64, 1), (False, False, False), False)
+Transformed SDFG: 7.9756000000 ms
+Current config: ((16,), (1, 8, 1), (16, 64, 1), (False, False, False), False), best config: ((32,), (1, 16, 1), (128, 2, 1), (False, False, False), False)
+Non-transformed SDFG: 35.5668000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096_auto_tiled_0_c2
+Current config: ((32,), (1, 16, 1), (128, 1, 1), (False, False, False), False)
+Transformed SDFG: 26.6142000000 ms
+Current config: ((32,), (1, 16, 1), (128, 1, 1), (False, False, False), False), best config: ((32,), (1, 16, 1), (128, 2, 1), (False, False, False), False)
+Non-transformed SDFG: 35.5668000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096_auto_tiled_0_c2
+Current config: ((16,), (16, 2, 1), (128, 8, 1), (False, False, False), False)
+Transformed SDFG: 175.4962000000 ms
+Current config: ((16,), (16, 2, 1), (128, 8, 1), (False, False, False), False), best config: ((32,), (1, 16, 1), (128, 2, 1), (False, False, False), False)
+Non-transformed SDFG: 35.5668000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096_auto_tiled_0_c2
+Current config: ((16,), (2, 1, 1), (512, 1, 1), (False, False, False), False)
+Transformed SDFG: 39.7252000000 ms
+Current config: ((16,), (2, 1, 1), (512, 1, 1), (False, False, False), False), best config: ((32,), (1, 16, 1), (128, 2, 1), (False, False, False), False)
+Non-transformed SDFG: 35.5668000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096_auto_tiled_0_c2
+Current config: ((128,), (2, 2, 1), (16, 64, 1), (False, False, False), False)
+Transformed SDFG: 90.6628000000 ms
+Current config: ((128,), (2, 2, 1), (16, 64, 1), (False, False, False), False), best config: ((32,), (1, 16, 1), (128, 2, 1), (False, False, False), False)
+Non-transformed SDFG: 35.5668000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096_auto_tiled_0_c2
+Current config: ((128,), (4, 4, 1), (16, 16, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (4, 4, 1), (16, 16, 1), (True, True, False), False), skipping.
+Current config: ((64,), (1, 8, 1), (256, 1, 1), (False, False, False), False)
+Transformed SDFG: 23.5378000000 ms
+Current config: ((64,), (1, 8, 1), (256, 1, 1), (False, False, False), False), best config: ((32,), (1, 16, 1), (128, 2, 1), (False, False, False), False)
+Non-transformed SDFG: 35.5668000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096
+Clean .dacecache/complex_gemm_aos_AoS_4096_4096_4096_auto_tiled_0_c2
+Current config: ((16,), (2, 4, 1), (32, 32, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((16,), (2, 4, 1), (32, 32, 1), (True, True, False), False), skipping.
+Current config: ((128,), (2, 2, 1), (64, 8, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (2, 2, 1), (64, 8, 1), (True, True, False), False), skipping.
+Current config: ((32,), (1, 4, 1), (16, 32, 1), (False, False, False), False)

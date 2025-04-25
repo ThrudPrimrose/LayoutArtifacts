@@ -1,0 +1,294 @@
+Cannot inline SDFG complex_gemm_aos_67_4_68_8: 4 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG complex_gemm_aos_67_4: 2 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+The CPU and GPU arrays are different.
+AMD GPU detected: AMD Radeon Graphics
+Read best config and time as None, None, continuing search
+Current config: ((32,), (8, 4, 1), (256, 4, 1), (False, False, False), False)
+Transformed SDFG: 14197.1436000000 ms
+Current config: ((32,), (8, 4, 1), (256, 4, 1), (False, False, False), False), best config: ((32,), (8, 4, 1), (256, 4, 1), (False, False, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((32,), (4, 4, 1), (64, 8, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (4, 4, 1), (64, 8, 1), (True, True, False), False), skipping.
+Current config: ((16,), (8, 1, 1), (256, 1, 1), (False, False, False), False)
+Transformed SDFG: 14082.9578000000 ms
+Current config: ((16,), (8, 1, 1), (256, 1, 1), (False, False, False), False), best config: ((16,), (8, 1, 1), (256, 1, 1), (False, False, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((128,), (1, 1, 1), (16, 64, 1), (False, False, False), False)
+Transformed SDFG: 937.1332000000 ms
+Current config: ((128,), (1, 1, 1), (16, 64, 1), (False, False, False), False), best config: ((128,), (1, 1, 1), (16, 64, 1), (False, False, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((64,), (8, 2, 1), (512, 2, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (8, 2, 1), (512, 2, 1), (True, True, False), False), skipping.
+Current config: ((64,), (4, 16, 1), (128, 1, 1), (False, False, False), False)
+Transformed SDFG: 6650.4584000000 ms
+Current config: ((64,), (4, 16, 1), (128, 1, 1), (False, False, False), False), best config: ((128,), (1, 1, 1), (16, 64, 1), (False, False, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((128,), (8, 2, 1), (64, 4, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (8, 2, 1), (64, 4, 1), (True, True, False), False), skipping.
+Current config: ((128,), (4, 2, 1), (512, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (4, 2, 1), (512, 1, 1), (True, True, False), False), skipping.
+Current config: ((128,), (4, 8, 1), (64, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (4, 8, 1), (64, 1, 1), (True, True, False), False), skipping.
+Current config: ((32,), (1, 16, 1), (64, 4, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (1, 16, 1), (64, 4, 1), (True, True, False), False), skipping.
+Current config: ((16,), (1, 16, 1), (16, 32, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((16,), (1, 16, 1), (16, 32, 1), (True, True, False), False), skipping.
+Current config: ((128,), (8, 2, 1), (64, 4, 1), (False, False, False), False)
+Transformed SDFG: 3856.6058000000 ms
+Current config: ((128,), (8, 2, 1), (64, 4, 1), (False, False, False), False), best config: ((128,), (1, 1, 1), (16, 64, 1), (False, False, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((128,), (8, 4, 1), (64, 4, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (8, 4, 1), (64, 4, 1), (True, True, False), False), skipping.
+Current config: ((128,), (8, 1, 1), (32, 32, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (8, 1, 1), (32, 32, 1), (True, True, False), False), skipping.
+Current config: ((16,), (8, 16, 1), (64, 1, 1), (False, False, False), False)
+Transformed SDFG: 13681.8842000000 ms
+Current config: ((16,), (8, 16, 1), (64, 1, 1), (False, False, False), False), best config: ((128,), (1, 1, 1), (16, 64, 1), (False, False, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+
+Numerical verification failed!
+  SDFG: complex_gemm_aos_AoS_16384_16384_16384
+  Entry node: complex_gemm_aos_67
+  Config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+  Max absolute difference: 3.994836e+03
+  Max relative difference: 3.158599e-01
+  Saved failing SDFG as 'failing.sdfgz'
+tensor([[3813.3213, 3854.5791, 3833.3672,  ..., 3853.4229, 3834.2744,
+         3870.2041],
+        [3862.7939, 3897.6465, 3856.4961,  ..., 3893.0781, 3865.0146,
+         3892.7217],
+        [3879.2002, 3876.2461, 3868.7207,  ..., 3903.9355, 3868.3076,
+         3890.9131],
+        ...,
+        [3815.5576, 3829.0840, 3818.4148,  ..., 3825.9805, 3806.4492,
+         3825.5264],
+        [3835.1602, 3855.4658, 3815.0613,  ..., 3857.9346, 3823.2354,
+         3840.3105],
+        [3835.0693, 3816.2285, 3821.7988,  ..., 3840.0244, 3813.9209,
+         3837.7080]], device='cuda:0')
+Numerical verification failed for: complex_gemm_aos_AoS_16384_16384_16384, complex_gemm_aos_67, ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Transformed SDFG: 216.9546000000 ms
+Current config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False), best config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((32,), (16, 8, 1), (128, 8, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (16, 8, 1), (128, 8, 1), (True, True, False), False), skipping.
+Current config: ((32,), (4, 2, 1), (32, 8, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (4, 2, 1), (32, 8, 1), (True, True, False), False), skipping.
+Current config: ((64,), (8, 16, 1), (256, 4, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (8, 16, 1), (256, 4, 1), (True, True, False), False), skipping.
+Current config: ((128,), (2, 16, 1), (128, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (2, 16, 1), (128, 1, 1), (True, True, False), False), skipping.
+Current config: ((64,), (4, 16, 1), (16, 64, 1), (False, False, False), False)
+Transformed SDFG: 4630.5842000000 ms
+Current config: ((64,), (4, 16, 1), (16, 64, 1), (False, False, False), False), best config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((128,), (8, 4, 1), (32, 8, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (8, 4, 1), (32, 8, 1), (True, True, False), False), skipping.
+Current config: ((16,), (1, 8, 1), (32, 16, 1), (False, False, False), False)
+Transformed SDFG: 663.3096000000 ms
+Current config: ((16,), (1, 8, 1), (32, 16, 1), (False, False, False), False), best config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((16,), (16, 8, 1), (64, 8, 1), (False, False, False), False)
+Transformed SDFG: 10587.4936000000 ms
+Current config: ((16,), (16, 8, 1), (64, 8, 1), (False, False, False), False), best config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((64,), (4, 1, 1), (256, 4, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (4, 1, 1), (256, 4, 1), (True, True, False), False), skipping.
+Current config: ((128,), (2, 4, 1), (512, 1, 1), (False, False, False), False)
+Transformed SDFG: 4538.2690000000 ms
+Current config: ((128,), (2, 4, 1), (512, 1, 1), (False, False, False), False), best config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((32,), (4, 2, 1), (256, 4, 1), (False, False, False), False)
+Transformed SDFG: 8054.2600000000 ms
+Current config: ((32,), (4, 2, 1), (256, 4, 1), (False, False, False), False), best config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((32,), (4, 1, 1), (32, 8, 1), (True, True, False), False)
+
+Numerical verification failed!
+  SDFG: complex_gemm_aos_AoS_16384_16384_16384
+  Entry node: complex_gemm_aos_67
+  Config: ((32,), (4, 1, 1), (32, 8, 1), (True, True, False), False)
+  Max absolute difference: 4.128047e+03
+  Max relative difference: 3.250299e-01
+  Saved failing SDFG as 'failing.sdfgz'
+tensor([[3941.5068, 3981.5723, 3961.7100,  ..., 3982.2979, 3954.7842,
+         4001.2285],
+        [3993.6445, 4035.0137, 3989.2236,  ..., 4025.8154, 3991.6680,
+         4029.0762],
+        [4009.5654, 4012.9209, 4003.7520,  ..., 4038.6777, 3994.2031,
+         4024.8770],
+        ...,
+        [3940.0264, 3961.0518, 3952.9863,  ..., 3955.9111, 3930.0850,
+         3959.3477],
+        [3956.5273, 3981.7988, 3946.0059,  ..., 3984.4131, 3943.8145,
+         3967.1855],
+        [3958.6855, 3943.1045, 3949.5283,  ..., 3962.6992, 3930.8311,
+         3967.3193]], device='cuda:0')
+Numerical verification failed for: complex_gemm_aos_AoS_16384_16384_16384, complex_gemm_aos_67, ((32,), (4, 1, 1), (32, 8, 1), (True, True, False), False)
+Transformed SDFG: 315.9410000000 ms
+Current config: ((32,), (4, 1, 1), (32, 8, 1), (True, True, False), False), best config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((128,), (8, 2, 1), (512, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (8, 2, 1), (512, 1, 1), (True, True, False), False), skipping.
+Current config: ((16,), (2, 2, 1), (32, 16, 1), (False, False, False), False)
+Transformed SDFG: 636.4402000000 ms
+Current config: ((16,), (2, 2, 1), (32, 16, 1), (False, False, False), False), best config: ((16,), (1, 2, 1), (16, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+
+Numerical verification failed!
+  SDFG: complex_gemm_aos_AoS_16384_16384_16384
+  Entry node: complex_gemm_aos_67
+  Config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+  Max absolute difference: 4.212933e+03
+  Max relative difference: 3.317038e-01
+  Saved failing SDFG as 'failing.sdfgz'
+tensor([[4004.2451, 4047.4912, 4026.9238,  ..., 4045.9834, 4016.6553,
+         4064.1816],
+        [4057.7900, 4103.2529, 4054.9590,  ..., 4091.8760, 4055.9053,
+         4094.4678],
+        [4072.8047, 4080.1787, 4069.1582,  ..., 4101.8320, 4058.5293,
+         4089.7041],
+        ...,
+        [4002.3945, 4024.1006, 4015.1348,  ..., 4015.8730, 3989.9639,
+         4020.4570],
+        [4020.0518, 4048.5918, 4011.8809,  ..., 4047.1045, 4004.3804,
+         4028.7754],
+        [4019.5371, 4004.4844, 4012.5986,  ..., 4024.0117, 3989.9761,
+         4027.0918]], device='cuda:0')
+Numerical verification failed for: complex_gemm_aos_AoS_16384_16384_16384, complex_gemm_aos_67, ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Transformed SDFG: 137.7466000000 ms
+Current config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((32,), (2, 8, 1), (16, 32, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (2, 8, 1), (16, 32, 1), (True, True, False), False), skipping.
+Current config: ((64,), (4, 16, 1), (512, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (4, 16, 1), (512, 1, 1), (True, True, False), False), skipping.
+Current config: ((64,), (1, 4, 1), (128, 2, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (1, 4, 1), (128, 2, 1), (True, True, False), False), skipping.
+Current config: ((64,), (2, 8, 1), (64, 16, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (2, 8, 1), (64, 16, 1), (True, True, False), False), skipping.
+Current config: ((64,), (16, 8, 1), (16, 64, 1), (False, False, False), False)
+Transformed SDFG: 5792.2616000000 ms
+Current config: ((64,), (16, 8, 1), (16, 64, 1), (False, False, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((16,), (2, 4, 1), (128, 2, 1), (False, False, False), False)
+Transformed SDFG: 695.3798000000 ms
+Current config: ((16,), (2, 4, 1), (128, 2, 1), (False, False, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((32,), (16, 16, 1), (32, 32, 1), (False, False, False), False)
+Transformed SDFG: 7219.8062000000 ms
+Current config: ((32,), (16, 16, 1), (32, 32, 1), (False, False, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((64,), (2, 1, 1), (32, 8, 1), (True, True, False), False)
+
+Numerical verification failed!
+  SDFG: complex_gemm_aos_AoS_16384_16384_16384
+  Entry node: complex_gemm_aos_67
+  Config: ((64,), (2, 1, 1), (32, 8, 1), (True, True, False), False)
+  Max absolute difference: 4.186985e+03
+  Max relative difference: 3.296652e-01
+  Saved failing SDFG as 'failing.sdfgz'
+tensor([[4004.2451, 4047.4912, 4026.9238,  ..., 4045.9834, 4016.6553,
+         4064.1816],
+        [4057.7900, 4103.2529, 4054.9590,  ..., 4091.8760, 4055.9053,
+         4094.4678],
+        [4072.8047, 4080.1787, 4069.1582,  ..., 4101.8320, 4058.5293,
+         4089.7041],
+        ...,
+        [4002.3945, 4024.1006, 4015.1348,  ..., 4015.8730, 3989.9639,
+         4020.4570],
+        [4020.0518, 4048.5918, 4011.8809,  ..., 4047.1045, 4004.3804,
+         4028.7754],
+        [4019.5371, 4004.4844, 4012.5986,  ..., 4024.0117, 3989.9761,
+         4027.0918]], device='cuda:0')
+Numerical verification failed for: complex_gemm_aos_AoS_16384_16384_16384, complex_gemm_aos_67, ((64,), (2, 1, 1), (32, 8, 1), (True, True, False), False)
+Transformed SDFG: 281.0008000000 ms
+Current config: ((64,), (2, 1, 1), (32, 8, 1), (True, True, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((128,), (4, 1, 1), (32, 16, 1), (False, False, False), False)
+Transformed SDFG: 4282.2058000000 ms
+Current config: ((128,), (4, 1, 1), (32, 16, 1), (False, False, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((16,), (16, 1, 1), (512, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((16,), (16, 1, 1), (512, 1, 1), (True, True, False), False), skipping.
+Current config: ((32,), (8, 8, 1), (16, 16, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (8, 8, 1), (16, 16, 1), (True, True, False), False), skipping.
+Current config: ((32,), (1, 1, 1), (256, 2, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (1, 1, 1), (256, 2, 1), (True, True, False), False), skipping.
+Current config: ((64,), (1, 4, 1), (256, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (1, 4, 1), (256, 1, 1), (True, True, False), False), skipping.
+Current config: ((32,), (1, 16, 1), (32, 32, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (1, 16, 1), (32, 32, 1), (True, True, False), False), skipping.
+Current config: ((16,), (4, 16, 1), (128, 2, 1), (False, False, False), False)
+Transformed SDFG: 6239.6952000000 ms
+Current config: ((16,), (4, 16, 1), (128, 2, 1), (False, False, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((64,), (1, 2, 1), (32, 32, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (1, 2, 1), (32, 32, 1), (True, True, False), False), skipping.
+Current config: ((128,), (16, 4, 1), (512, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((128,), (16, 4, 1), (512, 1, 1), (True, True, False), False), skipping.
+Current config: ((64,), (16, 1, 1), (64, 16, 1), (False, False, False), False)
+Transformed SDFG: 12844.1170000000 ms
+Current config: ((64,), (16, 1, 1), (64, 16, 1), (False, False, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((64,), (4, 8, 1), (16, 64, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((64,), (4, 8, 1), (16, 64, 1), (True, True, False), False), skipping.
+Current config: ((128,), (2, 4, 1), (256, 4, 1), (False, False, False), False)
+Transformed SDFG: 6993.7600000000 ms
+Current config: ((128,), (2, 4, 1), (256, 4, 1), (False, False, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((128,), (16, 8, 1), (64, 1, 1), (False, False, False), False)
+Transformed SDFG: 23943.8484000000 ms
+Current config: ((128,), (16, 8, 1), (64, 1, 1), (False, False, False), False), best config: ((64,), (1, 2, 1), (32, 16, 1), (True, True, False), False)
+Non-transformed SDFG: 3197.9890000000 ms
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384
+Clean .dacecache/complex_gemm_aos_AoS_16384_16384_16384_auto_tiled_0_c2
+Current config: ((64,), (8, 8, 1), (64, 8, 1), (False, False, False), False)
