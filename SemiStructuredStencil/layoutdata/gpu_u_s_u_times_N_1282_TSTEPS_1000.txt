@@ -1,2 +1,0 @@
-N: 1282, TSTEPS: 1000
-Repeat: 0
