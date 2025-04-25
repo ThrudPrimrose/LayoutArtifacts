@@ -1,0 +1,107 @@
+/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/validation.py:551: UserWarning: WARNING: Use of uninitialized transient "gpu_cfl_clipping" in state "single_state_body"
+  warnings.warn('WARNING: Use of uninitialized transient "%s" in state "%s"' %
+/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/validation.py:551: UserWarning: WARNING: Use of uninitialized transient "gpu_levmask" in state "single_state_body"
+  warnings.warn('WARNING: Use of uninitialized transient "%s" in state "%s"' %
+/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/validation.py:551: UserWarning: WARNING: Use of uninitialized transient "gpu_z_w_concorr_mc" in state "single_state_body"
+  warnings.warn('WARNING: Use of uninitialized transient "%s" in state "%s"' %
+/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/validation.py:551: UserWarning: WARNING: Use of uninitialized transient "gpu_z_w_con_c" in state "single_state_body"
+  warnings.warn('WARNING: Use of uninitialized transient "%s" in state "%s"' %
+/capstor/scratch/cscs/ybudanaz/dace/dace/sdfg/validation.py:551: UserWarning: WARNING: Use of uninitialized transient "gpu_out_val_0" in state "single_state_body"
+  warnings.warn('WARNING: Use of uninitialized transient "%s" in state "%s"' %
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1744: UserWarning: Kernel single_state_body_map_0_0_7_2_6 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpp.py:1533: UserWarning: Node single_state_body_map_0_0 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1317: UserWarning: CUDA: Stream ID 1 out of bounds (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1744: UserWarning: Kernel single_state_body_map_0_0_13_2_17 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_0_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1744: UserWarning: Kernel single_state_body_0_map_0_0_13_2_19 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpp.py:1533: UserWarning: Node single_state_body_0_map_0_0 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_1_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1744: UserWarning: Kernel single_state_body_1_map_0_0_13_3_20 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpp.py:1533: UserWarning: Node single_state_body_1_map_0_0 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_2_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_6_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_7_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_3_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_4_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_5_map_0_0". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1744: UserWarning: Kernel single_state_body_map_1_1_7_2_4 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpp.py:1533: UserWarning: Node single_state_body_map_1_1 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_0_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1744: UserWarning: Kernel single_state_body_0_map_1_1_7_2_15 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpp.py:1533: UserWarning: Node single_state_body_0_map_1_1 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_1_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1744: UserWarning: Kernel single_state_body_1_map_1_1_7_3_20 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpp.py:1533: UserWarning: Node single_state_body_1_map_1_1 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_2_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_6_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_7_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_3_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_4_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_5_map_1_1". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_map_2_2". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_3_map_2_2". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_1_map_2_2". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_2_map_2_2". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_4_map_2_2". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_5_map_2_2". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_0_map_2_2". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_map_3_3". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1744: UserWarning: Kernel single_state_body_map_3_3_7_2_6 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cpp.py:1533: UserWarning: Node single_state_body_map_3_3 is using CUDA stream 1, which exceeds the maximum number of allowed streams (1).
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_3_map_3_3". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_1_map_3_3". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_2_map_3_3". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_4_map_3_3". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_5_map_3_3". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+/capstor/scratch/cscs/ybudanaz/dace/dace/codegen/targets/cuda.py:1963: UserWarning: No `gpu_block_size` property specified on map "single_state_body_0_map_3_3". Falling back to the configuration entry `compiler.cuda.default_block_size`: 256,1,1. You can either specify the block size to use with the gpu_block_size property, or by adding nested `GPU_ThreadBlock` maps, which map work to individual threads. For more information, see https://spcldace.readthedocs.io/en/latest/optimization/gpu.html
+  warnings.warn(
+sh: nvcc: command not found

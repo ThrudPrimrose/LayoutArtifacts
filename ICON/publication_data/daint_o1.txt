@@ -1,0 +1,784 @@
+Running from 1 to 1
+Step 1 variables, extra_diffu: 1, istep: 1, lvn_only: 0, ldeepatmo: 0
+Total time: 1.59421 ms
+Timer Run took 79297 us
+Total time: 0.403296 ms
+Total time: 0.3688 ms
+Timer Run took 67781 us
+Total time: 0.37104 ms
+Total time: 0.38112 ms
+Timer Run took 67382 us
+Total time: 0.37424 ms
+Total time: 0.368864 ms
+Timer Run took 67783 us
+Total time: 0.373248 ms
+Total time: 0.37344 ms
+Timer Run took 67597 us
+Total time: 0.369024 ms
+Total time: 0.353856 ms
+Timer Run took 67702 us
+Total time: 0.36688 ms
+Total time: 0.356224 ms
+Timer Run took 67535 us
+Total time: 0.366016 ms
+Total time: 0.361568 ms
+Timer Run took 67587 us
+Total time: 0.362272 ms
+Total time: 0.360256 ms
+Timer Run took 67666 us
+Total time: 0.36 ms
+Total time: 0.361696 ms
+Timer Run took 67611 us
+Total time: 0.358528 ms
+Total time: 0.358432 ms
+Timer Run took 67544 us
+Total time: 0.364288 ms
+Total time: 0.35424 ms
+Timer Run took 67571 us
+Total time: 0.35584 ms
+Total time: 0.3592 ms
+Timer Run took 67509 us
+Total time: 0.365376 ms
+Total time: 0.361728 ms
+Timer Run took 67602 us
+Total time: 0.351648 ms
+Total time: 0.361088 ms
+Timer Run took 67529 us
+Total time: 0.360544 ms
+Total time: 0.351168 ms
+Timer Run took 67547 us
+Total time: 0.360832 ms
+Total time: 0.358144 ms
+Timer Run took 67532 us
+Total time: 0.362176 ms
+Total time: 0.356704 ms
+Timer Run took 67495 us
+Total time: 0.361024 ms
+Total time: 0.356 ms
+Timer Run took 67490 us
+Total time: 0.354912 ms
+Total time: 0.360928 ms
+Timer Run took 67591 us
+Total time: 0.350432 ms
+Total time: 0.365024 ms
+Timer Run took 67615 us
+Total time: 0.3504 ms
+Total time: 0.349024 ms
+Timer Run took 67501 us
+Total time: 0.348896 ms
+Total time: 0.359744 ms
+Timer Run took 67500 us
+Total time: 0.357216 ms
+Total time: 0.349248 ms
+Timer Run took 67523 us
+Total time: 0.353056 ms
+Total time: 0.351776 ms
+Timer Run took 67509 us
+Total time: 0.352256 ms
+Total time: 0.35168 ms
+Timer Run took 67617 us
+Total time: 0.346272 ms
+Total time: 0.356384 ms
+Timer Run took 67547 us
+Total time: 0.356512 ms
+Total time: 0.356608 ms
+Timer Run took 67483 us
+Total time: 0.353152 ms
+Total time: 0.360672 ms
+Timer Run took 67493 us
+Total time: 0.361472 ms
+Total time: 0.350976 ms
+Timer Run took 67447 us
+Total time: 0.359392 ms
+Total time: 0.356384 ms
+Timer Run took 67426 us
+Total time: 0.36016 ms
+Total time: 0.356544 ms
+Timer Run took 67521 us
+Total time: 0.3568 ms
+Total time: 0.351232 ms
+Timer Run took 67436 us
+Total time: 0.362688 ms
+Total time: 0.350752 ms
+Timer Run took 67538 us
+Total time: 0.352672 ms
+Total time: 0.356864 ms
+Timer Run took 67553 us
+Total time: 0.354816 ms
+Total time: 0.349312 ms
+Timer Run took 67459 us
+Total time: 0.351776 ms
+Total time: 0.352384 ms
+Timer Run took 67421 us
+Total time: 0.357792 ms
+Total time: 0.355456 ms
+Timer Run took 67508 us
+Total time: 0.368224 ms
+Total time: 0.351264 ms
+Timer Run took 67371 us
+Total time: 0.351936 ms
+Total time: 0.348672 ms
+Timer Run took 67435 us
+Total time: 0.355616 ms
+Total time: 0.353632 ms
+Timer Run took 67368 us
+Total time: 0.355072 ms
+Total time: 0.351488 ms
+Timer Run took 67430 us
+Total time: 0.351968 ms
+Total time: 0.35264 ms
+Timer Run took 67424 us
+Total time: 0.354912 ms
+Total time: 0.35008 ms
+Timer Run took 67513 us
+Total time: 0.36 ms
+Total time: 0.345088 ms
+Timer Run took 67392 us
+Total time: 0.360384 ms
+Total time: 0.35328 ms
+Timer Run took 67391 us
+Total time: 0.36 ms
+Total time: 0.356384 ms
+Timer Run took 67518 us
+Total time: 0.359488 ms
+Total time: 0.354208 ms
+Timer Run took 67667 us
+Total time: 0.358432 ms
+Total time: 0.360224 ms
+Timer Run took 67496 us
+Total time: 0.354656 ms
+Total time: 0.352896 ms
+Timer Run took 67459 us
+Total time: 0.350976 ms
+Step 1 done.
+Running from 2 to 2
+Step 2 variables, extra_diffu: 1, istep: 2, lvn_only: 0, ldeepatmo: 0
+Total time: 1.45053 ms
+Timer Run took 59807 us
+Total time: 0.23344 ms
+Total time: 0.269568 ms
+Timer Run took 57915 us
+Total time: 0.265952 ms
+Total time: 0.26512 ms
+Timer Run took 57369 us
+Total time: 0.277216 ms
+Total time: 0.270336 ms
+Timer Run took 57372 us
+Total time: 0.275328 ms
+Total time: 0.270624 ms
+Timer Run took 57377 us
+Total time: 0.26992 ms
+Total time: 0.273888 ms
+Timer Run took 57274 us
+Total time: 0.25728 ms
+Total time: 0.27152 ms
+Timer Run took 57627 us
+Total time: 0.270816 ms
+Total time: 0.2656 ms
+Timer Run took 57450 us
+Total time: 0.272864 ms
+Total time: 0.260416 ms
+Timer Run took 57252 us
+Total time: 0.263648 ms
+Total time: 0.269856 ms
+Timer Run took 57060 us
+Total time: 0.263104 ms
+Total time: 0.272672 ms
+Timer Run took 56918 us
+Total time: 0.26864 ms
+Total time: 0.259552 ms
+Timer Run took 56955 us
+Total time: 0.25616 ms
+Total time: 0.26224 ms
+Timer Run took 56777 us
+Total time: 0.27104 ms
+Total time: 0.269344 ms
+Timer Run took 56702 us
+Total time: 0.264288 ms
+Total time: 0.256032 ms
+Timer Run took 56753 us
+Total time: 0.273056 ms
+Total time: 0.270432 ms
+Timer Run took 56854 us
+Total time: 0.265728 ms
+Total time: 0.25808 ms
+Timer Run took 56719 us
+Total time: 0.265152 ms
+Total time: 0.25408 ms
+Timer Run took 57013 us
+Total time: 0.263168 ms
+Total time: 0.25136 ms
+Timer Run took 57009 us
+Total time: 0.255296 ms
+Total time: 0.253952 ms
+Timer Run took 69009 us
+Total time: 0.25312 ms
+Total time: 0.25936 ms
+Timer Run took 57551 us
+Total time: 0.253312 ms
+Total time: 0.256928 ms
+Timer Run took 57513 us
+Total time: 0.25168 ms
+Total time: 0.255168 ms
+Timer Run took 57269 us
+Total time: 0.258592 ms
+Total time: 0.247744 ms
+Timer Run took 56817 us
+Total time: 0.253152 ms
+Total time: 0.254336 ms
+Timer Run took 57293 us
+Total time: 0.25568 ms
+Total time: 0.251808 ms
+Timer Run took 57468 us
+Total time: 0.248704 ms
+Total time: 0.244192 ms
+Timer Run took 57001 us
+Total time: 0.25392 ms
+Total time: 0.251616 ms
+Timer Run took 56844 us
+Total time: 0.251584 ms
+Total time: 0.259808 ms
+Timer Run took 56549 us
+Total time: 0.264832 ms
+Total time: 0.266464 ms
+Timer Run took 56726 us
+Total time: 0.25344 ms
+Total time: 0.256384 ms
+Timer Run took 56835 us
+Total time: 0.24992 ms
+Total time: 0.250624 ms
+Timer Run took 56501 us
+Total time: 0.251232 ms
+Total time: 0.255552 ms
+Timer Run took 56462 us
+Total time: 0.254272 ms
+Total time: 0.254048 ms
+Timer Run took 56461 us
+Total time: 0.245632 ms
+Total time: 0.25568 ms
+Timer Run took 56466 us
+Total time: 0.250208 ms
+Total time: 0.250848 ms
+Timer Run took 56613 us
+Total time: 0.244064 ms
+Total time: 0.246368 ms
+Timer Run took 68098 us
+Total time: 0.251616 ms
+Total time: 0.251456 ms
+Timer Run took 56462 us
+Total time: 0.25872 ms
+Total time: 0.254848 ms
+Timer Run took 56455 us
+Total time: 0.2512 ms
+Total time: 0.258688 ms
+Timer Run took 56516 us
+Total time: 0.247808 ms
+Total time: 0.246976 ms
+Timer Run took 57182 us
+Total time: 0.254368 ms
+Total time: 0.2504 ms
+Timer Run took 57124 us
+Total time: 0.256768 ms
+Total time: 0.251872 ms
+Timer Run took 56285 us
+Total time: 0.254208 ms
+Total time: 0.253376 ms
+Timer Run took 56277 us
+Total time: 0.254112 ms
+Total time: 0.25616 ms
+Timer Run took 56406 us
+Total time: 0.246688 ms
+Total time: 0.262976 ms
+Timer Run took 56488 us
+Total time: 0.257952 ms
+Total time: 0.246848 ms
+Timer Run took 56945 us
+Total time: 0.252864 ms
+Total time: 0.258208 ms
+Timer Run took 56741 us
+Total time: 0.251456 ms
+Total time: 0.2536 ms
+Timer Run took 56691 us
+Total time: 0.256032 ms
+Total time: 0.258432 ms
+Timer Run took 56688 us
+Total time: 0.254464 ms
+Step 2 done.
+Running from 3 to 3
+Step 3 variables, extra_diffu: 1, istep: 2, lvn_only: 0, ldeepatmo: 0
+Total time: 1.52934 ms
+Timer Run took 89454 us
+Total time: 0.262816 ms
+Total time: 0.25248 ms
+Timer Run took 85984 us
+Total time: 0.252832 ms
+Total time: 0.261664 ms
+Timer Run took 85654 us
+Total time: 0.260096 ms
+Total time: 0.265216 ms
+Timer Run took 84990 us
+Total time: 0.260608 ms
+Total time: 0.257664 ms
+Timer Run took 85261 us
+Total time: 0.260704 ms
+Total time: 0.254912 ms
+Timer Run took 85166 us
+Total time: 0.256672 ms
+Total time: 0.255616 ms
+Timer Run took 84454 us
+Total time: 0.260768 ms
+Total time: 0.253888 ms
+Timer Run took 84220 us
+Total time: 0.255744 ms
+Total time: 0.262528 ms
+Timer Run took 84268 us
+Total time: 0.256256 ms
+Total time: 0.252032 ms
+Timer Run took 84299 us
+Total time: 0.257312 ms
+Total time: 0.248928 ms
+Timer Run took 83670 us
+Total time: 0.249472 ms
+Total time: 0.243584 ms
+Timer Run took 83272 us
+Total time: 0.246624 ms
+Total time: 0.244096 ms
+Timer Run took 83595 us
+Total time: 0.251584 ms
+Total time: 0.24656 ms
+Timer Run took 83098 us
+Total time: 0.247456 ms
+Total time: 0.246752 ms
+Timer Run took 83625 us
+Total time: 0.240768 ms
+Total time: 0.238912 ms
+Timer Run took 82983 us
+Total time: 0.238432 ms
+Total time: 0.246176 ms
+Timer Run took 82978 us
+Total time: 0.246016 ms
+Total time: 0.24512 ms
+Timer Run took 83276 us
+Total time: 0.24096 ms
+Total time: 0.242624 ms
+Timer Run took 82904 us
+Total time: 0.246496 ms
+Total time: 0.239584 ms
+Timer Run took 82657 us
+Total time: 0.242688 ms
+Total time: 0.241312 ms
+Timer Run took 82667 us
+Total time: 0.240096 ms
+Total time: 0.235872 ms
+Timer Run took 82945 us
+Total time: 0.255552 ms
+Total time: 0.237696 ms
+Timer Run took 83022 us
+Total time: 0.240608 ms
+Total time: 0.24512 ms
+Timer Run took 83072 us
+Total time: 0.242176 ms
+Total time: 0.24368 ms
+Timer Run took 83035 us
+Total time: 0.243232 ms
+Total time: 0.23392 ms
+Timer Run took 82625 us
+Total time: 0.23664 ms
+Total time: 0.239488 ms
+Timer Run took 82441 us
+Total time: 0.243904 ms
+Total time: 0.24272 ms
+Timer Run took 83449 us
+Total time: 0.244416 ms
+Total time: 0.241824 ms
+Timer Run took 83357 us
+Total time: 0.24368 ms
+Total time: 0.234944 ms
+Timer Run took 82759 us
+Total time: 0.243424 ms
+Total time: 0.237376 ms
+Timer Run took 83061 us
+Total time: 0.243136 ms
+Total time: 0.238688 ms
+Timer Run took 82779 us
+Total time: 0.236896 ms
+Total time: 0.236512 ms
+Timer Run took 82863 us
+Total time: 0.239552 ms
+Total time: 0.24608 ms
+Timer Run took 82665 us
+Total time: 0.235424 ms
+Total time: 0.24144 ms
+Timer Run took 82744 us
+Total time: 0.239808 ms
+Total time: 0.235168 ms
+Timer Run took 82490 us
+Total time: 0.244288 ms
+Total time: 0.237792 ms
+Timer Run took 82538 us
+Total time: 0.239104 ms
+Total time: 0.236896 ms
+Timer Run took 82808 us
+Total time: 0.237536 ms
+Total time: 0.24144 ms
+Timer Run took 82538 us
+Total time: 0.235104 ms
+Total time: 0.239136 ms
+Timer Run took 82875 us
+Total time: 0.236224 ms
+Total time: 0.23744 ms
+Timer Run took 82893 us
+Total time: 0.243808 ms
+Total time: 0.24112 ms
+Timer Run took 82395 us
+Total time: 0.237152 ms
+Total time: 0.239616 ms
+Timer Run took 82437 us
+Total time: 0.237472 ms
+Total time: 0.236864 ms
+Timer Run took 82817 us
+Total time: 0.235712 ms
+Total time: 0.232832 ms
+Timer Run took 82767 us
+Total time: 0.237696 ms
+Total time: 0.23712 ms
+Timer Run took 82362 us
+Total time: 0.236736 ms
+Total time: 0.240736 ms
+Timer Run took 82678 us
+Total time: 0.238848 ms
+Total time: 0.238656 ms
+Timer Run took 82702 us
+Total time: 0.235936 ms
+Total time: 0.237632 ms
+Timer Run took 82493 us
+Total time: 0.23888 ms
+Total time: 0.24032 ms
+Timer Run took 82431 us
+Total time: 0.237664 ms
+Step 3 done.
+Running from 4 to 4
+Step 4 variables, extra_diffu: 1, istep: 2, lvn_only: 0, ldeepatmo: 0
+Total time: 1.43443 ms
+Timer Run took 58225 us
+Total time: 0.24048 ms
+Total time: 0.257376 ms
+Timer Run took 56350 us
+Total time: 0.248544 ms
+Total time: 0.252768 ms
+Timer Run took 56010 us
+Total time: 0.257408 ms
+Total time: 0.265152 ms
+Timer Run took 55941 us
+Total time: 0.24688 ms
+Total time: 0.253824 ms
+Timer Run took 55889 us
+Total time: 0.264032 ms
+Total time: 0.252608 ms
+Timer Run took 55874 us
+Total time: 0.258752 ms
+Total time: 0.256384 ms
+Timer Run took 55674 us
+Total time: 0.25664 ms
+Total time: 0.258752 ms
+Timer Run took 55764 us
+Total time: 0.260288 ms
+Total time: 0.250528 ms
+Timer Run took 55585 us
+Total time: 0.252736 ms
+Total time: 0.252192 ms
+Timer Run took 55598 us
+Total time: 0.26192 ms
+Total time: 0.260736 ms
+Timer Run took 55521 us
+Total time: 0.262336 ms
+Total time: 0.25456 ms
+Timer Run took 55534 us
+Total time: 0.260736 ms
+Total time: 0.261184 ms
+Timer Run took 55544 us
+Total time: 0.261376 ms
+Total time: 0.25552 ms
+Timer Run took 55493 us
+Total time: 0.259584 ms
+Total time: 0.26064 ms
+Timer Run took 55670 us
+Total time: 0.262688 ms
+Total time: 0.261312 ms
+Timer Run took 55414 us
+Total time: 0.252896 ms
+Total time: 0.251136 ms
+Timer Run took 55431 us
+Total time: 0.25312 ms
+Total time: 0.253632 ms
+Timer Run took 55404 us
+Total time: 0.254464 ms
+Total time: 0.253472 ms
+Timer Run took 55402 us
+Total time: 0.251712 ms
+Total time: 0.251008 ms
+Timer Run took 55343 us
+Total time: 0.249824 ms
+Total time: 0.252512 ms
+Timer Run took 55292 us
+Total time: 0.2584 ms
+Total time: 0.254368 ms
+Timer Run took 55353 us
+Total time: 0.253984 ms
+Total time: 0.253984 ms
+Timer Run took 55338 us
+Total time: 0.254528 ms
+Total time: 0.253184 ms
+Timer Run took 55451 us
+Total time: 0.248512 ms
+Total time: 0.25008 ms
+Timer Run took 55346 us
+Total time: 0.253024 ms
+Total time: 0.262816 ms
+Timer Run took 55353 us
+Total time: 0.255552 ms
+Total time: 0.257632 ms
+Timer Run took 55298 us
+Total time: 0.254528 ms
+Total time: 0.25312 ms
+Timer Run took 55309 us
+Total time: 0.257184 ms
+Total time: 0.25344 ms
+Timer Run took 55299 us
+Total time: 0.255936 ms
+Total time: 0.256288 ms
+Timer Run took 55265 us
+Total time: 0.258048 ms
+Total time: 0.258592 ms
+Timer Run took 55233 us
+Total time: 0.257216 ms
+Total time: 0.255776 ms
+Timer Run took 55266 us
+Total time: 0.256928 ms
+Total time: 0.24096 ms
+Timer Run took 55225 us
+Total time: 0.257984 ms
+Total time: 0.254304 ms
+Timer Run took 55227 us
+Total time: 0.25296 ms
+Total time: 0.252864 ms
+Timer Run took 55219 us
+Total time: 0.248256 ms
+Total time: 0.254144 ms
+Timer Run took 55200 us
+Total time: 0.247552 ms
+Total time: 0.253536 ms
+Timer Run took 55223 us
+Total time: 0.255296 ms
+Total time: 0.254624 ms
+Timer Run took 55258 us
+Total time: 0.25312 ms
+Total time: 0.252128 ms
+Timer Run took 55258 us
+Total time: 0.260768 ms
+Total time: 0.257664 ms
+Timer Run took 55286 us
+Total time: 0.252096 ms
+Total time: 0.251008 ms
+Timer Run took 55329 us
+Total time: 0.246368 ms
+Total time: 0.251808 ms
+Timer Run took 55253 us
+Total time: 0.253184 ms
+Total time: 0.249344 ms
+Timer Run took 55237 us
+Total time: 0.251456 ms
+Total time: 0.252352 ms
+Timer Run took 55258 us
+Total time: 0.25024 ms
+Total time: 0.252864 ms
+Timer Run took 55282 us
+Total time: 0.25072 ms
+Total time: 0.255328 ms
+Timer Run took 55225 us
+Total time: 0.253568 ms
+Total time: 0.254592 ms
+Timer Run took 55255 us
+Total time: 0.251616 ms
+Total time: 0.254496 ms
+Timer Run took 55274 us
+Total time: 0.24704 ms
+Total time: 0.256896 ms
+Timer Run took 55314 us
+Total time: 0.24096 ms
+Total time: 0.258944 ms
+Timer Run took 55294 us
+Total time: 0.250944 ms
+Step 4 done.
+Running from 5 to 5
+Step 5 variables, extra_diffu: 1, istep: 2, lvn_only: 0, ldeepatmo: 0
+Total time: 1.54739 ms
+Timer Run took 57972 us
+Total time: 0.25456 ms
+Total time: 0.285472 ms
+Timer Run took 56015 us
+Total time: 0.285056 ms
+Total time: 0.282432 ms
+Timer Run took 55998 us
+Total time: 0.272544 ms
+Total time: 0.284384 ms
+Timer Run took 55888 us
+Total time: 0.282752 ms
+Total time: 0.275296 ms
+Timer Run took 55806 us
+Total time: 0.277152 ms
+Total time: 0.270624 ms
+Timer Run took 55984 us
+Total time: 0.268704 ms
+Total time: 0.273152 ms
+Timer Run took 55666 us
+Total time: 0.27872 ms
+Total time: 0.264256 ms
+Timer Run took 55832 us
+Total time: 0.277152 ms
+Total time: 0.26992 ms
+Timer Run took 55677 us
+Total time: 0.271136 ms
+Total time: 0.266464 ms
+Timer Run took 55584 us
+Total time: 0.275392 ms
+Total time: 0.273824 ms
+Timer Run took 55527 us
+Total time: 0.27296 ms
+Total time: 0.273024 ms
+Timer Run took 55471 us
+Total time: 0.27328 ms
+Total time: 0.280096 ms
+Timer Run took 55315 us
+Total time: 0.270144 ms
+Total time: 0.269984 ms
+Timer Run took 55341 us
+Total time: 0.267296 ms
+Total time: 0.262752 ms
+Timer Run took 55235 us
+Total time: 0.271008 ms
+Total time: 0.26048 ms
+Timer Run took 55265 us
+Total time: 0.266784 ms
+Total time: 0.264288 ms
+Timer Run took 55235 us
+Total time: 0.263648 ms
+Total time: 0.267072 ms
+Timer Run took 55248 us
+Total time: 0.262112 ms
+Total time: 0.260096 ms
+Timer Run took 55078 us
+Total time: 0.265504 ms
+Total time: 0.261376 ms
+Timer Run took 55158 us
+Total time: 0.25632 ms
+Total time: 0.268608 ms
+Timer Run took 56184 us
+Total time: 0.272704 ms
+Total time: 0.260064 ms
+Timer Run took 55020 us
+Total time: 0.2568 ms
+Total time: 0.259776 ms
+Timer Run took 55063 us
+Total time: 0.265856 ms
+Total time: 0.267968 ms
+Timer Run took 55110 us
+Total time: 0.269792 ms
+Total time: 0.25792 ms
+Timer Run took 55018 us
+Total time: 0.259168 ms
+Total time: 0.25696 ms
+Timer Run took 55034 us
+Total time: 0.258016 ms
+Total time: 0.258528 ms
+Timer Run took 55029 us
+Total time: 0.259904 ms
+Total time: 0.259872 ms
+Timer Run took 54994 us
+Total time: 0.26304 ms
+Total time: 0.25888 ms
+Timer Run took 54941 us
+Total time: 0.25792 ms
+Total time: 0.255488 ms
+Timer Run took 54999 us
+Total time: 0.25552 ms
+Total time: 0.253408 ms
+Timer Run took 55034 us
+Total time: 0.258624 ms
+Total time: 0.256928 ms
+Timer Run took 54884 us
+Total time: 0.259616 ms
+Total time: 0.258368 ms
+Timer Run took 54891 us
+Total time: 0.268128 ms
+Total time: 0.258816 ms
+Timer Run took 54964 us
+Total time: 0.259808 ms
+Total time: 0.257024 ms
+Timer Run took 54860 us
+Total time: 0.254048 ms
+Total time: 0.256384 ms
+Timer Run took 54927 us
+Total time: 0.251584 ms
+Total time: 0.2536 ms
+Timer Run took 54795 us
+Total time: 0.254048 ms
+Total time: 0.258464 ms
+Timer Run took 54887 us
+Total time: 0.255136 ms
+Total time: 0.25328 ms
+Timer Run took 54930 us
+Total time: 0.258464 ms
+Total time: 0.25856 ms
+Timer Run took 54817 us
+Total time: 0.249696 ms
+Total time: 0.256864 ms
+Timer Run took 54909 us
+Total time: 0.260768 ms
+Total time: 0.252512 ms
+Timer Run took 54929 us
+Total time: 0.257024 ms
+Total time: 0.2624 ms
+Timer Run took 54857 us
+Total time: 0.25984 ms
+Total time: 0.256928 ms
+Timer Run took 54855 us
+Total time: 0.256896 ms
+Total time: 0.251904 ms
+Timer Run took 54739 us
+Total time: 0.251392 ms
+Total time: 0.255488 ms
+Timer Run took 55002 us
+Total time: 0.24592 ms
+Total time: 0.254112 ms
+Timer Run took 54770 us
+Total time: 0.255296 ms
+Total time: 0.2552 ms
+Timer Run took 54856 us
+Total time: 0.26064 ms
+Total time: 0.261728 ms
+Timer Run took 54820 us
+Total time: 0.259424 ms
+Total time: 0.252032 ms
+Timer Run took 54804 us
+Total time: 0.243648 ms
+Step 5 done.
+Renamed: .dacecache/velocity_no_nproma_if_prop_lvn_only_0_istep_1/src/cpu/velocity_no_nproma_if_prop_lvn_only_0_istep_1.cpp -> .dacecache/velocity_no_nproma_if_prop_lvn_only_0_istep_1/src/cpu/velocity_no_nproma_if_prop_lvn_only_0_istep_1.cu
+Renamed: .dacecache/velocity_no_nproma_if_prop_lvn_only_0_istep_1/sample/velocity_no_nproma_if_prop_lvn_only_0_istep_1_main.cpp -> .dacecache/velocity_no_nproma_if_prop_lvn_only_0_istep_1/sample/velocity_no_nproma_if_prop_lvn_only_0_istep_1_main.cu
+Renamed: .dacecache/velocity_no_nproma_if_prop_lvn_only_1_istep_1/src/cpu/velocity_no_nproma_if_prop_lvn_only_1_istep_1.cpp -> .dacecache/velocity_no_nproma_if_prop_lvn_only_1_istep_1/src/cpu/velocity_no_nproma_if_prop_lvn_only_1_istep_1.cu
+Renamed: .dacecache/velocity_no_nproma_if_prop_lvn_only_1_istep_1/sample/velocity_no_nproma_if_prop_lvn_only_1_istep_1_main.cpp -> .dacecache/velocity_no_nproma_if_prop_lvn_only_1_istep_1/sample/velocity_no_nproma_if_prop_lvn_only_1_istep_1_main.cu
+Renamed: .dacecache/velocity_no_nproma_if_prop_lvn_only_1_istep_2/src/cpu/velocity_no_nproma_if_prop_lvn_only_1_istep_2.cpp -> .dacecache/velocity_no_nproma_if_prop_lvn_only_1_istep_2/src/cpu/velocity_no_nproma_if_prop_lvn_only_1_istep_2.cu
+Renamed: .dacecache/velocity_no_nproma_if_prop_lvn_only_1_istep_2/sample/velocity_no_nproma_if_prop_lvn_only_1_istep_2_main.cpp -> .dacecache/velocity_no_nproma_if_prop_lvn_only_1_istep_2/sample/velocity_no_nproma_if_prop_lvn_only_1_istep_2_main.cu
+Renamed: .dacecache/velocity_no_nproma_if_prop_lvn_only_0_istep_2/src/cpu/velocity_no_nproma_if_prop_lvn_only_0_istep_2.cpp -> .dacecache/velocity_no_nproma_if_prop_lvn_only_0_istep_2/src/cpu/velocity_no_nproma_if_prop_lvn_only_0_istep_2.cu
+Renamed: .dacecache/velocity_no_nproma_if_prop_lvn_only_0_istep_2/sample/velocity_no_nproma_if_prop_lvn_only_0_istep_2_main.cpp -> .dacecache/velocity_no_nproma_if_prop_lvn_only_0_istep_2/sample/velocity_no_nproma_if_prop_lvn_only_0_istep_2_main.cu
+p_diag_3.got and p_diag_3.want have numerical differences ❌
+  Rel: 3.984677590613513e-16, Abs: 6.505213034913027e-19
+p_diag_4.got and p_diag_4.want have numerical differences ❌
+  Rel: 4.826453832168786e-16, Abs: 8.673617379884035e-19
+p_diag_5.got and p_diag_5.want have numerical differences ❌
+  Rel: 2.54026625680731e-16, Abs: 4.336808689942018e-19
+p_diag_2.got and p_diag_2.want have numerical differences ❌
+  Rel: 2.4776317473458965e-16, Abs: 8.673617379884035e-19
+p_diag_1.got and p_diag_1.want have numerical differences ❌
+  Rel: 1.204283223560074e-16, Abs: 3.552713678800501e-15
+Numerical differences found ❌
