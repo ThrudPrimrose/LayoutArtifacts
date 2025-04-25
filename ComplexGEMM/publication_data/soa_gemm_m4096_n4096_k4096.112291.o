@@ -1,0 +1,13 @@
+The CPU and GPU arrays are different.
+The CPU and GPU arrays are almost identical.
+AMD GPU detected: AMD Radeon Graphics
+Read best config and time as ((32,), (1, 8, 1), (32, 16, 1), (False, False, False), False), 6.529000000000001, continuing search
+Skipping ((128,), (1, 4, 1), (256, 1, 1), (False, False, False), False) it was profiled before
+Skipping ((64,), (1, 8, 1), (256, 2, 1), (False, False, False), False) it was profiled before
+Skipping ((32,), (2, 16, 1), (64, 1, 1), (True, True, False), False) it was profiled before
+Skipping ((128,), (2, 8, 1), (128, 1, 1), (False, False, False), False) it was profiled before
+Current config: ((16,), (4, 1, 1), (128, 4, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((16,), (4, 1, 1), (128, 4, 1), (True, True, False), False), skipping.
+Best Tiling Configuration for complex_gemm_soa_merged_111: ((32,), (1, 8, 1), (32, 16, 1), (False, False, False), False)
+Read best config and time as ((32,), (1, 8, 1), (32, 16, 1), (False, False, False), False), 6.529000000000001, continuing search
+Current config: ((32,), (1, 8, 1), (32, 16, 1), (False, False, False), False)

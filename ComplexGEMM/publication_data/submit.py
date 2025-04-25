@@ -2,7 +2,7 @@ import subprocess
 from itertools import product
 
 # Layouts and matrix sizes
-layouts = ["SoA"]
+layouts = ["AoS", "SoA"]
 sizes = [(16384, 16384, 16384), (2048, 16384, 16384), (4096, 4096, 4096), (128, 32768, 512)]
 
 
@@ -17,7 +17,7 @@ slurm_script = "submit_complex_gemm.sh"
 # Loop over all combinations of layout and sizes
 for layout, (m, n, k) in product(layouts, sizes):
     # Build the command to run in the SLURM script
-    cmd = f"/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout {layout} --m {m} --n {n} --k {k} \n"
+    cmd = f"/capstor/scratch/cscs/ybudanaz/beverinenv/bin/python complex_gemm.py --layout {layout} --m {m} --n {n} --k {k} \n"
 
     # Create a temporary SLURM script with this configuration
     script_content = f"""#!/bin/sh
@@ -30,7 +30,7 @@ for layout, (m, n, k) in product(layouts, sizes):
 #SBATCH --output={layout.lower()}_gemm_m{m}_n{n}_k{k}.%j.o
 #SBATCH --error={layout.lower()}_gemm_m{m}_n{n}_k{k}.%j.e
 
-source /capstor/scratch/cscs/ybudanaz/.def/bin/activate
+source /capstor/scratch/cscs/ybudanaz/beverinenv/bin/activate
 spack load hip@6.2.1
 spack load cmake@3.30.5
 spack load hipsparse@6.2.1
@@ -54,7 +54,7 @@ alias cc=/capstor/scratch/cscs/ybudanaz/spack/opt/spack/linux-sles15-zen3/gcc-12
 export MPICH_GPU_SUPPORT_ENABLED=1
 export MPICH_CXX=hipcc
 
-{cmd*40}
+{cmd}
 """
     temp_script = f"temp_{layout.lower()}_gemm_m{m}_n{n}_k{k}.sh"
 

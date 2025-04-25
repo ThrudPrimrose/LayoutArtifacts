@@ -392,7 +392,7 @@ thread_coarsening = thread_coarsening_2D
 block_sizes = block_sizes_2D
 
 if args.layout == "AoS":
-    sdfg = sdfg1
+    sdfg = copy.deepcopy(sdfg1)
     inputs = {
         "A":complex_A_gpu,
         "B":complex_B_gpu,
@@ -402,7 +402,7 @@ if args.layout == "AoS":
         "K":_K,
     }
 else:
-    sdfg = sdfg2
+    sdfg = copy.deepcopy(sdfg2)
     inputs = {
         "Ar":Ar_gpu,
         "Aim":Aim_gpu,
@@ -433,7 +433,7 @@ if args.layout == "SoA":
         device_schedule = dace.dtypes.ScheduleType.GPU_Device,
         re_apply=False,
         verbose=True,
-        timeout=5000,
+        timeout=5,
         random_iter=True,
         static_sram_limit=static_sram,
         bound_dims=[_M, _N],
@@ -454,7 +454,7 @@ else:
         device_schedule = dace.dtypes.ScheduleType.GPU_Device,
         re_apply=False,
         verbose=True,
-        timeout=5000,
+        timeout=5,
         random_iter=True,
         static_sram_limit=static_sram,
         bound_dims=[_M, _N],
@@ -462,3 +462,30 @@ else:
         exclude_from_explicit_memory=["C"],
         output_name="C",
     )
+
+import time
+base_sdfg = sdfg1 if args.layout == "AoS" else sdfg2
+def run_and_time(sdfg, inputs, iterations=100):
+    times = []
+    c = sdfg.compile()
+    for _ in range(iterations):
+        start = time.perf_counter()
+        c(**inputs)
+        end = time.perf_counter()
+        times.append(end - start)
+    return times
+
+# Run and time original SDFG
+original_times = run_and_time(base_sdfg, inputs)
+
+# Run and time auto-tiled SDFG
+tuned_times = run_and_time(tiled_sdfg, inputs)
+
+# Log to file
+log_filename = f"runtime_log_{args.layout}_{args.m}_{args.n}_{args.k}.csv"
+with open(log_filename, "w") as f:
+    f.write("iteration,original,tuned\n")
+    for i, (orig, tuned) in enumerate(zip(original_times, tuned_times)):
+        f.write(f"{i+1},{orig},{tuned}\n")
+
+print(f"Runtimes logged in {log_filename}")

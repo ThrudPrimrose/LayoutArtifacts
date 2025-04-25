@@ -8,7 +8,7 @@
 #SBATCH --output=soa_gemm_m4096_n4096_k4096.%j.o
 #SBATCH --error=soa_gemm_m4096_n4096_k4096.%j.e
 
-source /capstor/scratch/cscs/ybudanaz/.def/bin/activate
+source /capstor/scratch/cscs/ybudanaz/beverinenv/bin/activate
 spack load hip@6.2.1
 spack load cmake@3.30.5
 spack load hipsparse@6.2.1
@@ -32,44 +32,5 @@ alias cc=/capstor/scratch/cscs/ybudanaz/spack/opt/spack/linux-sles15-zen3/gcc-12
 export MPICH_GPU_SUPPORT_ENABLED=1
 export MPICH_CXX=hipcc
 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
-/capstor/scratch/cscs/ybudanaz/.def/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
+/capstor/scratch/cscs/ybudanaz/beverinenv/bin/python complex_gemm.py --layout SoA --m 4096 --n 4096 --k 4096 
 

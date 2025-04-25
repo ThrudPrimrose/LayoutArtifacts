@@ -1,0 +1,14 @@
+The CPU and GPU arrays are different.
+AMD GPU detected: AMD Radeon Graphics
+Read best config and time as ((64,), (1, 4, 1), (16, 16, 1), (False, False, False), False), 0.43879999999999997, continuing search
+Skipping ((128,), (1, 4, 1), (256, 1, 1), (False, False, False), False) it was profiled before
+Skipping ((64,), (1, 8, 1), (256, 2, 1), (False, False, False), False) it was profiled before
+Current config: ((32,), (2, 16, 1), (64, 1, 1), (True, True, False), False)
+Kernel uses too much shared memory for config ((32,), (2, 16, 1), (64, 1, 1), (True, True, False), False), skipping.
+Skipping ((128,), (2, 8, 1), (128, 1, 1), (False, False, False), False) it was profiled before
+Current config: ((16,), (4, 1, 1), (128, 4, 1), (True, True, False), False)
+Skipping ((16,), (4, 1, 1), (128, 4, 1), (True, True, False), False) as it exceeds bound dims
+Kernel uses too much shared memory for config ((16,), (4, 1, 1), (128, 4, 1), (True, True, False), False), skipping.
+Best Tiling Configuration for complex_gemm_aos_67: ((64,), (1, 4, 1), (16, 16, 1), (False, False, False), False)
+Read best config and time as ((64,), (1, 4, 1), (16, 16, 1), (False, False, False), False), 0.43879999999999997, continuing search
+Current config: ((64,), (1, 4, 1), (16, 16, 1), (False, False, False), False)

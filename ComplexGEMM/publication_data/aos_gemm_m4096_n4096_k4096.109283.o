@@ -1,0 +1,4 @@
+Cannot inline SDFG complex_gemm_aos_67_4_68_8: 4 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+Cannot inline SDFG complex_gemm_aos_67_4: 2 nested SDFG must have exactly one state. init <class 'dace.sdfg.state.SDFGState'>
+The CPU and GPU arrays are different.
+AMD GPU detected: AMD Radeon Graphics
