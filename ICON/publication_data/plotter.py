@@ -59,7 +59,7 @@ with open("sdfg_out1.txt", "r") as f:
             #    pass
 
 # Parse icon_out.txt
-with open("icon_o1.txt", "r") as f:
+with open("icon_out1.txt", "r") as f:
     for line in f:
         if "Time for velocity_tendencies" in line and ("corrector step" in line or "predictor step" in line):
             parts = line.strip().split()
