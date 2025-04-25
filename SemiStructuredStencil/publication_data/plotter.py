@@ -105,7 +105,7 @@ def bootstrap_ci(data, n_iterations=100, ci_percentile=95.0):
 # Create the plot
 sns.set(style="whitegrid")
 
-fig, ax = plt.subplots(figsize=(6, 6.15))
+fig, ax = plt.subplots(figsize=(6, 6))
 
 # Calculate positions for bars for each N value
 bar_width = 0.35
